@@ -1,0 +1,165 @@
+#
+#  This is a sample control file for simulating a single dislocation
+#  line in a thin film using the LLNL FEM code coupled to ParaDiS.
+#
+#  After a few hundred iterations, the dislocation line should make
+#  an angle of about 18 deg with the vertical.
+#
+#  This is a single processor simulation for a BCC material using
+#  glide-restricted motion
+#
+#
+
+#  Directory to write output files
+dirname = "tests/singlelinefem_results/"
+
+#
+#  Simulation cell and processor setup
+#
+
+#  The total number of CPUs should be numXdoms * numYdoms * numZdoms
+numXdoms = 1 
+numYdoms = 1
+numZdoms = 1 
+
+#
+#  Cells for dislocation grouping (cannot be less than 4)
+#
+numXcells = 4
+numYcells = 4
+numZcells = 4
+
+#
+#  Fast Multipole Method controls
+#
+
+fmEnabled = 1
+fmMPOrder = 2
+fmTaylorOrder = 4
+fmCorrectionTbl = "inputs/fm-ctab.m2.t4.dat"
+
+#
+#  Boundary conditions (all free surfaces, no periodic boundaries)
+#
+xBoundType = 1
+yBoundType = 1
+zBoundType = 1
+
+#
+#  Dynamic load balancing turned off
+#
+DLBfreq = 0
+
+#
+#  Simulation time and timestepping controls
+#
+
+#  Number of simuation timesteps to run
+maxstep = 500
+
+#  Maximum time step duration (in seconds)
+maxDT = 100
+
+#  timestepIntegrator = "forward-euler"
+timestepIntegrator = "trapezoid"
+
+#  Maximum nodal displacement at each time step (for forward-euler
+#  timestep integrator only)
+#rmax = 1.0
+
+#  Error tolerance in determining time step
+rTol = 1.0
+
+#
+#  Descretization controls
+#
+maxSeg = 20.0
+minSeg = 6.14194
+
+#
+#  Loading conditions
+#
+
+#  Applied stress in Pa (xx,yy,zz,yz,zx,xy)
+appliedStress = [ 0 0 0 0 0 0 ]
+
+#
+#  Material and mobility parameters
+#
+
+mobilityLaw = "BCC_glide"
+MobScrew = 1
+MobEdge  = 1
+MobClimb = 0
+shearModulus = 160000000000.000000
+pois = 0.280100
+YoungModulus = 411000000000.000000
+
+#  Fundamental length unit
+burgMag = 2.741200e-010
+
+#  Core cut-off radius
+rc = 0.100000
+
+#  Core energy
+Ecore = 0.000000e+000
+
+#Save restart files
+savecn = 1
+savecnfreq = 50
+
+#Save properties files
+saveprop = 1
+savepropfreq = 10
+
+#
+#  Parameters needed for the FEM coupling
+#
+
+#
+#  Surface boundaries within the primary simulation space
+#
+xBoundMin = -4760
+xBoundMax = 4760 
+yBoundMin = -4760
+yBoundMax = 4760 
+zBoundMin = -119
+zBoundMax = 119 
+
+#
+#  Define which surfaces are free: BC_type=5 means all 6 surfaces
+#  are free
+BC_type = 5
+
+#
+#  Select type of geometry. mesh_type=1 is rectangular
+#
+mesh_type = 1
+
+#
+#  dirmax has to do with which method used to solve the elastic
+#  problem. dirmax=2000 uses a direct method.
+#
+dirmax = 2000
+
+#
+#  Set the number of FEM elements per dimension
+#
+fem_nx = 3
+fem_ny = 3
+fem_nz = 3
+
+#
+#  Set the rotation of the FEM box via fem_ageom_*.
+#  Here there is no rotation, since it is [1 0 0], [0 0 1].
+
+fem_ageom_x = [
+  1.000000e+00
+  0.000000e+00
+  0.000000e+00
+]
+fem_ageom_z = [
+  0.000000e+00
+  0.000000e+00
+  1.000000e+00
+]

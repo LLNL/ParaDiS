@@ -1,0 +1,352 @@
+#!/bin/ksh
+#
+#  Description:  This tool is used to convert ParaDiS generated
+#                gnuplot files into files formatted for use
+#                with povray.  For each file processed by the
+#                tool, a new file will be created by the same
+#                name plus a '.pov' suffix.
+#
+#                NOTE: you MUST have write access to the directory
+#                from which you invoke this tool since it attempts
+#                to create a temporary script in the local working
+#                directory!
+#                
+#
+#  Usage:  gnuplot2povray [-h] [-s <size>] [-d <dir> | -f <file>]
+#
+#      where:
+#
+#          -h         Prints the usage summary and a description
+#                     of the command line options
+#
+#          -d <dir>   Any '0tNNNN' files in this directory
+#                     that do not have a corresponding '.pov' file
+#                     will have one created.  This option is
+#                     mutually exclusize to the '-f' option.
+#
+#          -f <file>  Specifes the base name of a file for which to 
+#                     generate a corresponding '.pov' file.
+#
+#          -s <size>  The size of the simulation box.  If not
+#                     specified, defaults to 35000
+#
+#          NOTE:  If neither a directory or a file name was provided
+#                 via the command line options, the tool will behave
+#                 as the the current directory was specified.
+#
+#  Once the povray input have been generated, they can be
+#  visualized with povray.  For example, given a newly
+#  created file '0t0001.pov', execute:
+#
+#      povray -geometry 700x700 0t0001.pov
+#
+##############################################################################
+
+
+##############################################################################
+#
+#       Usage() - display the valid invocation syntax and exit
+#
+#       Positional parameters:
+#           1:  Name of the executable
+#
+##############################################################################
+function Usage
+{
+    echo " "
+    echo "  Usage:  ${1} [-h] [-s size] [-d dir | -f filename]"
+    echo " "
+    echo "      where:"
+    echo " "
+    echo "          -h         Prints the usage summary and a description"
+    echo "                     of the command line options"
+    echo " "
+    echo "          -d <dir>   Any '0tNNNN' files in this directory"
+    echo "                     that do not have a corresponding '.pov' file"
+    echo "                     will have one created.  This option is"
+    echo "                     mutually exclusize to the '-f' option."
+    echo " "
+    echo "          -f <file>  Specifes the base name of a file for which to "
+    echo "                     generate a corresponding '.pov' file."
+    echo " "
+    echo "          -s <size>  The size of the simulation cube.  If not"
+    echo "                     specified, defaults to 35000"
+    echo " "
+    echo "          NOTE:  If neither a directory or a file name was provided"
+    echo "                 via the command line options, the tool will behave"
+    echo "                 as the the current directory was specified."
+    echo " "
+
+    exit 1
+}
+    
+
+##############################################################################
+#
+#  Main processing...
+#
+##############################################################################
+
+
+#
+#  Set up some defaults values
+#
+    checkDir=1
+    dirName="."
+    fileName=""
+    L=17500
+    dL=300
+    dOptSet=0
+    fOptSet=0
+
+#
+#  Check command line arguments
+#
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            -h)
+                Usage ${progName}
+                ;;
+            -help)
+                Usage ${progName}
+                ;;
+            -d)
+                shift
+                if [ $# -lt 1 ]; then Usage ${progName}; fi
+                if [ ! -d $1  ]; then Usage ${progName}; fi
+                if [ ${fOptSet} -eq 1 ] ; then Usage ${progName} ; fi
+                dOptSet=1
+                cd $1
+                ;;
+            -f)
+                shift
+                if [ $# -lt 1 ]; then Usage ${progName}; fi
+                if [ ${dOptSet} -eq 1 ] ; then Usage ${progName} ; fi
+                checkDir=0
+                fileName=${1}
+                fOptSet=1
+                ;;
+            -s)
+                shift
+                if [ $# -lt 1 ]; then Usage ${progName}; fi
+                let L=${1}/2
+                ;;
+            *)
+                Usage $progName
+                ;;
+            esac
+        shift
+    done
+
+#
+#   Create up a temporary awk script we'll need later.
+#
+    AWK_SCRIPT="`pwd`/.gnu2pov.awk.$$"
+
+    rm -f ${AWK_SCRIPT}; touch ${AWK_SCRIPT}
+
+    cat <<END_OF_SCRIPT >> ${AWK_SCRIPT}
+    BEGIN{
+        needPoint1 = 1
+    }
+    {
+        if (NF == 3) {
+            if (substr(\$1,1,1) == "#") { next }
+            if (needPoint1 == 1) {
+                x1 = \$1
+                y1 = \$2
+                z1 = \$3
+                needPoint1 = 0
+            } else {
+                x2 = \$1
+                y2 = \$2
+                z2 = \$3
+#
+#               Plot each segment with a cylinder and cap each end
+#               with a sphere.
+#
+                printf("cylinder{<%s,%s,%s>,<%s,%s,%s>,radius01 pigment "  \
+                       "{ color color01 transmit transmit01 } finish "     \
+                       "{ phong 1 metallic } }\n", x1, y1, z1, x2, y2, z2)
+                printf("sphere{ <%s,%s,%s>, radius02 " \
+                       "pigment { color color01 transmit transmit01 } " \
+                       "finish { phong 1 metallic } }\n", x1, y1, z1)
+                printf("sphere{ <%s,%s,%s>, radius02 " \
+                       "pigment { color color01 transmit transmit01 } " \
+                       "finish { phong 1 metallic } }\n", x2, y2, z2)
+
+                needPoint1 = 1
+            }
+        } else {
+            needPoint1 = 1
+        }
+    }
+END_OF_SCRIPT
+
+#
+#   If user supplied a file name, the list of files to process
+#   will just be a single file.  If we're processing an entire
+#   directory, scan the directory for files of the expected
+#   names (i.e. '0tNNNN' or '0tNNNN.0')
+#
+    if [ ${checkDir} -eq 0 ] ; then
+       fileList=${fileName}
+    else
+       fileList=`ls 0t[0-9][0-9][0-9][0-9] 0t[0-9][0-9][0-9][0-9].0 2>/dev/null`
+    fi
+
+
+#
+#   Loop through the file list and process any file that does
+#   not already have a corresponding '.pov' file.
+#
+    for fileName in ${fileList}
+    do
+
+#
+#       Get the base file name (i.e. any '.0' suffix stripped off)
+#
+        fileNameLen=${#fileName}
+        let baseNameLen=$fileNameLen-2
+        baseName=`echo $fileName | cut -c1-$baseNameLen`
+
+        if [[ "${baseName}.0" != "$fileName" ]] ; then
+            baseName=${fileName}
+        fi
+
+#
+#       If the corresponding '.pov' file already exists, skip
+#       this file.
+#
+        if [ -f ${baseName}.pov ] ; then
+            echo "${baseName} already converted... skipping"
+            continue
+        fi
+
+#
+#       Make sure the specified file is valid
+#
+        if [ ! -f ${baseName} ] ; then
+            if [ ! -f ${baseName}.0 ] ; then
+                rm -f ${AWK_SCRIPT}
+                Usage ${progName}
+            else
+                segmentedFile=1
+            fi
+        else
+            segmentedFile=0
+        fi
+
+        frameFile="${baseName}.pov"
+
+#
+#       Create the new file.  First dump in some variables and
+#       settings, then embed the dislocation data from ParaDiS
+#       and lastly tidy up.
+#
+        echo "Generating ${frameFile} from ${baseName}"
+
+        touch ${frameFile}
+
+        echo '#include "colors.inc"'              >> ${frameFile}
+        echo " "                                  >> ${frameFile}
+        echo "#declare myradius=100;"             >> ${frameFile}
+        echo "#declare highlightcolor=Red;"       >> ${frameFile}
+        echo "#declare mytransmit=0;"             >> ${frameFile}
+        echo " "                                  >> ${frameFile}
+        echo "#declare radius00=myradius;"        >> ${frameFile}
+        echo "#declare radius01=myradius;"        >> ${frameFile}
+        echo "#declare radius02=myradius;"        >> ${frameFile}
+        echo "#declare radius03=myradius;"        >> ${frameFile}
+        echo "#declare radius04=myradius;"        >> ${frameFile}
+        echo " "                                  >> ${frameFile}
+        echo "#declare color00=Pink;"             >> ${frameFile}
+        echo "#declare color01=Green;"            >> ${frameFile}
+        echo "#declare color02=Red;"              >> ${frameFile}
+        echo "#declare color03=LightBlue;"        >> ${frameFile}
+        echo "#declare color04=Cyan;"             >> ${frameFile}
+        echo " "                                  >> ${frameFile}
+        echo "#declare transmit00=mytransmit;"    >> ${frameFile}
+        echo "#declare transmit01=mytransmit;"    >> ${frameFile}
+        echo "#declare transmit02=mytransmit;"    >> ${frameFile}
+        echo "#declare transmit03=0;"             >> ${frameFile}
+        echo "#declare transmit04=0;"             >> ${frameFile}
+        echo " "                                  >> ${frameFile}
+        echo "#declare L=${L};"                   >> ${frameFile}
+        echo "#declare dL=${dL};"                 >> ${frameFile}
+        echo " "                                  >> ${frameFile}
+        echo "#declare BoxFrame = union {"        >> ${frameFile}
+        echo "    box { <L+dL,-L,-L>,<L,L,L> }"   >> ${frameFile}
+        echo "    box { <-L,-L-dL,-L>,<L,-L,L> }" >> ${frameFile}
+        echo "    box { <-L,-L,L+dL>,<L,L,L> }"   >> ${frameFile}
+        echo "    pigment {checker rgb<1,1,0.5> rgb<0.9,0.9,0.8> transmit 0 scale 2000}"    >> ${frameFile}
+        echo "    finish { phong 1 metallic }"    >> ${frameFile}
+        echo "};"                                 >> ${frameFile}
+        echo ""                                   >> ${frameFile}
+        echo "//#declare SlicePlane = union {"    >> ${frameFile}
+        echo "//     box { <dL,-L,-L>,<0,L,L> }"  >> ${frameFile}
+        echo "//     box { <dL,-L,-L>,<0,L,L> rotate y*90}" >> ${frameFile}
+        echo "//     box { <dL,-L,-L>,<0,L,L> rotate z*90}" >> ${frameFile}
+        echo "//     pigment {color rgb<0.7,1,1> transmit 0.5}" >> ${frameFile}
+        echo "//     finish { phong 1 metallic }">> ${frameFile}
+        echo "//};"                              >> ${frameFile}
+        echo " "                                 >> ${frameFile}
+        echo "global_settings { ambient_light White max_trace_level 15 }" >> ${frameFile}
+        echo " "                                 >> ${frameFile}
+        echo "background { White }"              >> ${frameFile}
+        echo ""                                  >> ${frameFile}
+        echo "camera {"                          >> ${frameFile}
+        echo "  orthographic"                    >> ${frameFile}
+        echo "  location <0, 0, -L*2-(L*.2)>"    >> ${frameFile}
+        echo "  look_at  <-0, 0, 0>"             >> ${frameFile}
+        echo "}"                                 >> ${frameFile}
+        echo " "                                 >> ${frameFile}
+        echo "light_source { <-L*.1, L*.1, -L*2.5> color White }" >> ${frameFile}
+        echo "light_source { <L*.1, L*.1, -L*2.5> color White }"  >> ${frameFile}
+        echo ""                                  >> ${frameFile}
+        echo "fog {"                             >> ${frameFile}
+        echo "    distance L*2.1"                >> ${frameFile}
+        echo "    color rgb<0.3, 0.5, 0.2>"      >> ${frameFile}
+        echo "}"                                 >> ${frameFile}
+        echo ""                                  >> ${frameFile}
+        echo "union {"                           >> ${frameFile}
+        echo "  union {"                         >> ${frameFile}
+
+#
+#       Convert the ParaDiS generated gnuplot data and embed
+#       it within the new file.  The data *may* be contained in
+#       multiple file segments.
+#
+        if [ ${segmentedFile} -eq 0 ] ; then
+            awk -f ${AWK_SCRIPT} ${baseName}     >> ${frameFile}
+        else
+            let seqNum=0
+            segName="${baseName}.0"
+
+            while [ -f ${segName} ] ; do
+                awk -f ${AWK_SCRIPT} ${segName}  >> ${frameFile}
+                let seqNum=${seqNum}+1
+                segName="${baseName}.${seqNum}"
+            done
+        fi
+ 
+#
+#       And some final stuff in the file...
+#
+        echo " "                                 >> ${frameFile}
+        echo "  }"                               >> ${frameFile}
+        echo "  //SlicePlane"                    >> ${frameFile}
+        echo "  BoxFrame"                        >> ${frameFile}
+        echo "  no_shadow"                       >> ${frameFile}
+        echo "  rotate y*-40"                    >> ${frameFile}
+        echo "  rotate x*-20"                    >> ${frameFile}
+        echo "}"                                 >> ${frameFile}
+        echo " "                                 >> ${frameFile}
+
+    done
+
+#
+#   Remove the temporary awk script we'd created, and we're done...
+#
+    rm -f ${AWK_SCRIPT}
+

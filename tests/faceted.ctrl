@@ -1,0 +1,109 @@
+#
+#  This example demonstrates the use the BCC 'faceted' mobility
+#  function.
+#
+dirname =   "tests/faceted_results"  
+#
+#  Select 'faceted' mobility, and enable the cross-slip mechanism so
+#  dislocations can switch glide planes if forces dictate that action.
+#
+mobilityLaw =   "BCC_faceted"  
+enableCrossSlip = 1
+enforceGlidePlanes = 1
+#
+# Define the 'trenches' along which mobility will be decreased.
+#
+# Note: The <MobTrenchAngle>, <MobTrenchWidth> and <MobTrench>
+#       arrays are static-size arrays and MUST contain 10 elements
+#       each.  However, the value indicated in <MobNumTrenches>
+#       defines how many of the 10 elements of those arrays contain
+#       valid trench data.
+#
+MobNumTrenches = 2  # Number of trenches used
+
+MobTrenchAngle = [  # Angles (in degrees) of the trenches
+  0.0
+  71.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  ]
+
+MobTrenchWidth = [
+  5.0
+  5.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  ]
+
+MobTrench = [
+  0.03
+  0.1
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  -1.0
+  ]
+#
+MobGlide = 1.0e+00
+MobClimb = 1.0e-04
+#
+#  Choose the domain geometry and cell grid
+#
+numXdoms =   2  
+numYdoms =   2  
+numZdoms =   2  
+numXcells =   4  
+numYcells =   4  
+numZcells =   4  
+#
+#  Enable use of FMM for remote forces
+#
+fmEnabled =   1  
+fmMPOrder =   2  
+fmTaylorOrder =   5  
+fmCorrectionTbl =   "inputs/fm-ctab.Ta.600K.0GPa.m2.t5.dat"
+#
+timestepIntegrator =   "trapezoid"  
+maxstep =   5000
+nextDT =   1.0e-11
+#
+DLBfreq = 1
+decompType =   2  
+#
+minSeg =   2.000000e+02  
+maxSeg =   1.000000e+03  
+rTol =   5.000000e+00  
+#
+rc =   2.041241e+01  
+Ecore =   5.502262e+10  
+loadType =   0  
+appliedStress = [
+  0.000000e+00
+  0.000000e+00
+  5.000000e+08
+  0.000000e+00
+  0.000000e+00
+  0.000000e+00
+  ]
+#
+# Select all desired types of output
+#
+savetimers =   0  
+savecn =   1  
+savecnfreq =   100  

@@ -1,0 +1,82 @@
+#
+#  Example control file using Tantalum non-linear mobility
+#
+dirname =   "tests/Ta_001_m2e8_results"
+#
+#  Simulation cell and processor setup
+#  
+numXdoms =   5
+numYdoms =   4  
+numZdoms =   2  
+numXcells =   4  
+numYcells =   4  
+numZcells =   4  
+#
+#  Load balance every cycle using a recursive-bisection decomposition
+#
+decompType =   2  
+DLBfreq =   3  
+#
+#  Simulation time and timestepping controls
+#  
+maxstep =   1000000  
+timestepIntegrator =   "trapezoid"  
+rTol =   0.3 
+#
+#  Discretization controls
+#  
+maxSeg =   15.0  
+minSeg =   3.0
+remeshRule =   2  
+#
+#  Fast Multipole Method controls
+#  
+fmEnabled =   1
+fmMPOrder =   2  
+fmTaylorOrder =   5  
+fmCorrectionTbl =   "tests/Ta.fmm"
+#
+#  Loading conditions
+#  
+loadType =   1  
+eRate =   -2.000000e+08
+indxErate =   0  
+edotdir = [ 0.  0.  1 ]
+#
+#  Material and mobility parameters
+#  
+materialTypeName =   "BCC"
+mobilityLaw =   "BCC_0b"
+MobScrew = 2600
+MobEdge  =   20
+MobClimb =    0.1
+collisionMethod = 3
+#
+#
+shearModulus =   42.3e9
+pois =   0.339
+burgMag =   2.8500e-10  
+rc =   1.000000e+00
+rann = 1.5
+#
+#  I/O controls and parameters
+#  
+writeVisit =   1  
+writeVisitFreq =   500  
+writeVisitCounter =   1  
+writeVisitSegments =   1  
+writeVisitSegmentsAsText =   0  
+writeVisitNodes =   1  
+writeVisitNodesAsText =   0  
+writeVisitBurgID =   1  
+writeVisitForceVector =   0  
+writeVisitVelocityVector =   0
+
+
+writeFlux =   1  
+writeFluxFreq =   200
+savecn =   1  
+savecnfreq =   50  
+savecncounter =   0  
+saveprop =   1  
+savepropfreq =   50 

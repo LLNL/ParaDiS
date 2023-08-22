@@ -1,0 +1,66 @@
+#
+#  Example control file using Tantalum non-linear mobility
+#
+
+#
+#  Simulation cell and processor setup
+#  
+numXdoms =   2  
+numYdoms =   2  
+numZdoms =   2  
+numXcells =   8  
+numYcells =   8  
+numZcells =   8  
+#
+#  Load balance every cycle using a recursive-bisection decomposition
+#
+decompType =   2  
+DLBfreq =   1  
+#
+#  Simulation time and timestepping controls
+#  
+maxstep =   2000  
+timestepIntegrator =   "trapezoid"  
+rTol =   1.250000e+00  
+#
+#  Discretization controls
+#  
+maxSeg =   4.000000e+02  
+minSeg =   8.000000e+01  
+remeshRule =   2  
+#
+#  Fast Multipole Method controls
+#  
+fmEnabled =   1  
+fmMPOrder =   2  
+fmTaylorOrder =   5  
+fmCorrectionTbl =   "inputs/fm-ctab.Ta.300K.0GPa.m2.t5.dat"  
+#
+#  Loading conditions
+#  
+TempK =   3.000000e+02  
+pressure =   0.000000e+00  
+loadType =   1  
+eRate =   1.000000e+05  
+indxErate =   0  
+edotdir = [ 0.  0.  1 ]
+#
+#  Material and mobility parameters
+#  
+mobilityLaw =   "BCC_Ta_nl"  
+shearModulus =   70.7e9
+pois =   0.339
+burgMag =   2.8600e-10  
+rc =   5.000000e+00  
+Ecore =   5.502262e+10  
+MobClimb =   1.000000e-04  
+MobGlide =   1.000000e+02  
+#
+#  I/O controls and parameters
+#  
+dirname =   "tests/tantalum_nl_results"  
+savecn =   1  
+savecnfreq =   100  
+saveprop =   1  
+savepropfreq =   10  
+savetimers =   0  

@@ -1,0 +1,34 @@
+#
+# data for an precipitate consists of the following items separated with white space
+#
+# Precipitate Id     : 1 integer identifying the precipitate regardless of its position in the simulation or the domain encompassing it. (Should be sequential values)
+# Position           : 3 values specifying the XYZ coordinates of the center of the precipitate
+# Semi-principal axes: 3 values defining the three semi-principal axis of the ellipsoidal precipitate in units of b
+# dotation matrix    : 2 vectors defining the rotation of the ellipsoidal precipitates
+# Strain field       : 6 components of the strain field for the particleStrain field is a symmetric matrix so only six components are specified
+#
+1 -684.5 -682.8  682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+2 -684.5 -341.4  682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+3 -684.5      0  682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+4 -684.5  341.4  682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+5 -684.5  682.8  682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+6 -343.1 -682.8  341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+7 -343.1 -341.4  341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+8 -343.1      0  341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+9 -343.1  341.4  341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+10 -343.1  682.8  341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+11 -1.707 -682.8      0      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+12 -1.707 -341.4      0      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+13 -1.707      0      0      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+14 -1.707  341.4      0      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+15 -1.707  682.8      0      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+16  339.7 -682.8 -341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+17  339.7 -341.4 -341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+18  339.7      0 -341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+19  339.7  341.4 -341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+20  339.7  682.8 -341.4      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+21  681.1 -682.8 -682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+22  681.1 -341.4 -682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+23  681.1      0 -682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+24  681.1  341.4 -682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0
+25  681.1  682.8 -682.8      3      3      3 1 0 0 0 1 0     -0     -0     -0 0 0 0

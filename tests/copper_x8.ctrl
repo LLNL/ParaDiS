@@ -1,0 +1,94 @@
+########################################
+###  ParaDiS control parameter file  ###
+########################################
+
+#  [100] loading
+#  strain rate 10^6 /s
+
+dirname   = "copper_x8_results"
+
+numXdoms  = 2
+numYdoms  = 2
+numZdoms  = 2
+
+numXcells = 4
+numYcells = 4
+numZcells = 4
+
+#  Dynamic load balancing
+
+decompType = 2
+DLBfreq    = 3
+
+#  Discretization and topological change controls
+
+maxSeg             = 200.0
+remeshRule         = 3
+enforceGlidePlanes = 1
+enableCrossSlip    = 0
+splitMultiNodeFreq = 1  
+
+#  Simulation time and timestepping controls
+
+maxstep            = 1000  
+timestepIntegrator = "trapezoid"
+nextDT             = 1.0e-13
+
+#  Fast Multipole Method controls
+
+fmEnabled          = 1  
+fmMPOrder          = 2  
+fmTaylorOrder      = 5  
+fmCorrectionTbl    = "copper_x8.fmm"
+
+# lab frame
+
+uselabFrame        = 0
+
+#  Loading conditions
+
+loadType       = 1
+eRate          = 1e6
+edotdir        = [ 1.0 1.0 1.0 ]
+
+#  Material and mobility parameters
+
+mobilityLaw    = "FCC_0b"  
+shearModulus   = 50.0e9  
+pois           = 0.31
+burgMag        = 2.55600e-10  
+MobScrew       = 1.000000e+04  
+MobEdge        = 1.000000e+04  
+rc             = 10.0
+includeInertia = 0
+massDensity    = 8930  
+
+#  I/O controls and parameters
+
+savecn                   = 1  
+savecnfreq               = 100
+#savecndt                = 2e-10
+
+saveprop                 = 1
+savepropfreq             = 100
+
+savedt                   = 1  
+savedtfreq               = 100
+
+#velfile                 = 1  
+#velfilefreq             = 100
+
+#fluxfile                = 1
+#fluxfreq                = 100
+
+writeVisit               = 1
+writeVisitFreq           = 100
+writeVisitCounter        = 1
+writeVisitSegments       = 1
+writeVisitSegmentsAsText = 0
+writeVisitNodes          = 1
+writeVisitNodesAsText    = 0
+writeVisitBurgID         = 0
+
+winDefaultsFile          = "../inputs/paradis.xdefaults"  
+

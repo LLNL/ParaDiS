@@ -1,0 +1,9 @@
+bin
+obj
+*.o
+*.obj
+*.swp
+*_results
+.DS_Store
+*~
+*.pdf *.log

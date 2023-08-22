@@ -1,0 +1,45 @@
+#
+#   Contains a simple frank-read source of an edge dislocation with
+#   an <a> type burgers vector on the basal plane.
+#
+dataFileVersion =   4  
+numFileSegments =   1  
+minCoordinates = [
+  -1.500000000000000e+04
+  -1.500000000000000e+04
+  -1.500000000000000e+04
+  ]
+maxCoordinates = [
+  1.500000000000000e+04
+  1.500000000000000e+04
+  1.500000000000000e+04
+  ]
+nodeCount =   3  
+dataDecompType =   2  
+dataDecompGeometry = [
+  1
+  1
+  1
+  ]
+
+#
+#  END OF DATA FILE PARAMETERS
+#
+
+domainDecomposition = 
+# Dom_ID  Minimum XYZ bounds   Maximum XYZ bounds
+  0  -15000.0000 -15000.0000 -15000.0000   15000.0000  15000.0000  15000.0000
+nodalData = 
+#  Primary lines: node_tag, x, y, z, num_arms, constraint
+#  Secondary lines: arm_tag, burgx, burgy, burgz, nx, ny, nz
+ 9,0 0.0000 0.0000 0.0000 1 7
+   9,1 1.0000000000e+00 0.0000000000e+00 0.0000000000e+00
+       0.0000000000e+00 0.0000000000e+00 1.0000000000e+00
+ 9,1 0.0000  -5.e3     0.0000 2 0
+   9,2 1.0000000000e+00 0.0000000000e+00 0.0000000000e+00
+       0.0000000000e+00 0.0000000000e+00 1.0000000000e+00
+   9,0 -1.0000000000e+00 0.0000000000e+00 0.0000000000e+00
+       0.0000000000e+00 0.0000000000e+00 1.0000000000e+00
+ 9,2 0.0000 -10.e3     0.0000 1 7
+   9,1 -1.0000000000e+00 0.0000000000e+00 0.0000000000e+00
+       0.0000000000e+00 0.0000000000e+00 1.0000000000e+00

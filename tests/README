@@ -1,0 +1,28 @@
+    NOTE: The example problems in this directory require certain
+    tables used for calculating the far-field stresses from distant
+    cells and periodic images of the problem.  These tables may not
+    have been included with this copy of the code release, however,
+    the tools for creating these tables have been provided.
+
+    The example problems utilize the Fast Multipole Method  using the
+    image correction table specified by the <fmCorrectionTbl> control
+    file parameter.  See the section in the ParaDiS Users Guide on
+    "Creating the FMM Image Correction Table with ctablegen" for
+    instructions on creating this table.
+
+    Other examples may be periodically added to this directory.
+    The comments at the top of the control parameter files for those
+    examples should include a brief description.
+
+    For general information on compiling, configuring, and running
+    ParaDiS simulations, refer to the file:
+
+        docs/ParaDiSUsersGuide-VX.X.X.pdf
+
+
+    For a brief description of the major changes between the current
+    and previous releases of ParaDiS, refer to the file:
+
+        docs/Changes.txt
+
+

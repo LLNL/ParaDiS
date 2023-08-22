@@ -1,0 +1,77 @@
+#
+#  This example inserts eshelby inclusions into the simulation and
+#  enables use of a mobility function which retards the mobility of
+#  any dislcoation segments that intersects inclusions
+#
+#  Various types of outputs are generated and placed under the
+#  directory specified by the <dirname> value.
+#
+dirname = "tests/OneSphere_results"
+#
+numXdoms   = 1
+numYdoms   = 1
+numZdoms   = 1
+
+numXcells  = 4
+numYcells  = 4
+numZcells  = 4
+
+timestepIntegrator = "trapezoid"
+
+xBoundType = 0
+yBoundType = 0
+zBoundType = 0
+
+loadType   = 0
+
+rc         = 2
+
+maxstep    = 1000
+minSeg     =   10
+maxSeg     =   50
+
+mobilityLaw     = "FCC_linear_Eshelby"
+MobEshelbyResist = 1.0
+enforceGlidePlanes = 1
+
+fmEnabled        = 1
+fmMPOrder        = 2
+fmTaylorOrder    = 5
+fmCorrectionTbl  = "tests/OneSphere.fmm"
+
+remeshRule      = 2
+enableCrossSlip = 0
+
+appliedStress = [ 
+ -2449489.743
+  2449489.743
+         -0.0
+ -1224744.871
+ -1224744.871
+          0.0
+]
+
+savecn       = 1  
+savecnfreq   = 100
+saveprop     = 1  
+savepropfreq = 10
+savedt       = 0 
+savedtfreq   = 100
+gnuplot      = 0 
+gnuplotfreq  = 100
+
+shearModulus  = 1e9
+shearModulus2 = 3e9
+pois = 0.3
+pois2= 0.2
+
+
+
+writeVisit                = 1
+writeVisitFreq            = 100
+writeVisitCounter         = 1
+writeVisitSegments        = 1
+writeVisitNodes           = 1
+writeVisitSegmentsAsText  = 1
+writeVisitNodesAsText     = 1
+

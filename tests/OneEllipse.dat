@@ -1,0 +1,19 @@
+#
+# Sample file defining Eshelby inclusions to be inserted into
+# a ParaDiS simulation.
+#
+# Data for an inclusion consist of the following items separated
+# by white space
+#
+#     Inclusion ID:  Unique integer identifying the inclusion regardless
+#                    of its position in the simulation or the domain
+#                    encompassing it.  (Should be sequential values)
+#     Position:      3 values specifying the X, Y and Z coordinates of
+#                    the center of the inclusion
+#     Radius:        Radius of the inclusion in units of b
+#     Strain field:  Strain field for the particle.  Strain field is a
+#                    symetric matrix so only six components are specified
+#                    in the order: S[0][0], S[1][1], S[2][2], S[1][2],
+#                    S[0][2], S[0][1]
+#
+1  120 70 70  30. 150. 150.  1 1 1 0 1 -1 0. 0. 0.  0. 0. 0.

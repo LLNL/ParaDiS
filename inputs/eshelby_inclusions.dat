@@ -1,0 +1,38 @@
+#
+# Sample file defining Eshelby inclusions to be inserted into
+# a ParaDiS simulation.
+#
+# Data for an inclusion consist of the following items separated
+# by white space
+#
+#     Inclusion ID:  Unique integer identifying the inclusion regardless
+#                    of its position in the simulation or the domain
+#                    encompassing it.  (Should be sequential values)
+#     Position:      3 values specifying the X, Y and Z coordinates of
+#                    the center of the inclusion
+#     Radius:        Radius of the inclusion in units of b
+#     Strain field:  Strain field for the particle.  Strain field is a
+#                    symetric matrix so only six components are specified
+#                    in the order: S[0][0], S[1][1], S[2][2], S[1][2],
+#                    S[0][2], S[0][1]
+#
+1   8.441E+03  1.561E+02  4.061E+03  50       0.1 0.1 0.1 0. 0. 0.
+2  -7.023E+02  3.757E+03  1.313E+03  40       0.1 0.1 0.1 0. 0. 0.
+3  -9.220E+03 -1.926E+03 -9.507E+03  50       0.1 0.1 0.1 0. 0. 0.
+4   1.029E+04  1.349E+02 -6.397E+03  50       0.1 0.1 0.1 0. 0. 0.
+5  -1.272E+03  9.187E+03  1.645E+02  30       0.1 0.1 0.1 0. 0. 0.
+6   9.400E+03 -2.710E+03  8.391E+02  50       0.1 0.1 0.1 0. 0. 0.
+7  -1.553E+03  7.732E+03 -1.242E+03  25       0.1 0.1 0.1 0. 0. 0.
+8  -7.958E+03 -1.415E+03 -5.387E+03  50       0.1 0.1 0.1 0. 0. 0.
+9  -1.054E+02 -1.197E+03 -1.044E+02  50       0.1 0.1 0.1 0. 0. 0.
+10 -1.519E+02 -5.287E+02 -1.998E+03  40       0.1 0.1 0.1 0. 0. 0.
+11  9.019E+03  1.838E+03 -2.377E+03  30       0.1 0.1 0.1 0. 0. 0.
+12 -2.658E+03  1.744E+02  7.962E+03  50       0.1 0.1 0.1 0. 0. 0.
+13 -3.507E+03  5.193E+03 -3.221E+03  35       0.1 0.1 0.1 0. 0. 0.
+14  9.199E+03  1.741E+02  1.444E+02  50       0.1 0.1 0.1 0. 0. 0.
+15  7.731E+03 -1.469E+03 -1.455E+03  50       0.1 0.1 0.1 0. 0. 0.
+16 -8.261E+03  1.475E+03 -5.178E+02  45       0.1 0.1 0.1 0. 0. 0.
+17  9.441E+03  1.747E+03 -8.953E+03  50       0.1 0.1 0.1 0. 0. 0.
+18 -1.015E+01 -3.037E+02  5.765E+03  40       0.1 0.1 0.1 0. 0. 0.
+19 -1.143E+03  6.832E+02  4.344E+02  50       0.1 0.1 0.1 0. 0. 0.
+20 -1.547E+03 -1.985E+02 -4.885E+03  35       0.1 0.1 0.1 0. 0. 0.

@@ -1,0 +1,60 @@
+dirname = "tests/shearloopBCC_LinNoCS_results/"
+
+#Input files for PBC image stresses
+Rijmfile = "inputs/Rijm.cube.out"
+RijmPBCfile = "inputs/RijmPBC.cube.out"
+
+maxstep = 1000
+
+numXdoms = 1
+numYdoms = 1
+numZdoms = 1
+
+numXcells = 4
+numYcells = 4
+numZcells = 4
+
+#Fast multipole method specs.
+fmEnabled = 0
+
+timestepIntegrator = "trapezoid"
+
+materialTypeName =   "BCC"  
+mobilityLaw =   "BCC_Linear"  
+enforceGlidePlanes = 1
+enableCrossSlip = 0
+
+remeshRule = 2
+
+#Discretization
+maxSeg = 200.000000
+minSeg = 10.000000
+
+#Maximum time step
+maxDT = 1e-05
+
+#Core cut-off radius
+rc = 2.000000
+
+MobScrew = 1
+MobEdge = 100
+MobClimb = 0.01
+
+#Turn on elastic interaction
+elasticinteraction = 1
+
+#Applied stress in Pa (xx,yy,zz,yz,zx,xy)
+appliedStress = [ 5.40308e+07 -5.40308e+07 0 -2.70154e+07 2.70154e+07 0 ]
+
+savecn = 1
+savecnfreq = 10
+
+saveprop = 1
+savepropfreq = 10
+
+gnuplot = 1
+gnuplotfreq = 10
+
+
+#             gnuplot> load '<ParadisDir>/inputs/gnuplot.defaults'
+#              gnuplot> splot 'box.in' with lines, '0t0001' w lines

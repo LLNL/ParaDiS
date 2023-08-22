@@ -1,0 +1,95 @@
+#
+#  This example inserts eshelby inclusions into the simulation and
+#  enables use of a mobility function which retards the mobility of
+#  any dislcoation segments that intersects inclusions
+#
+#  Various types of outputs are generated and placed under the
+#  directory specified by the <dirname> value.
+#
+dirname = "OneSphere/OneSphereStep_results"
+#
+#  Specifying a file which defines the inclusions to be inserted
+#  automatically enables the code that calculates forces from
+#  inclusions on dislocations
+#  
+inclusionFile = "OneSphere/OneSphereStep.dat"
+#
+#  Enable the inclusion-specific FMM code to calculate forces from
+#  remote inclusions.  If this is not enabled, dislocations will
+#  only experience effects from inclusions in the 27-cell cube
+#  surrounding the dislocation.
+#
+eshelbyfmEnabled     = 0
+eshelbyfmMPOrder     = 3
+eshelbyfmTaylorOrder = 3
+#
+numXdoms   = 1
+numYdoms   = 1
+numZdoms   = 1
+
+numXcells  = 3
+numYcells  = 3
+numZcells  = 3
+
+maxDT = 1e-12
+
+timestepIntegrator = "trapezoid"
+
+xBoundType = 0
+yBoundType = 0
+zBoundType = 0
+
+loadType   = 0
+
+rc         = 2
+
+maxstep    = 100000
+minSeg     =   10
+maxSeg     =   50
+
+mobilityLaw     = "FCC_linear_Eshelby"
+MobEshelbyResist = 1
+MobEdge  = 5e4
+MobScrew = 5e4
+MobClimb = 1.0
+IncStepEnergy = 1e8  # very large value to see an effect
+
+fmEnabled       = 0
+remeshRule      = 2
+enableCrossSlip = 1
+enforceGlidePlanes = 1
+splitMultiNodeFreq =   100
+
+appliedStress = [
+ -244948974.3
+  244948974.3
+         -0.0
+ -122474487.1
+ -122474487.1
+          0.0
+]
+
+savecn       = 1  
+savecnfreq   = 100
+saveprop     = 1  
+savepropfreq = 100
+savedt       = 1  
+savedtfreq   = 100
+gnuplot      = 1  
+gnuplotfreq  = 100
+
+shearModulus  = 27e9
+shearModulus2 = 1.5e9
+pois = 0.347
+pois2= 0.355
+
+
+
+writeVisit                = 1
+writeVisitFreq            = 100
+writeVisitCounter         = 1
+writeVisitSegments        = 1
+writeVisitNodes           = 1
+writeVisitSegmentsAsText  = 1
+writeVisitNodesAsText     = 1
+

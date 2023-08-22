@@ -1,0 +1,229 @@
+#!/bin/sh
+#
+#    Description:  This utility is used to stitch together
+#                  the various pieces of multi-segment output
+#                  files generated via ParaDiS.  
+#
+#    Usage:  stitch [-h] [-d dir | -f file]
+#
+#        where:
+#
+#            -h          prints the usage information to stdout
+#
+#            -d <dir>    specifies a directory the utility will
+#                        scan for any segmented output files that
+#                        need to be stitched together.
+#
+#            -f <file>   specifies a base file name and the utility will
+#                        scan for the corresponding file segments (files
+#                        named <file>.N where N ranges from zero on up)
+#                        and stitch the segments into the single specified
+#                        base file name.
+#
+#        NOTE: If neither a directory nor file name were provided 
+#        on the command line, the utility will behave as though
+#        the caller specified the current directory on the command
+#        line and perform as stated above.
+#
+##############################################################################
+
+
+
+##############################################################################
+#
+#       Usage() - display the valid invocation syntax and exit
+#
+#       Positional parameters:
+#           1:  Name of the executable
+#
+##############################################################################
+function Usage
+{
+        echo " "
+        echo " Usage:  $1 [-h] [-d dir | -f file]"
+        echo " "
+        echo "   where:"
+        echo "     -h          prints the usage information to stdout"
+        echo " "
+        echo "     -d <dir>    specifies a directory the utility will"
+        echo "                 scan for any segmented output files that"
+        echo "                 need to be stitched together."
+        echo " "
+        echo "     -f <file>   specifies a base file name and the utility will"
+        echo "                 scan for the corresponding file segments (files"
+        echo "                 named <file>.N where N ranges from zero on up)"
+        echo "                 and stitch the segments into the single "
+        echo "                 specified  base file name."
+        echo " "
+        echo "   NOTE: If neither a directory nor file name was provided "
+        echo "   on the command line, the utility will behave as though"
+        echo "   the caller specified the current directory on the command"
+        echo "   line and perform as stated above."
+        echo " "
+
+        exit 1
+}
+
+
+##############################################################################
+#
+#       Stitch() - Find all data segments for a specific file, stitch
+#                  them together into a single file and remove the
+#                  now obsolete individual segments.
+#
+#       Positional parameters:
+#           1:  Base file name.  The segments of the base file
+#               are assumed to be named in the form <basefile>.N
+#               where N ranges sequentially from zero on up. A
+#               a break in sequence numbers of N forces the segment
+#               with the sequence number on the low end of the break
+#               to be treated as the final segment of the file.
+#       
+##############################################################################
+function Stitch
+{
+        baseName=$1
+        minSeqNum=0
+
+# 
+#       First figure out the number of pieces into which the
+#       file has been segmented.  This is done by sequentially
+#       looking for file segments (beginning with <baseName>.0)
+#       and continuing until we don't find the next segment in
+#       sequence.  The last file found in the sequence is assumed
+#       to be the final segment.
+#
+        let seqNum=$minSeqNum
+        segFile="${baseName}.$seqNum"
+
+        while [ -f ${segFile} ] ; do
+            let seqNum=$seqNum+1
+            segFile="${baseName}.$seqNum"
+        done
+
+        let segCount=$seqNum
+
+        if [ $segCount -eq 0 ]; then
+            echo "No segments found for ${baseName}"
+            return
+        fi
+
+        echo "Building ${baseName} from $segCount segments"
+
+#
+#       Create a temporary file and copy all the file segments
+#       (in sequence) into the temporary file
+#
+        tmpFile="resectTmp.$$"
+        touch $tmpFile
+
+        let seqNum=$minSeqNum
+        while [ $seqNum -lt $segCount ] ; do
+            segName="${baseName}.${seqNum}"
+            cat $segName >> $tmpFile
+            rc=$?
+            if [ $rc -ne 0 ] ; then
+                echo " "
+                echo "ERROR: rc = $rc, appending $segName to $tmpFile"
+                echo " "
+                rm -f $tmpFile
+                exit 1
+            fi
+            let seqNum=${seqNum}+1
+        done
+
+#
+#       Rename the temporary file to the base file name
+#
+        mv $tmpFile $baseName
+        rc=$?
+        if [ $rc -ne 0 ] ; then
+            echo " "
+            echo "ERROR: rc = $rc, renaming $tmpFile to $baseName"
+            echo " "
+            rm -f $tmpFile
+            exit 1
+        fi
+
+#
+#       All file segments have successfully been stitched together
+#       into a single output file, so remove the individual segments
+#
+        let seqNum=$minSeqNum
+        while [ $seqNum -lt $segCount ] ; do
+            segName="${baseName}.${seqNum}"
+            rm -f $segName
+            let seqNum=${seqNum}+1
+        done
+
+        return
+}
+
+
+##############################################################################
+#
+#       Main code
+#
+##############################################################################
+
+        progName=$0
+
+#
+#       Check command line args
+#
+        while [ $# -gt 0 ]; do
+            case "$1" in
+                -h)
+                      Usage $progName
+                      ;;
+                -help)
+                      Usage $progName
+                      ;;
+                -d)
+                      shift
+                      if [ $# -lt 1 ]; then Usage $progName; fi
+                      if [ ! -d $1  ]; then Usage $progName; fi
+                      cd $1
+                      ;;
+                -f)
+                      shift
+                      if [ $# -lt 1 ]; then Usage $progName; fi
+                      if [ ! -f ${1}.0  ]; then Usage $progName; fi
+                      Stitch $1
+                      exit 0
+                      ;;
+                 *)
+                      Usage $progName
+                      ;;
+            esac
+            shift
+        done
+
+#
+#       Look for output files of known types (gnuplot, tecplot, etc)
+#       with a ".0" suffix.  Assume that any such file is the
+#       first segment of a multi-segment file.
+#
+        armdataFiles=`ls arm*.0 2>/dev/null`
+        gnuplotFiles=`ls 0t*.0 2>/dev/null`
+        polefigFiles=`ls polefig*.0 2>/dev/null`
+        povrayFiles=`ls povray*.0 2>/dev/null`
+        tecplotFiles=`ls tecdata*.0 2>/dev/null`
+        velocityFiles=`ls vel*.0 2>/dev/null`
+        forceFiles=`ls force*.0 2>/dev/null`
+
+#
+#       For each of the files we found above, try to stitch all
+#       corresponding segments back into a complete single file.
+#
+        for fileName in $armdataFiles $gnuplotFiles $polefigFiles \
+                        $povrayFiles $tecplotFiles $velocityFiles \
+                        $forceFiles \
+        do
+            nameLen=${#fileName}
+            let baseNameLen=$nameLen-2
+            baseName=`echo $fileName | cut -c1-$baseNameLen`
+            Stitch $baseName
+        done
+
+        exit 0

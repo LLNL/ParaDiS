@@ -1,0 +1,68 @@
+#
+dirname =   "tests/singlescrew_results"
+#
+numXdoms = 1 #   2  
+numYdoms = 1 #   2  
+numZdoms = 1 #   2  
+#
+numXcells =   3  
+numYcells =   3  
+numZcells =   3  
+#
+fmEnabled       = 0
+fmMPOrder       = 2
+fmTaylorOrder   = 5
+fmCorrectionTbl = "tests/fmm-Ta-twinning-antiTW.table.txt"
+#
+maxstep = 10000 
+remeshRule =   2  
+maxSeg =  200.
+minSeg =   50. 
+#
+timestepIntegrator =   "trapezoid"  
+#
+enforceGlidePlanes = 1
+enableCrossSlip = 1
+remeshRule = 2
+#
+rc =  2.0
+rann = 6.0
+
+
+mobilityLaw =   "BCC_Ta"
+#mobilityLaw =   "Ta_PlanarScrewSet5bis"
+maxDT = 4.e-9
+#
+shearModulus =   70.7e9
+pois =   0.339
+burgMag =   2.853217687613880e-10
+#
+loadType = 1
+appliedStress = [ 
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+]
+
+eRate = 1e5
+edotdir=[1 0 0]
+indxErate = 0 
+
+#
+savecn =   1  
+savecnfreq =   100  
+savecncounter =   0  
+saveprop =   1  
+savepropfreq =   100  
+
+writeVisit                =    1
+writeVisitFreq            =   1000
+writeVisitCounter         =    1
+writeVisitSegments        =    1
+writeVisitNodes           =    1
+writeVisitSegmentsAsText  =    1
+writeVisitNodesAsText     =    1
+

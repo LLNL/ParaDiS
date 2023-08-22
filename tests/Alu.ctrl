@@ -1,0 +1,97 @@
+dirname = "CompareAlu/Alu_results"
+
+#
+#  Domain geometry
+#
+numXdoms = 4 
+numYdoms = 4
+numZdoms = 6
+#
+#  Cell geometry
+#
+numXcells = 8
+numYcells = 8
+numZcells = 8
+#
+#  Dynamic load balancing
+#
+decompType = 2
+DLBfreq = 3
+#
+#  Discretization and topological change controls
+#
+maxSeg = 50
+minSeg = 10
+remeshRule = 2
+enforceGlidePlanes =   0
+enableCrossSlip =   1
+splitMultiNodeFreq =   5  
+#
+#  Simulation time and timestepping controls
+#  
+maxstep =   20000000 
+timestepIntegrator =   "trapezoid"
+nextDT = 1.0e-12
+rTol =  1.
+#
+#  Fast Multipole Method controls
+#  
+fmEnabled =   1  
+fmMPOrder =   2  
+fmTaylorOrder =   5  
+fmCorrectionTbl =   "./Alu.fmm"
+#
+#  Loading conditions
+#  
+loadType =   1  
+eRate =  1.0e5
+indxErate =  2 
+edotdir = [
+    0.0
+    0.0
+    1.0
+  ]
+
+appliedStress = [
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+]
+
+#
+#  Material and mobility parameters
+#
+mobilityLaw =   "FCC_linear"  
+shearModulus = 27e+9
+pois = 0.347
+YoungModulus = 72.7e+9
+burgMag =   2.86e-10  
+#
+#  Mobility values obtained from Table 3
+#  in "Atomistic simulations of dislocation
+#  mobility in Al, Ni and Al/Mg alloys." Olmsted et al. 
+#
+MobEdge  = 5e4
+MobScrew = 5e4
+MobClimb = 1.0
+rc =  5.0
+#
+#  I/O controls and parameters
+#  
+fluxfile =   1  
+fluxfreq =   200
+savecn =   1  
+savecnfreq =  200
+saveprop =   1  
+savepropfreq =  200
+writeVisit                =    1
+writeVisitFreq            =   1000
+writeVisitCounter         =    1
+writeVisitSegments        =    1
+writeVisitNodes           =    1
+writeVisitSegmentsAsText  =    1
+writeVisitNodesAsText     =    1
+

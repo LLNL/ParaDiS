@@ -1,0 +1,657 @@
+#------------------------------------------------------------------------------
+#    This file contains 'make' macros and definitions for a
+#    pre-defined set of system types that may be selected
+#    by the "SYS=..." value in the file 'makefile.setup'.
+#
+#    The pre-defined system 'types' included in this file are:
+#
+#    System type       Description
+#    -----------       -----------
+#      linux.intel     Linux systems using native Intel compilers.
+#      linux           Generic linux system
+#      gcc             Generic system build using gnu compilers
+#      aix             IBM aix systems using native compilers (ice, berg, purple, um, up, uv...)
+#      mac             MacBook Pro
+#      bgp             LC BlueGene/P systems (dawn, dawndev)
+#      bgq             LC BlueGene/Q systems (sequoia, rzuseq)
+#      mc-cc           Stanford ME Linux system using intel compilers
+#      wcr             Stanford ME Linux system using intel compilers
+#      cygwin          Stanford Linux emulator for Windows PC
+#      xt4             Cray XT4 systems (NERSC's franklin)
+#      pershing        ARL's Pershing cluster using native Intel compilers.
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+# System type: linux.intel
+#
+# Linux systems using native Intel compilers.
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),linux.intel)
+   CPP_PARALLEL.linux.intel      = mpicxx
+   CPPFLAG_PARALLEL.linux.intel  = -DPARALLEL $(SCR_DEFS_$(SCR_MODE))
+
+   CPP_SERIAL.linux.intel        = icpc
+   CPPFLAG_SERIAL.linux.intel    =
+
+   CPP.linux.intel               = $(CPP_$(MODE).linux.intel)
+   CPPFLAG.linux.intel           = $(CPPFLAG_$(MODE).linux.intel)
+
+   CUDA_PATH                    := $(CUDA_PATH)
+   CUDA_LIBS                    := $(CUDA_LIBS)
+   NVCC                         := $(NVCC)
+   NVCC_INCLUDES                 =
+
+ifeq ($(MODE),PARALLEL)
+   NVCC_INCLUDES                 = -I/usr/local/tools/mvapich-intel/include
+endif
+
+   XLIB_LIBDIR.linux.intel       =
+   XLIB_LIB.linux.intel          = -lX11 -lpthread
+   XLIB_INCS.linux.intel         =
+
+   MPI_LIBDIR.linux.intel        =
+   MPI_LIB.linux.intel           = -lmpich
+   MPI_INCS.linux.intel          =
+
+   HDF_DIR.linux.intel           = /usr/local/tools/hdf5-intel-serial-1.8.8
+   HDF_LIB.linux.intel           = -L$(HDF_DIR.linux.intel)/lib \
+                                   -Wl,-rpath,$(HDF_DIR.linux.intel)/lib \
+                                   -Bstatic -lhdf5 -lhdf5_hl -Bdynamic -lz
+   HDF_INCS.linux.intel          = -I$(HDF_DIR.linux.intel)/include
+
+   SCR_DIR.linux.intel           = /usr/local/tools/scr-1.1
+   SCR_LIB.linux.intel           = -L$(SCR_DIR.linux.intel)/lib \
+                                   -Wl,-rpath,$(SCR_DIR.linux.intel)/lib -lscr
+   SCR_INCS.linux.intel          = -I$(SCR_DIR.linux.intel)/include
+
+   OPENMP_FLAG.linux.intel       = -openmp
+
+   LIB_PARALLEL.linux.intel      = -lm
+   INCS_PARALLEL.linux.intel     =
+
+   LIB_SERIAL.linux.intel        = -lm
+   INCS_SERIAL.linux.intel       =
+endif
+
+#------------------------------------------------------------------------------
+# System type: linux
+#
+# Generic linux system
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),linux)
+   CPP_PARALLEL.linux      = mpicxx
+   CPPFLAG_PARALLEL.linux  = -DPARALLEL
+
+   CPP_SERIAL.linux        = c++
+   CPPFLAG_SERIAL.linux    =
+
+   CPP.linux               = $(CPP_$(MODE).linux)
+   CPPFLAG.linux           = $(CPPFLAG_$(MODE).linux)
+
+   CUDA_PATH              := $(CUDA_PATH)
+   CUDA_LIBS              := $(CUDA_LIBS)
+   NVCC                   := $(NVCC)
+   NVCC_INCLUDES           =
+
+ifeq ($(MODE),PARALLEL)
+   NVCC_INCLUDES           = -I/usr/tce/packages/mvapich2/mvapich2-2.2-intel-18.0.1/include
+endif
+
+   XLIB_LIBDIR.linux       = /usr/X11R6/lib
+   XLIB_LIB.linux          = -L$(XLIB_LIBDIR.linux) -lX11 -lpthread
+   XLIB_INCS.linux         =
+
+   MPI_LIBDIR.linux        =
+   MPI_LIB.linux           =
+   MPI_INCS.linux          =
+
+   HDF_DIR.linux           = /usr/local/tools/hdf5-intel-serial-1.8.8
+   HDF_LIB.linux           = -L$(HDF_DIR.linux)/lib -Xlinker -rpath -Xlinker \
+                             $(HDF_DIR.linux)/lib -lhdf5 -lhdf5_hl
+   HDF_INCS.linux          = -I$(HDF_DIR.linux)/include
+
+   OPENMP_FLAG.linux       = -fopenmp
+
+   LIB_PARALLEL.linux      = -lm
+   INCS_PARALLEL.linux     =
+
+   LIB_SERIAL.linux        = -lm
+   INCS_SERIAL.linux       =
+endif
+
+#------------------------------------------------------------------------------
+# System type: linux.coral
+#
+# This system type was added to deal with the new early-access Sierra/CORAL
+# systems at LLNL. These systems are in considerable flux, so no guarantees! (bmw)
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),linux.coral)
+
+   CPP_PARALLEL.linux.coral      = mpicxx
+   CPPFLAG_PARALLEL.linux.coral  = -DPARALLEL -qstrict -qmaxmem=-1 -qsuppress=1500-010
+
+   CPP_SERIAL.linux.coral        = c++
+   CPPFLAG_SERIAL.linux.coral    =
+
+   CPP.linux.coral               = $(CPP_$(MODE).linux.coral)
+   CPPFLAG.linux.coral           = $(CPPFLAG_$(MODE).linux.coral)
+
+   CUDA_PATH                     = $(CUDA_HOME)
+   CUDA_LIBS                     = $(CUDA_HOME)/lib64
+   NVCC                          = $(CUDA_HOME)/bin/nvcc
+   NVCC_INCLUDES                 =
+
+ifeq ($(MODE),PARALLEL)
+   NVCC_INCLUDES                 = -I/usr/tce/packages/spectrum-mpi/ibm/spectrum-mpi-rolling-release/include
+endif
+
+   XLIB_LIBDIR.linux.coral       = /usr/X11R6/lib
+   XLIB_LIB.linux.coral          = -L$(XLIB_LIBDIR.linux.coral) -lX11 -lpthread
+   XLIB_INCS.linux.coral         =
+
+   MPI_LIBDIR.linux.coral        =
+   MPI_LIB.linux.coral           =
+   MPI_INCS.linux.coral          =
+
+   HDF_DIR.linux.coral           = /usr/local/tools/hdf5-intel-serial-1.8.8
+   HDF_LIB.linux.coral           = -L$(HDF_DIR.linux.coral)/lib -Xlinker -rpath -Xlinker $(HDF_DIR.linux.coral)/lib -lhdf5 -lhdf5_hl
+   HDF_INCS.linux.coral          = -I$(HDF_DIR.linux.coral)/include
+
+   OPENMP_FLAG.linux.coral       = -fopenmp
+
+   LIB_PARALLEL.linux.coral      = -lm
+   INCS_PARALLEL.linux.coral     =
+
+   LIB_SERIAL.linux.coral        = -lm
+   INCS_SERIAL.linux.coral       =
+
+endif
+
+#------------------------------------------------------------------------------
+# System type: aix
+#
+# LC IBM aix systems using native compilers
+#
+# Systems: ice, berg, purple, um, up, uv, etc...
+#------------------------------------------------------------------------------
+# NOTE: enabling -qflttrap is expensive, so unless there are problems
+#       that require debugging, leave it turned off.
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),aix)
+   CPP_PARALLEL.aix      = mpCC_r
+   CPPFLAG_PARALLEL.aix  = -DPARALLEL -qstrict
+#                          -qflttrap=enable:imprecise:overflow:underflow:zerodivide:invalid
+
+   CPP_SERIAL.aix        = xlC_r
+   CPPFLAG_SERIAL.aix    = -qstrict
+#                          -qflttrap=enable:imprecise:overflow:underflow:zerodivide:invalid
+
+   CPP.aix               = $(CPP_$(MODE).aix)
+   CPPFLAG.aix           = $(CPPFLAG_$(MODE).aix)
+
+   XLIB_LIBDIR.aix       = /usr/local/X11R6.3
+   XLIB_LIB.aix          = -L$(XLIB_LIBDIR.aix) -lX11 -lpthread
+   XLIB_INCS.aix         =
+
+   MPI_LIBDIR.aix        =
+   MPI_LIB.aix           =
+   MPI_INCS.aix          =
+
+   HDF_DIR.aix           = /usr/local/tools/hdf5/hdf5-1.6.5/serial
+   HDF_LIB.aix           = -L$(HDF_DIR.aix)/lib -lhdf5 -lhdf5_hl
+   HDF_INCS.aix          = -I$(HDF_DIR.aix)/include
+
+   OPENMP_FLAG.aix       = -qsmp=omp
+
+   LIB_PARALLEL.aix      = -lmass
+   INCS_PARALLEL.aix     =
+
+   LIB_SERIAL.aix        = -lmass
+   INCS_SERIAL.aix       =
+endif
+
+#------------------------------------------------------------------------------
+# System type: mac
+#
+# MacBook Pro system using gcc compiler
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),mac)
+   CPP_PARALLEL.mac      = mpicxx
+
+   CPPFLAG_PARALLEL.mac  = -DPARALLEL
+
+   CPP_SERIAL.mac        = g++
+   CPPFLAG_SERIAL.mac    =
+
+   CPP.mac               = $(CPP_$(MODE).mac)
+   CPPFLAG.mac           = $(CPPFLAG_$(MODE).mac)
+
+   CUDA_PATH             = /usr/local/cuda
+   CUDA_LIBS             = /usr/local/cuda/lib -Wl,-rpath,/usr/local/cuda/lib
+   NVCC                  = /usr/local/cuda/bin/nvcc
+   NVCC_INCLUDES         =
+
+ifeq ($(MODE),PARALLEL)
+   NVCC_INCLUDES         = -I/opt/local/include/openmpi-gcc5
+endif
+
+   XLIB_LIBDIR.mac       = -L/opt/X11/lib -L/usr/X11/lib
+   XLIB_LIB.mac          = -L/opt/X11/lib -L/usr/X11/lib -lX11
+   XLIB_INCS.mac         = -I/opt/X11/include
+
+   MPI_LIBDIR.mac        =
+   MPI_LIB.mac           =
+   MPI_INCS.mac          =
+
+   LIB_PARALLEL.mac      =
+   INCS_PARALLEL.mac     =
+
+   LIB_SERIAL.mac        = -lm
+   INCS_SERIAL.mac       =
+endif
+
+#------------------------------------------------------------------------------
+# System type: bgp
+#
+# LC BG/P systems (dawn, dawndev)
+#------------------------------------------------------------------------------
+#
+# NOTES: -qflttrap="..." is very costly (~30% more expensive), but
+#                    does force aborts on numeric errors which helps
+#                    during testing.
+#        -qarch=450d requires -qtune=450, [-O3|-O4|-O5],
+#                    needs 16-byte alignment, but cannot be combined
+#                    with -qflttrap.  Slight gains, but not much
+#        -D_LARGEFILE64_SOURCE and -D_FILE_OFFSET_BITS=64  are both
+#                    required in order to support large files (>2GB)
+#                    in C/C++ on BGP.  The IBM fortran compiler automatically
+#                    provides the support.
+#
+# For testing, use:
+#     -qarch=450 -qtune=450 -qhot \
+#     -qflttrap=enable:imprecise:invalid:overflow:underflow:zerodivide
+#
+# For production, use:
+#     -qarch=450d -qtune=450 -qhot
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),bgp)
+   CPP_PARALLEL.bgp      = /usr/local/bin/mpixlcxx_r
+   CPPFLAG_PARALLEL.bgp  = -D_BGP -DPARALLEL \
+                           -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 \
+                           -qarch=450d -qtune=450 -qhot \
+                           -qstrict
+
+   CPP_SERIAL.bgp        = xlC_r
+   CPPFLAG_SERIAL.bgp    = -D_BGP -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 \
+                           -qstrict
+
+   CPP.bgp               = $(CPP_$(MODE).bgp)
+   CPPFLAG.bgp           = $(CPPFLAG_$(MODE).bgp)
+
+   XLIB_LIBDIR.bgp       =
+   XLIB_LIB.bgp          =
+   XLIB_INCS.bgp         =
+
+   MPI_LIBDIR.bgp        =
+   MPI_LIB.bgp           =
+   MPI_INCS.bgp          =
+
+   LIB_PARALLEL.bgp      = -lmass
+   INCS_PARALLEL.bgp     = -I/bgsys/drivers/ppcfloor/arch/include
+
+   LIB_SERIAL.bgp        = -lmass
+   INCS_SERIAL.bgp       =
+
+#  The "-qsmp=omp" assumes -O2 optimization. For debugging, try
+#  "-qsmp=omp:noopt" to turn of optimization of parallelized code.
+
+   OPENMP_FLAG.bgp       = -qsmp=omp
+endif
+
+#------------------------------------------------------------------------------
+# System type: bgq
+#
+# LC BG/Q systems (sequoia)
+#------------------------------------------------------------------------------
+#
+# NOTES: -qflttrap="..." is very costly (~30% more expensive), but
+#                    does force aborts on numeric errors which helps
+#                    during testing.
+#        -qarch=qp   Produces object code that will run on the Blue Gene/Q
+#                    platforms. The -qarch=qp option automatically sets the
+#                    -qsimd=auto option. You can disable SIMD optimization
+#                    with the -qsimd=noauto option. When -qhot is set with
+#                    -qarch=qp, -qhot=fastmath:level=0 is also set by default.
+#                    -qarch=qp also enables the Blue Gene/Q vector type.
+#        -qhot       Specifies whether or not to perform high-order
+#                    transformations during optimization.  Optimization level
+#                    -O3 implies -qhot=level=0.
+#                    WARNING: this option results in (at most) tiny gains
+#                    under normal circumstances, but results in a significant
+#                    performance hit when anisotropy is enabled.
+#        -qsmp=omp   Enables strict OpenMP compliance. Only OpenMP
+#                    parallelization pragmas are recognized. -qhot=level=2 must
+#                    be used with -qsmp.
+#        -qsuppress=1500-036 Suppresses warning messages generated when
+#                    using -O3 optimization without -qstrict.  (By default,
+#                    -O3 may perform optimizations that could alter
+#                    the semantics of the program.  The -qstrict option
+#                    is provided to turn off these aggressive optimizations.
+#                    Unless suppressed, when -O3 is used without -qstrict,
+#                    the compiler issues a warning when one of these
+#                    aggressive optimizations is used.)
+#
+#        Support for 64-bit file offsets is standard for BG/Q systems.
+#
+#        When compiling an OpenMP program that you want to debug with the IBM
+#        compiler you must compile with the option: -qsmp=omp:noauto:noopt.
+#
+# For testing, use:
+#     -qarch=qp \
+#     -qflttrap=enable:imprecise:invalid:overflow:underflow:zerodivide \
+#     -qsmp=omp:noauto:noopt
+#
+# For production, use:
+#     -qarch=qp
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),bgq)
+   CPP_PARALLEL.bgq      = /usr/local/bin/mpixlcxx_r
+   CPPFLAG_PARALLEL.bgq  = -D_BGQ -DPARALLEL -qarch=qp -qsuppress=1500-036
+
+   CPP_SERIAL.bgq        = xlC_r
+   CPPFLAG_SERIAL.bgq    = -D_BGQ -qsuppress=1500-036
+
+   CPP.bgq               = $(CPP_$(MODE).bgq)
+   CPPFLAG.bgq           = $(CPPFLAG_$(MODE).bgq)
+
+   XLIB_LIBDIR.bgq       =
+   XLIB_LIB.bgq          =
+   XLIB_INCS.bgq         =
+
+   MPI_LIBDIR.bgq        =
+   MPI_LIB.bgq           =
+   MPI_INCS.bgq          =
+
+   LIB_PARALLEL.bgq      = -lmass
+   INCS_PARALLEL.bgq     =
+
+   LIB_SERIAL.bgq        = -lmass
+   INCS_SERIAL.bgq       =
+
+#  The "-qsmp=omp" assumes -O2 optimization. For debugging, you must use
+#  "-qsmp=omp:noauto:noopt" to turn of optimization of parallelized code.
+#  "-qhot=level=2" must be used with -qsmp???
+
+   OPENMP_FLAG.bgq       = -qsmp=omp
+endif
+
+#------------------------------------------------------------------------------
+# System type: bgq.gnu
+#
+# LC BG/Q systems using gnu compiler (sequoia)
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),gnu)
+   CPP_PARALLEL.bgq.gnu      = /usr/local/bin/mpicxx
+
+   CPPFLAG_PARALLEL.bgq.gnu  = -D_BGQ -DPARALLEL
+
+   CPP_SERIAL.bgq.gnu        = gcc
+   CPPFLAG_SERIAL.bgq.gnu    = -D_BGQ
+
+   CPP.bgq.gnu               = $(CPP_$(MODE).bgq.gnu)
+   CPPFLAG.bgq.gnu           = $(CPPFLAG_$(MODE).bgq.gnu)
+
+   XLIB_LIBDIR.bgq.gnu       =
+   XLIB_LIB.bgq.gnu          =
+   XLIB_INCS.bgq.gnu         =
+
+   MPI_LIBDIR.bgq.gnu        =
+   MPI_LIB.bgq.gnu           =
+   MPI_INCS.bgq.gnu          =
+
+   LIB_PARALLEL.bgq.gnu      = -lm
+   INCS_PARALLEL.bgq.gnu     =
+
+   LIB_SERIAL.bgq.gnu        = -lm
+   INCS_SERIAL.bgq.gnu       =
+
+   OPENMP_FLAG.bgq.gnu       = -fopenmp
+endif
+
+#------------------------------------------------------------------------------
+# System type:  wcr
+#
+# Stanford ME linux system using intel compilers
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),wcr)
+   CPP_PARALLEL.wcr      = /share/apps/mvapich/intel/bin/mpiCC
+   CPPFLAG_PARALLEL.wcr  = -DPARALLEL -I/export/apps/mvapich/intel/include
+
+   CPP_SERIAL.wcr        = icpc
+   CPPFLAG_SERIAL.wcr    =
+
+   CPP.wcr               = $(CPP_$(MODE).wcr)
+   CPPFLAG.wcr           = $(CPPFLAG_$(MODE).wcr)
+
+   XLIB_LIBDIR.wcr       = /usr/X11R6/lib64
+   XLIB_LIB.wcr          = -L$(XLIB_LIBDIR.wcr) -lX11 -lpthread
+   XLIB_INCS.wcr         =
+
+   MPI_LIBDIR.wcr        = -L/export/apps/mvapich/intel/lib
+   MPI_LIB.wcr           = -lmpich
+   MPI_INCS.wcr          =
+
+   HDF_DIR.wcr           =
+   HDF_LIB.wcr           =
+   HDF_INCS.wcr          =
+
+   OPENMP_FLAG.wcr       = -openmp
+
+   LIB_PARALLEL.wcr      = -lm
+   INCS_PARALLEL.wcr     =
+
+   LIB_SERIAL.wcr        = -L/opt/fftw-3.1.2/intel/lib -lm
+   INCS_SERIAL.wcr       =
+endif
+
+#------------------------------------------------------------------------------
+# System type: mc-cc
+#
+# Stanford ME linux system using intel compilers
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),mc-cc)
+   CPP_PARALLEL.mc-cc      = icc
+   CPPFLAG_PARALLEL.mc-cc  = -DPARALLEL -I/export/apps/mvapich/intel/include
+
+   CPP_SERIAL.mc-cc        = icpc
+   CPPFLAG_SERIAL.mc-cc    =
+
+   CPP.mc-cc               = $(CPP_$(MODE).mc-cc)
+   CPPFLAG.mc-cc           = $(CPPFLAG_$(MODE).mc-cc)
+
+   XLIB_LIBDIR.mc-cc       = /usr/X11R6/lib
+   XLIB_LIB.mc-cc          = -L$(XLIB_LIBDIR.mc-cc) -lX11 -lpthread
+   XLIB_INCS.mc-cc         =
+
+   MPI_LIBDIR.mc-cc        =
+   MPI_LIB.mc-cc           = -lmpich
+   MPI_INCS.mc-cc          =
+
+   HDF_DIR.mc-cc           =
+   HDF_LIB.mc-cc           =
+   HDF_INCS.mc-cc          =
+
+   OPENMP_FLAG.mc-cc       = -openmp
+
+   LIB_PARALLEL.mc-cc      = -lm
+   INCS_PARALLEL.mc-cc     =
+
+   LIB_SERIAL.mc-cc        = -L/opt/fftw-3.1.2/lib -lm
+   INCS_SERIAL.mc-cc       =
+endif
+
+#------------------------------------------------------------------------------
+# System type:  cygwin
+#
+# Cygwin: Linux emulator for Windows PC
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),cygwin)
+   CPP_PARALLEL.cygwin      = mpiCC
+   CPPFLAG_PARALLEL.cygwin  = -DPARALLEL -D_NOLOCK -D_CYGWIN
+
+   CPP_SERIAL.cygwin        = g++
+   CPPFLAG_SERIAL.cygwin    = -D_NOLOCK -D_CYGWIN
+
+   CPP.cygwin               = $(CPP_$(MODE).cygwin)
+   CPPFLAG.cygwin           = $(CPPFLAG_$(MODE).cygwin)
+
+   XLIB_LIBDIR.cygwin       = /usr/X11R6/lib
+   XLIB_LIB.cygwin          = -L$(XLIB_LIBDIR.cygwin) -lX11 -lpthread
+   XLIB_INCS.cygwin         =
+
+   MPI_LIBDIR.cygwin        = -L/export/apps/mvapich/intel/lib
+   MPI_LIB.cygwin           = -lmpich
+   MPI_INCS.cygwin          =
+
+   HDF_DIR.cygwin           =
+   HDF_LIB.cygwin           =
+   HDF_INCS.cygwin          =
+
+   LIB_PARALLEL.cygwin      = -lm
+   INCS_PARALLEL.cygwin     =
+
+   LIB_SERIAL.cygwin        = -lm
+   INCS_SERIAL.cygwin       =
+endif
+
+#------------------------------------------------------------------------------
+# System type: xt4
+#
+# NERSC Cray XT4 system
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),xt4)
+   CPP_PARALLEL.xt4      = CC
+   CPPFLAG_PARALLEL.xt4  = -DPARALLEL -D_XT4
+
+   CPP_SERIAL.xt4        = CC
+   CPPFLAG_SERIAL.xt4    = -D_XT4
+
+   CPP.xt4               = $(CPP_$(MODE).xt4)
+   CPPFLAG.xt4           = $(CPPFLAG_$(MODE).xt4)
+
+   XLIB_LIBDIR.xt4       =
+   XLIB_LIB.xt4          =
+   XLIB_INCS.xt4         =
+
+   MPI_LIBDIR.xt4        =
+   MPI_LIB.xt4           =
+   MPI_INCS.xt4          =
+
+   HDF_DIR.xt4           =
+   HDF_LIB.xt4           =
+   HDF_INCS.xt4          =
+
+   LIB_PARALLEL.xt4      = -lm
+   INCS_PARALLEL.xt4     =
+
+   LIB_SERIAL.xt4        = -lm
+   INCS_SERIAL.xt4       =
+endif
+
+#------------------------------------------------------------------------------
+# System type: gcc
+#
+# Generic system build using gnu compilers
+#------------------------------------------------------------------------------
+# NOTE : Some systems require 'mpiCC' rather than the 'mpicxx'
+#        used below for CPP_PARALLEL.gcc.
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),gcc)
+   CPP_PARALLEL.gcc      = mpicxx
+   CPPFLAG_PARALLEL.gcc  = -DPARALLEL -Wno-write-strings
+
+   CPP_SERIAL.gcc        = g++
+   CPPFLAG_SERIAL.gcc    = -Wno-write-strings
+
+   CPP.gcc               = $(CPP_$(MODE).gcc)
+   CPPFLAG.gcc           = $(CPPFLAG_$(MODE).gcc)
+
+   XLIB_LIBDIR.gcc       =
+   XLIB_LIB.gcc          =
+   XLIB_INCS.gcc         =
+
+   MPI_LIBDIR.gcc        =
+   MPI_LIB.gcc           = -lmpich
+   MPI_INCS.gcc          =
+
+   HDF_DIR.gcc           =
+   HDF_LIB.gcc           =
+   HDF_INCS.gcc          =
+
+   OPENMP_FLAG.gcc       = -fopenmp
+
+   LIB_PARALLEL.gcc      = -lm -lX11 -lpthread
+   INCS_PARALLEL.gcc     =
+
+   LIB_SERIAL.gcc        = -lm -lX11 -lpthread
+   INCS_SERIAL.gcc       =
+endif
+
+#------------------------------------------------------------------------------
+# System type: pershing
+#
+# ARL's Pershing cluster using native Intel compilers.
+#------------------------------------------------------------------------------
+
+ifeq ($(SYS),pershing)
+   CPP_PARALLEL.pershing      = mpiicpc
+   CPPFLAG_PARALLEL.pershing  = -DPARALLEL $(SCR_DEFS_$(SCR_MODE)) \
+                                -DMPICH_IGNORE_CXX_SEEK            \
+                                -DMPICH_SKIP_MPICXX
+
+   CPP_SERIAL.pershing        = icpc
+   CPPFLAG_SERIAL.pershing    =
+
+   CPP.pershing               = $(CPP_$(MODE).pershing)
+   CPPFLAG.pershing           = $(CPPFLAG_$(MODE).pershing)
+
+   XLIB_LIBDIR.pershing       =
+   XLIB_LIB.pershing          = -lX11 -lpthread
+   XLIB_INCS.pershing         =
+
+   MPI_LIBDIR.pershing        =
+   MPI_LIB.pershing           = -lmpich
+   MPI_INCS.pershing          =
+
+   HDF_DIR.pershing           = /usr/local/tools/hdf5-intel-serial-1.8.8
+   HDF_LIB.pershing           = -L$(HDF_DIR.pershing)/lib \
+                                -Wl,-rpath,$(HDF_DIR.pershing)/lib \
+                                -Bstatic -lhdf5 -lhdf5_hl -Bdynamic -lz
+   HDF_INCS.pershing          = -I$(HDF_DIR.pershing)/include
+
+   SCR_DIR.pershing           = /usr/local/tools/scr-1.1
+   SCR_LIB.pershing           = -L$(SCR_DIR.pershing)/lib \
+                                -Wl,-rpath,$(SCR_DIR.pershing)/lib -lscr
+   SCR_INCS.pershing          = -I$(SCR_DIR.pershing)/include
+
+   OPENMP_FLAG.pershing       = -openmp
+
+   LIB_PARALLEL.pershing      = -lm
+   INCS_PARALLEL.pershing     =
+
+   LIB_SERIAL.pershing        = -lm
+   INCS_SERIAL.pershing       =
+endif

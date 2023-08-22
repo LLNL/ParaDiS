@@ -1,0 +1,78 @@
+#
+#  This example inserts eshelby inclusions into the simulation and
+#  enables use of a mobility function which retards the mobility of
+#  any dislcoation segments that intersects inclusions
+#
+#  Various types of outputs are generated and placed under the
+#  directory specified by the <dirname> value.
+#
+dirname = "tests/ThreeSpheres_results"
+#
+#  Specifying a file which defines the inclusions to be inserted
+#  automatically enables the code that calculates forces from
+#  inclusions on dislocations
+#  
+inclusionFile = "tests/ThreeSpheres.dat"
+#
+#  Enable the inclusion-specific FMM code to calculate forces from
+#  remote inclusions.  If this is not enabled, dislocations will
+#  only experience effects from inclusions in the 27-cell cube
+#  surrounding the dislocation.
+#
+eshelbyfmEnabled     = 0
+eshelbyfmMPOrder     = 3
+eshelbyfmTaylorOrder = 3
+#
+numXdoms   = 2
+numYdoms   = 2
+numZdoms   = 2
+
+numXcells  = 3
+numYcells  = 3
+numZcells  = 3
+
+timestepIntegrator = "trapezoid"
+#maxDT = 1e-8
+
+xBoundType = 0
+yBoundType = 0
+zBoundType = 0
+
+loadType   = 0
+
+rc         = 2
+
+maxstep    = 10000
+minSeg     =   10
+maxSeg     =   30
+
+mobilityLaw     = "FCC_linear_Eshelby"
+fmEnabled       = 0
+remeshRule      = 2
+enableCrossSlip = 0
+
+appliedStress = [ 
+  -2.449489743000000e8
+   2.449489743000000e8
+                   0
+  -1.224744871000000e8
+  -1.224744871000000e8
+                   0
+]
+savecn       = 1  
+savecnfreq   = 100
+saveprop     = 1  
+savepropfreq = 100
+savedt       = 1  
+savedtfreq   = 100
+gnuplot      = 1  
+gnuplotfreq  = 100
+
+writeVisit                = 1
+writeVisitFreq            = 100
+writeVisitCounter         = 1
+writeVisitSegments        = 1
+writeVisitNodes           = 1
+writeVisitSegmentsAsText  = 1
+writeVisitNodesAsText     = 1
+

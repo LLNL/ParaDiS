@@ -1,0 +1,77 @@
+This directory contains files containing material specific
+information.  All files related to the same material will
+be named with the same prefix.  For example, files related
+to Tantalum might be named "Ta.c11.dat", "Ta.c12.dat", etc.
+
+
+File Types:
+-----------
+
+  <prefix>.c11.dat
+  <prefix>.c12.dat
+  <prefix>.c44.dat
+
+        These files contain the values for material specific
+        isothermal elastic constants through a range of temperature
+        and pressure values.  Temperatures are in degrees K, pressures
+        and constant values are in units of Mbar.  The format of each
+        of these files is:
+
+            <temp1> <pressure1> <const value>
+            <temp1> <pressure2> <const value>
+            ...
+            <temp1> <pressureN> <const value>
+            <temp2> <pressure1> <const value>
+            <temp2> <pressure2> <const value>
+            ...
+            <tempM> <pressureN> <const value>
+
+        Additionally, blank lines or lines beginning with "#" 
+        are ignored as is anything following the pertinent values
+        on a valid data line.
+
+    
+  <prefix>.burg.dat
+
+        This file contains values for the atomic volume per atom through
+        a range of temperature and pressure values.  This is used for
+        calculating the proper value for the burgers vector magnitude.
+        Temperatures are in degrees K, pressures are in units of Mbar and
+        the volume constants are in units of cubic Bohrs. The format of
+        this file is the same as the format for the elastic constants
+        files (i.e. *.c11.dat, *.c12.dat, ...) described above.
+
+
+  <prefix>.meltTemp
+
+        These files contain values for the melting temperature of the
+        specified material through a range of pressures.  Temperatures
+        are specified in degrees K and pressures in units of MBars. The
+        format of these files is:
+
+            <temp1> <pressure1>
+            <temp2> <pressure2>
+            ...
+            <tempN> <pressureN>
+
+        Additionally, blank lines or lines beginning with "#" 
+        are ignored as is anything following the pertinent values
+        on a valid data line.
+
+  <prefix>.mobility
+
+        These files contain the values for the material specific
+        pieirls, deltah_0, and alpha values (needed in the functions
+        for calculating non-linear velocity) through a range of pressure
+        and temperature values.  Pressures are in units of GPa and
+        temperatures are in degrees K.  The format of each of these
+        files is:
+
+        <pressure1> <temp1> <deltaH_0> <pieirls> <alpha>
+        <pressure2> <temp1> <deltaH_0> <pieirls> <alpha>
+        ...
+        <pressureN> <temp1> <deltaH_0> <pieirls> <alpha>
+        <pressure1> <temp2> <deltaH_0> <pieirls> <alpha>
+        <pressure2> <temp2> <deltaH_0> <pieirls> <alpha>
+        ...
+        <pressureN> <tempM> <deltaH_0> <pieirls> <alpha>

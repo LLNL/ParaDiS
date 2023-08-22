@@ -1,0 +1,2052 @@
+set terminal x11 
+set output 
+set autoscale
+set view 110, 30, 0.75, 1.5
+set xlabel "X" offset 0,0
+set ylabel "Y" offset 0,0
+set zlabel "Z" offset 0,0
+unset clip points
+set clip one
+unset clip two
+unset border
+set boxwidth
+set dummy u,v
+set format x "%g"
+set format y "%g"
+set format z "%g"
+unset grid
+unset key
+unset label
+unset arrow
+unset logscale
+set offsets 0, 0, 0, 0
+unset polar
+set angles radians
+set parametric
+set samples 100, 100
+set isosamples 10, 10
+set surface
+unset contour
+set clabel
+unset hidden3d
+set cntrparam order 4
+set cntrparam linear
+set cntrparam levels auto 5
+set cntrparam points 5
+set size 1,1
+set style data points
+set style function lines
+unset xzeroaxis
+unset yzeroaxis
+set tics in
+set ticslevel 0.5
+unset xtics
+unset ytics
+unset ztics
+set title "" offset 0,0
+unset time
+set rrange [0 : 10]
+set trange [-5 : 5]
+set urange [-5 : 5]
+set vrange [-5 : 5]
+set zero 1e-08
+splot 'box.in' w lines ls 2, '0t0001' w lines ls 3
+ pause -1 
+splot 'box.in' w lines ls 2, '0t0002' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0003' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0004' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0005' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0006' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0007' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0008' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0009' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0010' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0011' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0012' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0013' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0014' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0015' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0016' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0017' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0018' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0019' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0020' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0021' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0022' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0023' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0024' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0025' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0026' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0027' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0028' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0029' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0030' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0031' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0032' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0033' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0034' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0035' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0036' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0037' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0038' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0039' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0040' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0041' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0042' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0043' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0044' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0045' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0046' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0047' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0048' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0049' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0050' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0051' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0052' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0053' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0054' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0055' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0056' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0057' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0058' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0059' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0060' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0061' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0062' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0063' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0064' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0065' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0066' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0067' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0068' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0069' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0070' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0071' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0072' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0073' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0074' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0075' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0076' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0077' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0078' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0079' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0080' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0081' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0082' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0083' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0084' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0085' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0086' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0087' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0088' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0089' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0090' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0091' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0092' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0093' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0094' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0095' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0096' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0097' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0098' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0099' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0100' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0101' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0102' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0103' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0104' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0105' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0106' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0107' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0108' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0109' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0110' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0111' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0112' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0113' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0114' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0115' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0116' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0117' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0118' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0119' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0120' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0121' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0122' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0123' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0124' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0125' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0126' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0127' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0128' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0129' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0130' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0131' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0132' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0133' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0134' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0135' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0136' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0137' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0138' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0139' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0140' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0141' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0142' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0143' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0144' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0145' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0146' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0147' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0148' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0149' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0150' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0151' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0152' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0153' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0154' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0155' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0156' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0157' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0158' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0159' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0160' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0161' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0162' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0163' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0164' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0165' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0166' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0167' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0168' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0169' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0170' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0171' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0172' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0173' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0174' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0175' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0176' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0177' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0178' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0179' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0180' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0181' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0182' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0183' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0184' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0185' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0186' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0187' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0188' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0189' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0190' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0191' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0192' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0193' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0194' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0195' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0196' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0197' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0198' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0199' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0200' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0201' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0202' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0203' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0204' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0205' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0206' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0207' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0208' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0209' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0210' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0211' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0212' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0213' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0214' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0215' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0216' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0217' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0218' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0219' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0220' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0221' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0222' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0223' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0224' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0225' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0226' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0227' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0228' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0229' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0230' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0231' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0232' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0233' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0234' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0235' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0236' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0237' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0238' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0239' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0240' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0241' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0242' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0243' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0244' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0245' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0246' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0247' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0248' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0249' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0250' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0251' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0252' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0253' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0254' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0255' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0256' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0257' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0258' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0259' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0260' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0261' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0262' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0263' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0264' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0265' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0266' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0267' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0268' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0269' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0270' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0271' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0272' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0273' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0274' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0275' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0276' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0277' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0278' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0279' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0280' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0281' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0282' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0283' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0284' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0285' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0286' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0287' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0288' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0289' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0290' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0291' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0292' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0293' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0294' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0295' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0296' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0297' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0298' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0299' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0300' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0301' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0302' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0303' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0304' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0305' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0306' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0307' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0308' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0309' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0310' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0311' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0312' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0313' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0314' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0315' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0316' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0317' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0318' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0319' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0320' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0321' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0322' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0323' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0324' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0325' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0326' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0327' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0328' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0329' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0330' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0331' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0332' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0333' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0334' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0335' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0336' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0337' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0338' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0339' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0340' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0341' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0342' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0343' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0344' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0345' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0346' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0347' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0348' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0349' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0350' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0351' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0352' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0353' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0354' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0355' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0356' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0357' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0358' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0359' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0360' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0361' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0362' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0363' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0364' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0365' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0366' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0367' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0368' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0369' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0370' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0371' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0372' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0373' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0374' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0375' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0376' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0377' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0378' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0379' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0380' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0381' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0382' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0383' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0384' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0385' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0386' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0387' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0388' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0389' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0390' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0391' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0392' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0393' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0394' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0395' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0396' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0397' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0398' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0399' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0400' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0401' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0402' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0403' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0404' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0405' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0406' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0407' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0408' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0409' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0410' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0411' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0412' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0413' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0414' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0415' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0416' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0417' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0418' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0419' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0420' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0421' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0422' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0423' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0424' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0425' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0426' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0427' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0428' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0429' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0430' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0431' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0432' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0433' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0434' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0435' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0436' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0437' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0438' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0439' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0440' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0441' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0442' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0443' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0444' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0445' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0446' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0447' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0448' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0449' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0450' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0451' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0452' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0453' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0454' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0455' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0456' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0457' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0458' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0459' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0460' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0461' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0462' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0463' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0464' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0465' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0466' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0467' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0468' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0469' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0470' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0471' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0472' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0473' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0474' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0475' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0476' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0477' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0478' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0479' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0480' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0481' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0482' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0483' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0484' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0485' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0486' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0487' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0488' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0489' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0490' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0491' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0492' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0493' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0494' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0495' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0496' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0497' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0498' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0499' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0500' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0501' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0502' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0503' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0504' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0505' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0506' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0507' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0508' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0509' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0510' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0511' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0512' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0513' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0514' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0515' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0516' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0517' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0518' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0519' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0520' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0521' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0522' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0523' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0524' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0525' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0526' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0527' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0528' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0529' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0530' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0531' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0532' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0533' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0534' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0535' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0536' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0537' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0538' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0539' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0540' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0541' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0542' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0543' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0544' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0545' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0546' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0547' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0548' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0549' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0550' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0551' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0552' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0553' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0554' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0555' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0556' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0557' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0558' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0559' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0560' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0561' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0562' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0563' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0564' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0565' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0566' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0567' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0568' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0569' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0570' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0571' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0572' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0573' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0574' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0575' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0576' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0577' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0578' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0579' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0580' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0581' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0582' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0583' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0584' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0585' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0586' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0587' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0588' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0589' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0590' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0591' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0592' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0593' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0594' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0595' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0596' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0597' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0598' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0599' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0600' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0601' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0602' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0603' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0604' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0605' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0606' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0607' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0608' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0609' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0610' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0611' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0612' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0613' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0614' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0615' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0616' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0617' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0618' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0619' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0620' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0621' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0622' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0623' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0624' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0625' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0626' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0627' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0628' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0629' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0630' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0631' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0632' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0633' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0634' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0635' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0636' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0637' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0638' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0639' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0640' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0641' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0642' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0643' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0644' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0645' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0646' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0647' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0648' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0649' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0650' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0651' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0652' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0653' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0654' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0655' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0656' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0657' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0658' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0659' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0660' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0661' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0662' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0663' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0664' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0665' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0666' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0667' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0668' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0669' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0670' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0671' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0672' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0673' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0674' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0675' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0676' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0677' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0678' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0679' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0680' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0681' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0682' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0683' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0684' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0685' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0686' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0687' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0688' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0689' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0690' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0691' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0692' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0693' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0694' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0695' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0696' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0697' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0698' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0699' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0700' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0701' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0702' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0703' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0704' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0705' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0706' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0707' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0708' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0709' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0710' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0711' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0712' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0713' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0714' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0715' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0716' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0717' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0718' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0719' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0720' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0721' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0722' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0723' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0724' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0725' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0726' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0727' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0728' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0729' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0730' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0731' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0732' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0733' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0734' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0735' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0736' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0737' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0738' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0739' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0740' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0741' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0742' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0743' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0744' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0745' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0746' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0747' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0748' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0749' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0750' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0751' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0752' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0753' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0754' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0755' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0756' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0757' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0758' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0759' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0760' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0761' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0762' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0763' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0764' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0765' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0766' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0767' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0768' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0769' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0770' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0771' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0772' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0773' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0774' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0775' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0776' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0777' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0778' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0779' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0780' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0781' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0782' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0783' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0784' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0785' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0786' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0787' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0788' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0789' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0790' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0791' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0792' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0793' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0794' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0795' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0796' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0797' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0798' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0799' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0800' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0801' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0802' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0803' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0804' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0805' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0806' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0807' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0808' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0809' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0810' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0811' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0812' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0813' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0814' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0815' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0816' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0817' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0818' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0819' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0820' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0821' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0822' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0823' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0824' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0825' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0826' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0827' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0828' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0829' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0830' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0831' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0832' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0833' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0834' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0835' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0836' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0837' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0838' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0839' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0840' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0841' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0842' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0843' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0844' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0845' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0846' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0847' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0848' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0849' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0850' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0851' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0852' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0853' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0854' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0855' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0856' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0857' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0858' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0859' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0860' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0861' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0862' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0863' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0864' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0865' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0866' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0867' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0868' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0869' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0870' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0871' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0872' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0873' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0874' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0875' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0876' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0877' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0878' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0879' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0880' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0881' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0882' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0883' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0884' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0885' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0886' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0887' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0888' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0889' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0890' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0891' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0892' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0893' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0894' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0895' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0896' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0897' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0898' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0899' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0900' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0901' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0902' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0903' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0904' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0905' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0906' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0907' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0908' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0909' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0910' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0911' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0912' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0913' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0914' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0915' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0916' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0917' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0918' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0919' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0920' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0921' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0922' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0923' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0924' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0925' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0926' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0927' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0928' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0929' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0930' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0931' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0932' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0933' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0934' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0935' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0936' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0937' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0938' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0939' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0940' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0941' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0942' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0943' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0944' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0945' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0946' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0947' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0948' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0949' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0950' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0951' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0952' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0953' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0954' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0955' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0956' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0957' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0958' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0959' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0960' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0961' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0962' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0963' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0964' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0965' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0966' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0967' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0968' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0969' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0970' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0971' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0972' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0973' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0974' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0975' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0976' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0977' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0978' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0979' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0980' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0981' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0982' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0983' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0984' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0985' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0986' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0987' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0988' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0989' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0990' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0991' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0992' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0993' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0994' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0995' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0996' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0997' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0998' w lines ls 3
+ pause -1
+splot 'box.in' w lines ls 2, '0t0999' w lines ls 3
+ pause -1
+plot 'box.in' w lines ls 2, '0t1000' w lines ls 3
+ pause -1

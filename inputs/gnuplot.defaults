@@ -1,0 +1,52 @@
+set terminal x11 
+set output 
+set autoscale
+set view 110, 30, 0.75, 1.5
+set xlabel "X" 0,0
+set ylabel "Y" 0,0
+set zlabel "Z" 0,0
+set noclip points
+set clip one
+set noclip two
+set noborder
+set boxwidth
+set dummy u,v
+set format x "%g"
+set format y "%g"
+set format z "%g"
+set nogrid
+set nokey
+set nolabel
+set noarrow
+set nologscale
+set offsets 0, 0, 0, 0
+set nopolar
+set angles radians
+set parametric
+set samples 100, 100
+set isosamples 10, 10
+set surface
+set nocontour
+set clabel
+set nohidden3d
+set cntrparam order 4
+set cntrparam linear
+set cntrparam levels auto 5
+set cntrparam points 5
+set size 1,1
+set data style points
+set function style lines
+set noxzeroaxis
+set noyzeroaxis
+set tics in
+set ticslevel 0.5
+set noxtics
+set noytics
+set noztics
+set title "" 0,0
+set notime
+set rrange [0 : 10]
+set trange [-5 : 5]
+set urange [-5 : 5]
+set vrange [-5 : 5]
+set zero 1e-08

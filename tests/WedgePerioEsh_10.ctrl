@@ -1,0 +1,62 @@
+#
+dirname     = "tests/WedgePerioEsh_10_results"
+inclusionFile = "tests/perio10.dat"
+#
+numXdoms   = 1
+numYdoms   = 1
+numZdoms   = 1
+#
+numXcells  = 3
+numYcells  = 3
+numZcells  = 3
+#
+eshelbyfmEnabled   = 0
+fmEnabled          = 0
+#
+maxstep    = 100000
+#
+maxSeg     = 30
+minSeg     = 1
+rc         = 1.0
+#
+remeshRule      = 2
+collisionMethod = 1
+nextDT = 1e-12
+mobilityLaw      = "BCC_linear_Eshelby"
+#mobilityLaw      = "BCC_linear" #_Eshelby"
+MobEshelbyResist =   1.0
+MobScrew = 1000
+MobEdge  = 2350
+MobClimb = 1e-3
+#
+shearModulus =   160e9
+pois =   0.28
+shearModulus2 =   1e7
+pois2 =   0.45
+burgMag =   2.73600e-10
+#
+loadType   = 0
+appliedStress = [ 
+   81649658.1
+          0.0
+  -81649658.1
+  -40824829.0
+          0.0
+  -40824829.0
+]
+
+enableCrossSlip = 0
+enforceGlidePlanes = 1
+splitMultiNodeFreq = 1000
+#
+savecn       = 0  
+saveprop     = 0  
+#
+#timestepIntegrator = "trapezoid-KINSOL-AAFixedPt"
+KINSOL_UseNewton         = 0
+KINSOL_MaxIterations     = 5
+KINSOL_MaxLinIterations  = 0
+KINSOL_NumPriorResiduals = 4
+KINSOL_PrintLevel        = 0
+KINSOL_LogFile           = ""
+KINSOL_EtaVal            = 0.2

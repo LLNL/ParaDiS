@@ -1,0 +1,110 @@
+########################################
+###  ParaDiS control parameter file  ###
+########################################
+
+dirname   = "Al_results"
+
+numXdoms  = 2
+numYdoms  = 2
+numZdoms  = 2
+
+numXcells = 4
+numYcells = 4
+numZcells = 4
+
+#  Dynamic load balancing
+
+decompType = 2
+DLBfreq    = 3
+
+#  Discretization and topological change controls
+
+maxSeg             = 200
+minSeg             = 50
+remeshRule         = 2
+enforceGlidePlanes = 0
+enableCrossSlip    = 1
+splitMultiNodeFreq = 5
+
+#  Simulation time and timestepping controls
+
+maxstep            = 40
+timestepIntegrator = "trapezoid"
+nextDT             = 1.0e-12;
+rTol               = 3.0
+
+#  Fast Multipole Method controls
+
+fmEnabled          = 1
+fmMPOrder          = 2
+fmTaylorOrder      = 5
+fmCorrectionTbl    = "Al.fmm"
+
+#  Tables for non-FMM far-field force calcs
+
+Rijmfile           = "../inputs/Rijm.cube.out"  
+RijmPBCfile        = "../inputs/RijmPBC.cube.out"  
+
+#  Loading conditions
+
+loadType  = 1
+eRate     = 1.0e4
+indxErate = 0
+
+edotdir = [
+    1.0
+    0.0
+    0.0
+  ]
+
+appliedStress = [
+    0.0
+    0.0
+    0.0
+    0.0
+    0.0
+    0.0
+]
+
+#  Material and mobility parameters
+
+mobilityLaw  = "FCC_linear"
+shearModulus = 27e+9
+pois         = 0.347
+YoungModulus = 72.7e+9
+burgMag      = 2.86e-10
+
+#  Mobility values obtained from Table 3
+#  in "Atomistic simulations of dislocation
+#  mobility in Al, Ni and Al/Mg alloys." Olmsted et al.
+
+MobEdge  = 5e4
+MobScrew = 5e4
+MobClimb = 1.0
+rc       = 5.0
+
+#  I/O controls and parameters
+
+fluxfile      = 1
+fluxfreq      = 100
+
+savecn        = 1
+savecnfreq    = 100
+
+saveprop      = 1
+savepropfreq  = 100
+
+savetimers    = 0
+
+velfile       = 0
+velfilefreq   = 200
+
+writeVisit                = 1
+writeVisitFreq            = 100
+writeVisitCounter         = 1
+writeVisitSegments        = 1
+writeVisitNodes           = 1
+writeVisitSegmentsAsText  = 1
+writeVisitNodesAsText     = 1
+
+winDefaultsFile           =  "../inputs/paradis.xdefaults"  

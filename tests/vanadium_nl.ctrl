@@ -1,0 +1,57 @@
+dirname = "tests/vanadium_nl_results"
+#
+numXdoms = 2
+numYdoms = 2
+numZdoms = 2
+#
+numXcells = 8
+numYcells = 8
+numZcells = 8
+#
+DLBfreq = 1
+decompType = 2
+#
+remeshRule = 2
+maxSeg = 5.000000e+02
+#
+maxstep = 5000
+timestepIntegrator = "trapezoid"
+nextDT = 1.0e-08
+rTol = 1
+#
+fmEnabled       = 1
+fmMPOrder       = 2
+fmTaylorOrder   = 5
+fmCorrectionTbl = "inputs/fm-ctab.Va.m2.t5.p60GPa.t1000.dat"
+#
+mobilityLaw = "BCC_Va_nl"
+rc = 5
+Ecore = 2.019904e+10
+loadType = 1
+eRate = 1.0e+05
+indxErate = 0
+edotdir = [
+  1.0e+01
+  1.0e+01
+  1.0e+01
+]
+pois = 4.005e-01
+shearModulus = 7.588e+10
+burgMag = 2.432758022e-10
+#
+pressure = 60.0e+09
+TempK = 1000
+#
+MobG0 = 4.9e+10
+MobClimb = 1.0e-02
+MobLine = 1.0e+04
+MobGlide = 1.0e+02
+#
+savecn = 1
+savecnfreq = 100
+gnuplot = 1
+gnuplotfreq = 100
+povray = 0
+povrayfreq = 250
+saveprop = 1
+savepropfreq = 50

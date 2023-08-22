@@ -1,0 +1,43 @@
+Nonlinear mobility tests within this directory...
+
+Test              Doms   Cells  rTol  segments integrator    MU    NU   rc  mobLaw             eRate        Remote     Box
+ta_neg_fmm_1      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_Ta         -2e8 (compress)  FMM (2x5)  cubic
+ta_neg_fmm_2      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_Ta_pencil  -2e8 (compress)  FMM (2x5)  cubic
+ta_neg_tbl_1      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_Ta         -2e8 (compress)  table      cubic
+ta_neg_tbl_2      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_Ta         -2e8 (compress)  table      rectangular
+ta_pos_fmm_1      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_Ta          2e8 (tension )  FMM (2x5)  cubic
+ta_pos_fmm_2      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_Ta_pencil   2e8 (tension )  FMM (2x5)  cubic
+ta_pos_tbl_1      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_Ta          2e8 (tension )  table      cubic
+ta_pos_tbl_2      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_Ta          2e8 (tension )  table      rectangular
+
+ta_bcc_fmm_1      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0          -2e8 (compress)  FMM (2x5)  cubic
+ta_bcc_tbl_1      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0          -2e8 (compress)  table      cubic
+ta_bcc_tbl_2      2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0          -2e8 (compress)  table      rectangular
+
+ta_bcc_0b_fmm     2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0b         -2e8 (compress)  FMM (2x5)  cubic
+ta_bcc_0b_tbl_1   2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0b         -2e8 (compress)  table      cubic
+ta_bcc_0b_tbl_2   2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0b         -2e8 (compress)  table      rectangular
+
+ta_bcc_lin_fmm    2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0b         -2e8 (compress)  FMM (2x5)  cubic
+ta_bcc_lin_tbl_1  2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0b         -2e8 (compress)  table      cubic
+ta_bcc_lin_tbl_2  2 2 2  4 4 4  0.3    3-15    trapezoid   70.7e9 0.339 1   BCC_0b         -2e8 (compress)  table      rectangular
+
+Files to test the non-linear mobility law in ParaDiS:
+
+2 mobility laws : BCC_Ta and BCC_Ta_pencil
+
+3 remotes forces calculations : table with cubic box, table with rectangular box, and FMM.
+
+Different in tension and compression.
+
+taneg : compression with FMM tables and planar non-linear mob. law (BCC_Ta)
+tapos : tension with FMM tables  and planar non-linear mob. law (BCC_Ta)
+
+tanegTable : compression with Rij cubic tables and planar non-linear mob. law (BCC_Ta)
+taposTable : tension with Rij cubic tables  and planar non-linear mob. law (BCC_Ta)
+
+tanegTable2 : compression with Rij rectangular tables and planar non-linear mob. law (BCC_Ta)
+taposTable2 : tension with FMM Rij rectangular and planar non-linear mob. law (BCC_Ta)
+
+taneg : compression with FMM tables and pencil non-linear mob. law (BCC_Ta_pencil)
+tapos : tension with FMM tables  and pencil non-linear mob. law (BCC_Ta_pencil)

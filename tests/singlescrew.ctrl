@@ -1,0 +1,99 @@
+#
+dirname =   "tests/singlescrew_results"
+#
+numXdoms = 1 #   2  
+numYdoms = 1 #   2  
+numZdoms = 1 #   2  
+#
+numXcells =   3  
+numYcells =   3  
+numZcells =   3  
+#
+fmEnabled       = 0
+fmMPOrder       = 2
+fmTaylorOrder   = 5
+fmCorrectionTbl = "tests/fmm-Ta-twinning-antiTW.table.txt"
+#
+maxstep = 10000 
+remeshRule =   2  
+maxSeg =  200.
+minSeg =   50. 
+#
+timestepIntegrator =   "trapezoid"  
+#
+enforceGlidePlanes = 0
+enableCrossSlip = 0
+remeshRule = 2
+#
+rc =  2.0
+rann = 6.0
+
+
+mobilityLaw =   "BCC_Ta"
+mobilityLaw =   "Ta_PlanarScrewSet5bis"
+maxDT = 4.e-7
+#
+shearModulus =   1e9
+pois =   0.339
+burgMag =   2.853217687613880e-10
+#
+
+
+
+#
+savecn =   1  
+savecnfreq =   100  
+savecncounter =   0  
+saveprop =   1  
+savepropfreq =   100  
+
+loadType =   0
+
+appliedStress = [ 
+ -0 
+ 0 
+ 0 
+ 0 
+ -0 
+ -0
+] 
+
+
+appliedStress = [ 
+ -9.42809e+08 
+ 4.71405e+08 
+ 4.71405e+08 
+ 4.71405e+08 
+ -2.35702e+08 
+ -2.35702e+08
+] 
+
+appliedStress = [ 
+ -1.88562e+09 
+ 9.42809e+08 
+ 9.42809e+08 
+ 9.42809e+08 
+ -4.71405e+08 
+ -4.71405e+08
+] 
+
+appliedStress = [ 
+ -4.71405e+09 
+ 2.35702e+09 
+ 2.35702e+09 
+ 2.35702e+09 
+ -1.17851e+09 
+ -1.17851e+09
+] 
+
+appliedStress = [ 
+ -9.42809e+09 
+ 4.71405e+09 
+ 4.71405e+09 
+ 4.71405e+09 
+ -2.35702e+09 
+ -2.35702e+09
+] 
+
+
+

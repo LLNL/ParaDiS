@@ -1,0 +1,203 @@
+#!/bin/ksh
+#
+#	Scan a ParaDiS nodal data file and report both
+#	the total node count and the number of nodes with
+#	each of 1 to 10 arms.
+#
+#	Usage:  countnodes [-old] <nodal_data_file>>
+#
+#           where:
+#
+#             -old      specifies that the file is an old-style
+#                       configuration parameter file containing
+#                       the nodal data itself rather than a
+#                       separate nodal data file
+#             filename  specifies the name of the nodal data file
+#                       to be scanned.  For segmented data files,
+#                       this can be either the base file name, or
+#                       the name of the first file segment. 
+#                       (i.e. both rs0001.data and rs0001.data.0
+#                       are valid)
+#
+
+function Usage
+{
+        echo " "
+        echo "  Usage:  $1 [-old] <nodal_data_file>>"
+        echo " "
+        echo "      where:"
+        echo " "
+        echo "         -old     specifies that the file is an old-style"
+        echo "                  configuration parameter file containing"
+        echo "                  the nodal data itself rather than a"
+        echo "                  separate nodal data file"
+        echo "         filename specifies the name of the nodal data file"
+        echo "                  to be scanned.  For segmented data files,"
+        echo "                  this can be either the base file name, or"
+        echo "                  the name of the first file segment. "
+        echo "                  (i.e. both rs0001.data and rs0001.data.0"
+        echo "                  are valid)"
+        echo " "
+
+        exit 1
+}
+
+
+##############################################################################
+#
+#       Main script
+#
+##############################################################################
+
+        progName=$0
+        oldStyle=0
+        gotFile=0
+
+#
+#       Check command line args
+#
+       while [ $# -gt 0 ]; do
+            case "$1" in
+                -old)
+                      oldStyle=1
+                      ;;
+                   *)
+                      if [ $gotFile -eq 1 ]; then
+                          Usage $progName
+                      fi
+                      fileName=$1
+                      gotFile=1
+                      ;;
+            esac
+            shift
+        done
+
+        if [ $gotFile -ne 1 ]; then
+            Usage $progName
+        fi
+
+#
+#       Provided file name may be either the base file name for
+#       the nodal data file, or the name of the first segment of
+#       a segmented file.  Need to check and set the base name
+#       for later.
+#
+        nameLen=${#fileName}
+        let baseNameLen=$nameLen-2
+        let suffixStart=$baseNameLen+1
+        baseName=`echo $fileName | cut -c1-$baseNameLen`
+        suffix=`echo $fileName | cut -c${suffixStart}-$nameLen`
+
+#
+#       If the file terminates in ".0" it is assumed to be a
+#       segmented file, so the base name is the provided name
+#       minus the suffix.
+#
+        if [[ "$suffix" != ".0" ]]; then
+              baseName=$fileName
+        fi
+
+        
+#
+#       First look for a file under just the base name.  If found,
+#       use that file, and set a flag that there are no other segments
+#       to be processed.  If no such file is found, try looking for
+#       the first segment of a file with that basename...
+#
+        seqNum=0
+        isSegmented=0
+        segFile=$baseName
+
+        if [ ! -f $segFile ] ; then
+            segFile="${baseName}.${seqNum}"
+            isSegmented=1
+        fi
+
+        if [ ! -f $segFile ]; then
+            echo " "
+            echo " Error: Unable to find file ${segFile}."
+            echo " "
+            exit 1
+        fi
+
+#
+#       Get a list of the one or more segments of which the
+#       specified nodal data file is comprised.
+#
+        while [ -f ${segFile} ] ; do
+            fileList="$fileList $segFile"
+            let seqNum=$seqNum+1
+            segFile="${baseName}.${seqNum}"
+            if [ $isSegmented -eq 0 ]; then break; fi
+        done
+
+#
+#       Execute an in-lined awk script to count the number
+#       of nodes contained within the specified data files
+#       and break the total down into counts of nodes with
+#       each of 1 to 10 attached segments
+#
+#       Old style configurations with nodal data included
+#       in the control parameter file are formatted differently
+#       than newer nodal data files... so we have to choose
+#       which awk script to use based on the style of nodal
+#       data.
+#
+
+        if [ $oldStyle -eq 0 ]; then
+            awk '							\
+                BEGIN {							\
+                	tot_nodes = 0;					\
+                	for (i = 1; i < 11; i++)  nodes[i] = 0;		\
+                }							\
+                							\
+                {							\
+                	if (substr($0, 0, 1) == "#") next;		\
+                	if (NF != 6) next;				\
+                	if (index($1, ",") == 0) next;			\
+                							\
+                	tot_nodes++;					\
+                	if ($5 > 10) {					\
+                		printf("Node has more than 10 arms\n")	\
+                	} else {					\
+                		nodes[$5]++				\
+                	}						\
+                }							\
+                END {							\
+                	printf("    Total  %d\n", tot_nodes);		\
+                	for (i = 1; i < 11; i++) {			\
+                		printf(" %2d-nodes  %d\n", i, nodes[i])	\
+                	}						\
+                }' $fileList
+        else
+            awk '							\
+                BEGIN {							\
+                        inHeaders = 1;					\
+                	tot_nodes = 0;					\
+                	for (i = 1; i < 11; i++)  nodes[i] = 0;		\
+                }							\
+                {							\
+                        while (inHeaders == 1) {			\
+                            if (index($0, "config =") != 0) {		\
+                                inHeaders = 0;				\
+                            }						\
+                            next;					\
+                        }						\
+                							\
+                	if (substr($0, 0, 1) == "#") next;		\
+                	if (NF != 9) next;				\
+                							\
+                	tot_nodes++;					\
+                	if ($6 > 10) {					\
+                		printf("Node has more than 10 arms\n")	\
+                	} else {					\
+                		nodes[$6]++				\
+                	}						\
+                }							\
+                END {							\
+                	printf("    Total  %d\n", tot_nodes);		\
+                	for (i = 1; i < 11; i++) {			\
+                		printf(" %2d-nodes  %d\n", i, nodes[i])	\
+                	}						\
+                }' $fileList
+        fi

@@ -1,0 +1,123 @@
+########################################
+###                                  ###
+###  ParaDiS control parameter file  ###
+###                                  ###
+########################################
+
+# Simulation cell and processor setup
+
+numXdoms   = 2
+numYdoms   = 2
+numZdoms   = 2
+
+numXcells  = 8
+numYcells  = 8
+numZcells  = 8
+
+xBoundType = 0
+yBoundType = 0
+zBoundType = 0
+
+decompType = 1
+DLBfreq    = 3
+
+dirname    = "bcc_0b.rslts"
+
+# Simulation time and timestepping controls
+
+maxstep            = 250000
+maxstep            = 1000
+timeNow            = 2.486991e-07
+timeStart          = 2.482490e-07
+timestepIntegrator = "trapezoid"
+deltaTT            = 4.500331e-10
+maxDT              = 1.000000e-06
+nextDT             = 4.500331e-10
+
+rTol               = 1.25
+rmax               = 65.0
+
+# Discretization and topological change controls
+
+maxSeg             = 200.0
+minSeg             = 50.0
+remeshRule         = 2
+splitMultiNodeFreq = 1
+collisionMethod    = 2
+
+# Fast Multipole Method controls
+
+fmEnabled          = 1
+fmMPOrder          = 2
+fmTaylorOrder      = 5
+fmCorrectionTbl    = "bcc_0b.fmm"
+
+# Tables for non-FMM far-field force calcs
+
+Rijmfile           = "../inputs/Rijm.cube.out"
+RijmPBCfile        = "../inputs/RijmPBC.cube.out"
+
+# Loading conditions
+
+loadType      = 1
+
+appliedStress = [
+   0.0
+   0.0
+   0.0
+   0.0
+   0.0
+   0.0
+  ]
+
+eRate     = 1000.0
+indxErate = 2
+
+edotdir   = [
+   0.0
+   0.0
+   1.0
+  ]
+
+useLabFrame = 0
+
+# Material and mobility parameters
+
+mobilityLaw      = "BCC_0b"
+materialTypeName = "BCC"
+shearModulus     = 8.600000e+10
+pois             = 2.910000e-01
+burgMag          = 2.480000e-10
+YoungModulus     = 2.220520e+11
+rc               = 5.000000e+00
+Ecore            = 2.677257e+10
+MobScrew         = 1.000000e+01
+MobEdge          = 1.000000e+02
+MobClimb         = 1.000000e-05
+
+includeInertia   = 0
+massDensity      = -1.000000e+00
+
+# I/O controls and parameters
+
+savecn                   = 1
+savecnfreq               = 50
+
+saveprop                 = 1
+savepropfreq             = 1000
+
+savetimers               = 0
+savetimersfreq           = 1000
+savetimersdt             = 0.0
+savetimerstime           = 0.0
+savetimerscounter        = 0
+
+#  Miscellaneous parameters
+
+enforceGlidePlanes       = 0
+enableCrossSlip          = 0
+TensionFactor            = 1.0
+elasticinteraction       = 1
+
+winDefaultsFile          = "../inputs/paradis.xdefaults"
+

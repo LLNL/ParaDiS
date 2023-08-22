@@ -1,0 +1,63 @@
+# 
+# ParaDiS X-windows specification file
+#
+
+enable_window = 1    # Toggle enabling/disabling simulation X-window.
+
+win_name = "ParaDiS" # Name associated with the X-window display
+
+win_width = 500      # The height of the simulation X-window display
+                     # when it is first created.
+
+win_height = 500     # The width of the simulation X-window display
+                     # when it is first created.
+
+scalepoints = 0      # Toggle whether or not the size of the node
+                     # will change as we zoom in or out
+
+point_radius = 2.0   # The radius of a point (e.g. node) in the X-window.
+
+maxpointradius = 8.0 # The maximum radius of a point (e.g. node)
+                     # in the X-window.
+
+line_width = 2.0     # The width of a dislocation line in the X-window.
+
+maxlinewidth = 4.0   # The maximum width of a dislocation line in the X-window.
+
+rotateangles = [ 0 -90 0 1.2 ] # The default angles of rotation of the
+                               # simulation box when displaying it in
+                               # the X-window.  (Hor, Ver, Spin, Scale)
+
+reversergb = 1       # The color on a computer is specified by three numbers
+                     # for the intensity of red, green and blue (RGB).
+                     # Different computers may have reverse order for red
+                     # and blue (i.e. RGB vs BGR). Setting reversergb = 1
+                     # means that we reverse the order of red and blue,
+                     # which may be necessary for some computers to display
+                     # the color correctly. If you find that the displayed
+                     # color is not what you specified, try toggle
+                     # reversergb between 0 and 1.
+
+sleepseconds = 3     # The duration time (in seconds) for the simulation
+                     # X-window display to remain active once all simulation
+                     # timesteps have completed. 
+
+color_scheme = 1     # 1 == color by domain
+                     # 2 == color by burgers vector
+
+bgcolor = grey30     # Background color for the X-window display
+
+color00 = red        # normal node color
+
+color01 = magenta    # cross link color (i.e. dislocations crossing domain
+                     # boundaries)
+color02 = turquoise  
+color03 = green
+color04 = SkyBlue2
+color05 = gold3
+color06 = chocolate
+color07 = yellow     # event highlight color
+color08 = azure4
+color09 = ivory3     # domain boundary color
+color10 = ivory3     # framecolor
+

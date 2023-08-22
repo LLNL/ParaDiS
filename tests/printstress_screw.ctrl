@@ -1,0 +1,61 @@
+#
+# Test of the print stress option. 
+# Stress is printed for a periodic 
+# of screw dislocations at given 
+# grid points defined in PrintStress.cc
+# Stress can be compared to the analytical 
+# stress in a Matlab test file.
+# S. Aubry September 26, 2016.
+#
+dirname = "tests/printstress_screw_results"
+#
+numXdoms = 1
+numYdoms = 1
+numZdoms = 1
+#
+numXcells = 4
+numYcells = 4
+numZcells = 4
+#
+DLBfreq = 0
+decompType = 2
+#
+remeshRule = 2
+maxSeg = 2.500000e+02
+#
+maxstep = 1
+timestepIntegrator = "trapezoid"
+maxDT = 1e-40
+#
+fmEnabled       = 1
+fmMPOrder       = 2
+fmTaylorOrder   = 5
+fmCorrectionTbl = "tests/printstress_screw.ffm"
+#
+loadType = 0
+eRate = 1.0e+03
+rc = 0.1
+#
+savecn = 1
+savecnfreq = 1
+savecncounter = 0
+gnuplot = 1
+gnuplotfreq = 100
+gnuplotcounter = 0
+povray = 1
+povrayfreq = 250
+povraycounter = 0
+saveprop = 1
+savepropfreq = 1
+#
+mobilityLaw =   "BCC_0"  
+MobScrew =   0.000000e+00  
+MobEdge =    1.0
+MobClimb =   0.0  
+#
+shearModulus =   1.300000e+11  
+pois =   3.09000e-01  
+burgMag =   2.875401e-10  
+##
+rc = 0.500000
+

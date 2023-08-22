@@ -1,0 +1,115 @@
+########################################
+###  ParaDiS control parameter file  ###
+########################################
+
+#------------------------------------------------------------------------------
+# This is a test file for driving an anisotropic test on tantalum.
+# Note that you need to compile ParaDiS with anisotropic forces
+# enabled and the Taylor FMM disabled...
+#
+# DEFS += -DANISOTROPIC    (enabled aniso forces)
+# DEFS += -DANISO_QMAX=10  (set qmax=10)
+# TAYLOR_FMM_MODE=OFF      (disabled)
+# DEFS += -DUNIFORMFMM     (use uniform FMM solution)
+#------------------------------------------------------------------------------
+
+# Simulation cell and processor setup
+
+numXdoms   = 4
+numYdoms   = 4
+numZdoms   = 2
+
+numXcells  = 8
+numYcells  = 8
+numZcells  = 8
+
+xBoundType = 0
+yBoundType = 0
+zBoundType = 0
+
+dirname    = "ta_aniso_neg.rslts"
+
+#  Load balance every cycle using a recursive-bisection decomposition
+
+decompType = 2
+DLBfreq    = 3
+
+#  Simulation time and timestepping controls
+
+maxstep            = 1000000
+timestepIntegrator = "trapezoid"
+rTol               = 0.3
+
+#  Discretization controls
+
+maxSeg      = 15.0
+minSeg      = 3.0
+remeshRule  = 2
+
+Rijmfile    = "../inputs/Rijm.cube.out"
+RijmPBCfile = "../inputs/RijmPBC.cube.out"
+
+#  Loading conditions
+
+loadType    =  1
+eRate       = -2.000000e+08
+indxErate   =  2
+edotdir     = [ 0.  0.  1 ]
+
+#  Material and mobility parameters
+
+materialTypeName            = "BCC"
+mobilityLaw                 = "BCC_0b"
+ 
+MobScrew                    = 2600.0
+MobEdge                     = 20.0
+MobClimb                    = 1.0e-2
+
+shearModulus                = 42.3e9
+pois                        = 0.339
+burgMag                     = 2.8500e-10
+rc                          = 1.000000e+00
+
+enforceGlidePlanes          = 1
+enableCrossSlip             = 1
+
+KMatFileName                = "ta_aniso.kmat"
+fmEnableAnisotropy          = 1
+C11                         = 258.85e9
+C12                         = 169.44e9
+C44                         = 93.27e9
+anisoHarmonicsNumTermsBase  = 10
+anisoNumThetaPoints         = 150
+anisoNumPhiPoints           = 150
+
+#  Fast Multipole Method controls
+
+fmEnabled                   = 1
+fmExpansionOrder            = 4
+fmCorrectionTbl             = "ta_aniso.fmm"
+
+#  I/O controls and parameters
+
+savecn                      = 1
+savecnfreq                  = 100
+saveprop                    = 1
+savepropfreq                = 100
+savetimers                  = 1
+savetimersfreq              = 100
+
+writeFlux                   = 1
+writeFluxFreq               = 100
+
+writeVisit                  = 1
+writeVisitFreq              = 1000
+writeVisitCounter           = 1
+writeVisitSegments          = 1
+writeVisitSegmentsAsText    = 0
+writeVisitNodes             = 1
+writeVisitNodesAsText       = 0
+writeVisitBurgID            = 1
+writeVisitForceVector       = 0
+writeVisitVelocityVector    = 0
+
+winDefaultsFile             = "../inputs/paradis.xdefaults"
+

@@ -1,0 +1,4 @@
+# LLDB test script used for parallel debugging
+# This script is run by every LLDB process launched by mpirun
+
+run -d bcc_0b.data bcc_0b.ctrl

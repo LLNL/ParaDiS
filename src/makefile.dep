@@ -1,0 +1,1066 @@
+# DO NOT DELETE
+
+$(OBJDIR)/ARKodeIntegrator.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ARKodeIntegrator.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ARKodeIntegrator.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ARKodeIntegrator.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ARKodeIntegrator.o: $(INCDIR)/Comm.h
+$(OBJDIR)/ARKodeIntegrator_RhsFi.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/ARKodeIntegrator_RhsFi.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/ARKodeIntegrator_RhsFi.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/ARKodeIntegrator_RhsFi.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/ARKodeIntegrator_RhsFi.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Comm.h $(INCDIR)/Timestep.h
+$(OBJDIR)/Abort.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Abort.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Abort.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Abort.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Abort.h
+$(OBJDIR)/AnisotropicInit.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/AnisotropicInit.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/AnisotropicInit.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/AnisotropicInit.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/AnisotropicVars_t.o: $(INCDIR)/Complex_t.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/AnisotropicVars_t.h
+$(OBJDIR)/Append_v.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Append_v.h
+$(OBJDIR)/Args.o: $(INCDIR)/Args.h
+$(OBJDIR)/BB_FMCorrectionTable.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/BB_FMCorrectionTable.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/BB_FMCorrectionTable.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/BB_FMCorrectionTable.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/BB_FMCorrectionTable.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/BB_FMFunctions.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/BB_FMFunctions.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/BB_FMFunctions.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/BB_FMFunctions.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/BB_FMInit.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/BB_FMInit.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/BB_FMInit.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/BB_FMInit.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/BCC_Util.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/BCC_Util.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/BCC_Util.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/BCC_Util.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Bitmap_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Bitmap_t.h
+$(OBJDIR)/BurgVec_Table.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/BurgVec_Table.h $(INCDIR)/Node.h $(INCDIR)/ParadisThread.h $(INCDIR)/Tag.h
+$(OBJDIR)/BurgVec_Table.o: $(INCDIR)/cuda_portability.h $(INCDIR)/Thread.h $(INCDIR)/Home.h $(INCDIR)/ParadisProto.h $(INCDIR)/FM.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/BurgVec_Table.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h
+$(OBJDIR)/BurgVec_Table.o: $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/BurgVec_Table.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CTableGen.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CTableGen.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CTableGen.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/CTableGen.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CalcJunctionLen.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CalcJunctionLen.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CalcJunctionLen.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CalcJunctionLen.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Cell.o: $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Cell.h $(INCDIR)/Node.h $(INCDIR)/mpi_portability.h $(INCDIR)/ParadisThread.h $(INCDIR)/Tag.h $(INCDIR)/cuda_portability.h
+$(OBJDIR)/Cell.o: $(INCDIR)/Thread.h $(INCDIR)/Home.h $(INCDIR)/ParadisProto.h $(INCDIR)/FM.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Cell.o: $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h
+$(OBJDIR)/Cell.o: $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CellCharge.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CellCharge.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CellCharge.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CellCharge.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CellTable.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CellTable.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CellTable.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/CellTable.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Collision.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Collision.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Collision.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Collision.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CommSendGhostPlanes.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CommSendGhostPlanes.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CommSendGhostPlanes.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CommSendGhostPlanes.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CommSendGhostPlanes.o: $(INCDIR)/Comm.h $(INCDIR)/QueueOps.h
+$(OBJDIR)/CommSendGhosts.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CommSendGhosts.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CommSendGhosts.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CommSendGhosts.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CommSendGhosts.o: $(INCDIR)/Comm.h $(INCDIR)/QueueOps.h
+$(OBJDIR)/CommSendMirrorNodes.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CommSendMirrorNodes.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CommSendMirrorNodes.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CommSendMirrorNodes.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CommSendMirrorNodes.o: $(INCDIR)/Comm.h $(INCDIR)/QueueOps.h
+$(OBJDIR)/CommSendRemesh.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CommSendRemesh.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CommSendRemesh.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CommSendRemesh.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CommSendRemesh.o: $(INCDIR)/Comm.h
+$(OBJDIR)/CommSendSecondaryGhosts.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/CommSendSecondaryGhosts.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/CommSendSecondaryGhosts.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/CommSendSecondaryGhosts.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/CommSendSecondaryGhosts.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/QueueOps.h $(INCDIR)/Comm.h
+$(OBJDIR)/CommSendSegments.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CommSendSegments.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CommSendSegments.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CommSendSegments.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CommSendSegments.o: $(INCDIR)/Comm.h
+$(OBJDIR)/CommSendVelocity.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CommSendVelocity.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CommSendVelocity.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CommSendVelocity.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CommSendVelocity.o: $(INCDIR)/Comm.h
+$(OBJDIR)/Complex_Vec_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Complex_t.h $(INCDIR)/cuda_portability.h $(INCDIR)/Complex_Vec_t.h
+$(OBJDIR)/ComputeForces.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ComputeForces.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ComputeForces.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ComputeForces.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ComputeForces.o: $(INCDIR)/CPU_Timer.h $(INCDIR)/V3.h $(INCDIR)/ComputeForces.h
+$(OBJDIR)/CrossSlip.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CrossSlip.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CrossSlip.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/CrossSlip.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/CrossSlip.h
+$(OBJDIR)/CrossSlipBCC.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CrossSlipBCC.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CrossSlipBCC.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CrossSlipBCC.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CrossSlipBCC.o: $(INCDIR)/CrossSlip.h
+$(OBJDIR)/CrossSlipBCCRandom.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CrossSlipBCCRandom.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CrossSlipBCCRandom.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CrossSlipBCCRandom.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CrossSlipBCCRandom.o: $(INCDIR)/CrossSlip.h
+$(OBJDIR)/CrossSlipFCC.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CrossSlipFCC.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CrossSlipFCC.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CrossSlipFCC.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CrossSlipFCC.o: $(INCDIR)/CrossSlip.h
+$(OBJDIR)/CrossSlipHCP.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/CrossSlipHCP.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/CrossSlipHCP.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/CrossSlipHCP.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/CrossSlipHCP.o: $(INCDIR)/CrossSlip.h
+$(OBJDIR)/CrossSlipRhombohedralVa.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/CrossSlipRhombohedralVa.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/CrossSlipRhombohedralVa.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/CrossSlipRhombohedralVa.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/CrossSlipRhombohedralVa.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/CrossSlip.h
+$(OBJDIR)/DLBfreeOld.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/DLBfreeOld.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/DLBfreeOld.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/DLBfreeOld.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DLBfreeOld.o: $(INCDIR)/Decomp.h
+$(OBJDIR)/DebugFunctions.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/DebugFunctions.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/DebugFunctions.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/DebugFunctions.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Decomp.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Decomp.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Decomp.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Decomp.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Restart.h
+$(OBJDIR)/Decomp.o: $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h $(INCDIR)/RSDecomp.h $(INCDIR)/RBDecomp.h
+$(OBJDIR)/DeltaPlasticStrain.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/DeltaPlasticStrain.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/DeltaPlasticStrain.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/DeltaPlasticStrain.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DeltaPlasticStrain_BCC.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/DeltaPlasticStrain_BCC.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/DeltaPlasticStrain_BCC.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/DeltaPlasticStrain_BCC.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/DeltaPlasticStrain_BCC.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DeltaPlasticStrain_BCC2.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/DeltaPlasticStrain_BCC2.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/DeltaPlasticStrain_BCC2.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/DeltaPlasticStrain_BCC2.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/DeltaPlasticStrain_BCC2.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DeltaPlasticStrain_FCC.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/DeltaPlasticStrain_FCC.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/DeltaPlasticStrain_FCC.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/DeltaPlasticStrain_FCC.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/DeltaPlasticStrain_FCC.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DeltaPlasticStrain_HCP.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/DeltaPlasticStrain_HCP.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/DeltaPlasticStrain_HCP.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/DeltaPlasticStrain_HCP.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/DeltaPlasticStrain_HCP.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DeltaPlasticStrain_rhomboVa.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/DeltaPlasticStrain_rhomboVa.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/DeltaPlasticStrain_rhomboVa.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/DeltaPlasticStrain_rhomboVa.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/DeltaPlasticStrain_rhomboVa.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DeltaTime.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/DeltaTime.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/DeltaTime.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/DeltaTime.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/DeltaTime.h
+$(OBJDIR)/DeltaTime.o: $(INCDIR)/UTC_Time.h
+$(OBJDIR)/Directory.o: $(INCDIR)/Directory.h
+$(OBJDIR)/DisableUnneededParams.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/DisableUnneededParams.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/DisableUnneededParams.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/DisableUnneededParams.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/DisableUnneededParams.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DislocationNetwork.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/DislocationNetwork.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/DislocationNetwork.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/DislocationNetwork.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/DislocationNetwork.o: $(INCDIR)/DislocationNetwork.h
+$(OBJDIR)/DisplayC.o: $(INCDIR)/display.h $(INCDIR)/mpi_portability.h $(INCDIR)/DisplayC.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h
+$(OBJDIR)/DisplayC.o: $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Cell.h
+$(OBJDIR)/DisplayC.o: $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/DisplayC.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Mobility.h
+$(OBJDIR)/DisplayC.o: $(INCDIR)/MatType_t.h
+$(OBJDIR)/Domain_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h
+$(OBJDIR)/ElasticConstants.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ElasticConstants.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ElasticConstants.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ElasticConstants.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Ellipsoid.o: $(INCDIR)/Ellipsoid.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Vertex.h $(INCDIR)/Triangle.h $(INCDIR)/V3.h $(INCDIR)/M33.h $(INCDIR)/M44.h $(INCDIR)/DisplayC.h
+$(OBJDIR)/EshelbyBuildMatrix.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/EshelbyBuildMatrix.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/EshelbyBuildMatrix.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/EshelbyBuildMatrix.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/EshelbyDerofR.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/EshelbyDerofR.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/EshelbyDerofR.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/EshelbyDerofR.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/EshelbyEvalTaylor.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/EshelbyEvalTaylor.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/EshelbyEvalTaylor.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/EshelbyEvalTaylor.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/EshelbyForce.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/EshelbyForce.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/EshelbyForce.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/EshelbyForce.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/V3.h
+$(OBJDIR)/EshelbyMakeEta.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/EshelbyMakeEta.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/EshelbyMakeEta.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/EshelbyMakeEta.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/EshelbyMakeTaylor.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/EshelbyMakeTaylor.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/EshelbyMakeTaylor.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/EshelbyMakeTaylor.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/EshelbyTranslateEta.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/EshelbyTranslateEta.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/EshelbyTranslateEta.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/EshelbyTranslateEta.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/EshelbyTranslateTaylor.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/EshelbyTranslateTaylor.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/EshelbyTranslateTaylor.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/EshelbyTranslateTaylor.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/EshelbyTranslateTaylor.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FCC_Util.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FCC_Util.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FCC_Util.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/FCC_Util.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FFT.o: $(INCDIR)/FFT.h
+$(OBJDIR)/FMAnisotropicInit.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FMAnisotropicInit.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FMAnisotropicInit.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/FMAnisotropicInit.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FMComm.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FMComm.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FMComm.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/FMComm.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FMSigma2.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FMSigma2.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FMSigma2.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/FMSigma2.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FMSigma2NonRational.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FMSigma2NonRational.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FMSigma2NonRational.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/FMSigma2NonRational.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FMSigma2Rational.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FMSigma2Rational.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FMSigma2Rational.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/FMSigma2Rational.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FMStanfordSupport.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FMStanfordSupport.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FMStanfordSupport.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/FMStanfordSupport.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FMSupport.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FMSupport.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FMSupport.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/FMSupport.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FMWrapperFuncs.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FMWrapperFuncs.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FMWrapperFuncs.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/FMWrapperFuncs.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/File.o: $(INCDIR)/File.h
+$(OBJDIR)/FindPreciseGlidePlane.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FindPreciseGlidePlane.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/FindPreciseGlidePlane.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/FindPreciseGlidePlane.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/FindPreciseGlidePlane.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FixRemesh.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FixRemesh.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FixRemesh.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/FixRemesh.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FixedPt_Fcn.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FixedPt_Fcn.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FixedPt_Fcn.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/FixedPt_Fcn.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FixedPt_Fcn.o: $(INCDIR)/Comm.h $(INCDIR)/Timestep.h
+$(OBJDIR)/ForwardEulerIntegrator.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/ForwardEulerIntegrator.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/ForwardEulerIntegrator.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/ForwardEulerIntegrator.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/ForwardEulerIntegrator.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Comm.h
+$(OBJDIR)/FreeInitArrays.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/FreeInitArrays.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/FreeInitArrays.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/FreeInitArrays.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/FreeInitArrays.o: $(INCDIR)/Decomp.h
+$(OBJDIR)/G2sigma_tilde.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/G2sigma_tilde.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/G2sigma_tilde.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/G2sigma_tilde.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/GPU_Error.o: $(INCDIR)/cuda_portability.h $(INCDIR)/GPU_Error.h
+$(OBJDIR)/GPU_Node.o: $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/GPU_Node.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/GPU_Node.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/GPU_Node.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/GPU_Node.h $(INCDIR)/V3.h
+$(OBJDIR)/GPU_Segment.o: $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/GPU_Segment.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/GPU_Segment.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/GPU_Segment.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/GPU_Segment.o: $(INCDIR)/GPU_Node.h $(INCDIR)/GPU_Segment.h $(INCDIR)/V3.h
+$(OBJDIR)/GPU_Timer.o: $(INCDIR)/cuda_portability.h $(INCDIR)/GPU_Timer.h
+$(OBJDIR)/GenerateOutput.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/GenerateOutput.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/GenerateOutput.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/GenerateOutput.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/GenerateOutput.o: $(INCDIR)/Comm.h $(INCDIR)/WriteProp.h $(INCDIR)/DisplayC.h $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h $(INCDIR)/UTC_Time.h $(INCDIR)/DeltaTime.h
+$(OBJDIR)/GenerateOutput.o: $(INCDIR)/Narms_Diag.h $(INCDIR)/Malloc.h $(INCDIR)/omp_portability.h
+$(OBJDIR)/GetBurgList.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/GetBurgList.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/GetBurgList.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/GetBurgList.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/GetDensityDelta.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/GetDensityDelta.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/GetDensityDelta.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/GetDensityDelta.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/GetNewGhostNode.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/GetNewGhostNode.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/GetNewGhostNode.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/GetNewGhostNode.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/GetNewGhostNode.o: $(INCDIR)/QueueOps.h
+$(OBJDIR)/GetNewNativeNode.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/GetNewNativeNode.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/GetNewNativeNode.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/GetNewNativeNode.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/GetNewNativeNode.o: $(INCDIR)/QueueOps.h
+$(OBJDIR)/Gnuplot.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Gnuplot.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Gnuplot.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Gnuplot.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/HCP_CA_Split.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/HCP_CA_Split.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/HCP_CA_Split.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/HCP_CA_Split.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/HCP_Util.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/HCP_Util.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/HCP_Util.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/HCP_Util.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Heap.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h
+$(OBJDIR)/Heap.o: $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h
+$(OBJDIR)/Heap.o: $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h
+$(OBJDIR)/Heap.o: $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/InclusionStepForce.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/InclusionStepForce.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/InclusionStepForce.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/InclusionStepForce.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/InclusionStepForce.o: $(INCDIR)/V3.h $(INCDIR)/M33.h
+$(OBJDIR)/InitCellDomains.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/InitCellDomains.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/InitCellDomains.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/InitCellDomains.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/InitCellDomains.o: $(INCDIR)/Decomp.h
+$(OBJDIR)/InitCellNatives.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/InitCellNatives.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/InitCellNatives.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/InitCellNatives.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/InitCellNeighbors.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/InitCellNeighbors.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/InitCellNeighbors.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/InitCellNeighbors.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/InitHome.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Init.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/InitHome.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/InitHome.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/InitHome.o: $(INCDIR)/Util.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/InData.h
+$(OBJDIR)/InitRemoteDomains.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/InitRemoteDomains.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/InitRemoteDomains.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/InitRemoteDomains.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/InitSendDomains.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Init.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/InitSendDomains.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/InitSendDomains.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/InitSendDomains.o: $(INCDIR)/Util.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/InData.h
+$(OBJDIR)/InitSendDomains.o: $(INCDIR)/Comm.h $(INCDIR)/QueueOps.h
+$(OBJDIR)/Initialize.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Home.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Initialize.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Initialize.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/Initialize.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Initialize.o: $(INCDIR)/DisplayC.h $(INCDIR)/Decomp.h $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h $(INCDIR)/Comm.h $(INCDIR)/Timestep.h $(INCDIR)/SSF_Driver.h $(INCDIR)/AnisotropicVars_t.h
+$(OBJDIR)/Initialize.o: $(INCDIR)/Complex_t.h $(INCDIR)/SSF_FV_t.h $(INCDIR)/V3.h $(INCDIR)/SSF_PV_t.h $(INCDIR)/SSF_Node_t.h
+$(OBJDIR)/InputSanity.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/InputSanity.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/InputSanity.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/InputSanity.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/V3.h
+$(OBJDIR)/LinearMobilityFunctions.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/LinearMobilityFunctions.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/LinearMobilityFunctions.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/LinearMobilityFunctions.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/LinearMobilityFunctions.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/LoadCurve.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/LoadCurve.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/LoadCurve.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/LoadCurve.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/LocalSegForces.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/LocalSegForces.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/LocalSegForces.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/LocalSegForces.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/LocalSegForces.o: $(INCDIR)/Comm.h $(INCDIR)/ComputeForces.h $(INCDIR)/V3.h $(INCDIR)/SegmentPairList.h $(INCDIR)/NativeSeg.h $(INCDIR)/Moment.h $(INCDIR)/SSF_Driver.h
+$(OBJDIR)/LocalSegForces.o: $(INCDIR)/AnisotropicVars_t.h $(INCDIR)/Complex_t.h $(INCDIR)/SSF_FV_t.h $(INCDIR)/SSF_PV_t.h $(INCDIR)/SSF_Node_t.h
+$(OBJDIR)/M22.o: $(INCDIR)/M22.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h
+$(OBJDIR)/M33.o: $(INCDIR)/V3.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/M33.h
+$(OBJDIR)/M44.o: $(INCDIR)/V3.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/M44.h
+$(OBJDIR)/MPI_Cell_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h $(INCDIR)/MPI_Cell_t.h $(INCDIR)/cuda_portability.h
+$(OBJDIR)/MPI_Cell_t.o: $(INCDIR)/Node.h $(INCDIR)/ParadisThread.h $(INCDIR)/Tag.h $(INCDIR)/Thread.h $(INCDIR)/Home.h $(INCDIR)/ParadisProto.h $(INCDIR)/FM.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h
+$(OBJDIR)/MPI_Cell_t.o: $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MPI_Cell_t.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h
+$(OBJDIR)/MPI_Cell_t.o: $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MPI_Comms_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Home.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MPI_Comms_t.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MPI_Comms_t.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MPI_Comms_t.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MPI_Comms_t.o: $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h $(INCDIR)/MPI_Cell_t.h $(INCDIR)/MPI_Comms_t.h
+$(OBJDIR)/MPI_Utils.o: $(INCDIR)/mpi_portability.h $(INCDIR)/MPI_Utils.h
+$(OBJDIR)/Malloc.o: $(INCDIR)/omp_portability.h $(INCDIR)/Malloc.h
+$(OBJDIR)/Matrix.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Matrix.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Matrix.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Matrix.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Matrix_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/FFT.h $(INCDIR)/Matrix_t.h $(INCDIR)/Vector_t.h
+$(OBJDIR)/MemCheck.o: $(INCDIR)/ParadisThread.h
+$(OBJDIR)/Meminfo.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Meminfo.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Meminfo.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Meminfo.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Memory_Buffer_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Memory_Buffer_t.h
+$(OBJDIR)/Migrate.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Migrate.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Migrate.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Migrate.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/QueueOps.h
+$(OBJDIR)/Migrate.o: $(INCDIR)/Decomp.h
+$(OBJDIR)/MirrorDomain.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MirrorDomain.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MirrorDomain.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MirrorDomain.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MirrorDomain.o: $(INCDIR)/Comm.h $(INCDIR)/QueueOps.h
+$(OBJDIR)/MobilityLaw_BCC_0.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_BCC_0.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MobilityLaw_BCC_0.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MobilityLaw_BCC_0.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_BCC_0_Eshelby.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_BCC_0_Eshelby.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_BCC_0_Eshelby.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_BCC_0_Eshelby.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_BCC_0_Eshelby.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/M33.h
+$(OBJDIR)/MobilityLaw_BCC_0b.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_BCC_0b.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MobilityLaw_BCC_0b.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MobilityLaw_BCC_0b.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_BCC_0b_Eshelby.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_BCC_0b_Eshelby.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_BCC_0b_Eshelby.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_BCC_0b_Eshelby.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_BCC_0b_Eshelby.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl_planar.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl_planar.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl_planar.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl_planar.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_BCC_Va_nl_planar.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_BCC_glide.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_BCC_glide.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/MobilityLaw_BCC_glide.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/MobilityLaw_BCC_glide.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/MobilityLaw_BCC_glide.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_BCC_linear.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_BCC_linear.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_BCC_linear.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_BCC_linear.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_BCC_linear.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_BCC_linear_Eshelby.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_BCC_linear_Eshelby.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_BCC_linear_Eshelby.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_BCC_linear_Eshelby.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_BCC_linear_Eshelby.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_BCC_nl.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_BCC_nl.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MobilityLaw_BCC_nl.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MobilityLaw_BCC_nl.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_FCC_0.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_FCC_0.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MobilityLaw_FCC_0.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MobilityLaw_FCC_0.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_FCC_0b.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_FCC_0b.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MobilityLaw_FCC_0b.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MobilityLaw_FCC_0b.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_FCC_0b_Eshelby.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_FCC_0b_Eshelby.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_FCC_0b_Eshelby.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_FCC_0b_Eshelby.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_FCC_0b_Eshelby.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_FCC_angle.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_FCC_angle.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/MobilityLaw_FCC_angle.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/MobilityLaw_FCC_angle.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/MobilityLaw_FCC_angle.o: $(INCDIR)/SegmentPair.h $(INCDIR)/V3.h
+$(OBJDIR)/MobilityLaw_FCC_climb.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_FCC_climb.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/MobilityLaw_FCC_climb.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/MobilityLaw_FCC_climb.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/MobilityLaw_FCC_climb.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_FCC_linear.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_FCC_linear.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_FCC_linear.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_FCC_linear.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_FCC_linear.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_FCC_linear_Eshelby.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_FCC_linear_Eshelby.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_FCC_linear_Eshelby.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_FCC_linear_Eshelby.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_FCC_linear_Eshelby.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/M33.h
+$(OBJDIR)/MobilityLaw_HCP_linear.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_HCP_linear.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_HCP_linear.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_HCP_linear.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_HCP_linear.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_Relax.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_Relax.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MobilityLaw_Relax.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MobilityLaw_Relax.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_Relax_glide.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/MobilityLaw_Relax_glide.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/MobilityLaw_Relax_glide.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/MobilityLaw_Relax_glide.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/MobilityLaw_Relax_glide.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_Ta.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_Ta.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/MobilityLaw_Ta.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/MobilityLaw_Ta.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_Ta_linear.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_Ta_linear.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/MobilityLaw_Ta_linear.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/MobilityLaw_Ta_linear.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/MobilityLaw_Ta_linear.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/MobilityLaw_Ta_pencil.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/MobilityLaw_Ta_pencil.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/MobilityLaw_Ta_pencil.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/MobilityLaw_Ta_pencil.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/MobilityLaw_Ta_pencil.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Mobility_BCC_Fe_nl.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Mobility_BCC_Fe_nl.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Mobility_BCC_Fe_nl.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/Mobility_BCC_Fe_nl.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Mobility_BCC_Fe_nl_a.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Mobility_BCC_Fe_nl_a.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/Mobility_BCC_Fe_nl_a.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/Mobility_BCC_Fe_nl_a.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/Mobility_BCC_Fe_nl_a.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Mobility_BCC_Ta_nl.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Mobility_BCC_Ta_nl.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Mobility_BCC_Ta_nl.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/Mobility_BCC_Ta_nl.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b_planar.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b_planar.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b_planar.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b_planar.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/Mobility_BCC_Ta_nl_b_planar.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Mobility_BCC_faceted.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Mobility_BCC_faceted.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/Mobility_BCC_faceted.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/Mobility_BCC_faceted.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/Mobility_BCC_faceted.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Mobility_Rhombohedral_Va_nl_planar.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/Mobility_Rhombohedral_Va_nl_planar.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/Mobility_Rhombohedral_Va_nl_planar.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/Mobility_Rhombohedral_Va_nl_planar.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/Mobility_Rhombohedral_Va_nl_planar.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Moment.o: $(INCDIR)/Moment.h
+$(OBJDIR)/Narms_Diag.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Narms_Diag.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Narms_Diag.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/Narms_Diag.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Narms_Diag.o: $(INCDIR)/MPI_Utils.h $(INCDIR)/Narms_Diag.h
+$(OBJDIR)/Newton_Fcn.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Newton_Fcn.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Newton_Fcn.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/Newton_Fcn.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Comm.h
+$(OBJDIR)/Node.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Home.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h
+$(OBJDIR)/Node.o: $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h
+$(OBJDIR)/Node.o: $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h
+$(OBJDIR)/Node.o: $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/CPU_Timer.h
+$(OBJDIR)/NodeBlock.o: $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Tag.h $(INCDIR)/cuda_portability.h $(INCDIR)/Node.h $(INCDIR)/mpi_portability.h $(INCDIR)/ParadisThread.h $(INCDIR)/Thread.h
+$(OBJDIR)/NodeBlock.o: $(INCDIR)/Home.h $(INCDIR)/ParadisProto.h $(INCDIR)/FM.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h
+$(OBJDIR)/NodeBlock.o: $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/NodeBlock.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/NodeForce.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/NodeForce.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/NodeForce.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/NodeForce.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/V3.h
+$(OBJDIR)/NodeTaskGroup.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/NodeTaskGroup.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/NodeTaskGroup.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/NodeTaskGroup.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/NodeVelocity.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/NodeVelocity.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/NodeVelocity.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/NodeVelocity.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/OsmoticForce.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/OsmoticForce.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/OsmoticForce.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/OsmoticForce.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/PBC.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Home.h $(INCDIR)/ParadisThread.h
+$(OBJDIR)/PBC.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h
+$(OBJDIR)/PBC.o: $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h
+$(OBJDIR)/PBC.o: $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ParaDiS.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ParaDiS.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ParaDiS.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/ParaDiS.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ParaDiS_Net.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ParaDiS_Net.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ParaDiS_Net.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ParaDiS_Net.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ParaDiS_Net.o: $(INCDIR)/DislocationNetwork.h
+$(OBJDIR)/ParadisFinish.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ParadisFinish.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ParadisFinish.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ParadisFinish.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ParadisFinish.o: $(INCDIR)/DisplayC.h $(INCDIR)/Decomp.h $(INCDIR)/Timestep.h $(INCDIR)/SharedMem.h
+$(OBJDIR)/ParadisInit.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ParadisInit.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ParadisInit.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ParadisInit.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ParadisInit.o: $(INCDIR)/MPI_Utils.h $(INCDIR)/SharedMem.h
+$(OBJDIR)/ParadisSUNDIALS.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ParadisSUNDIALS.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ParadisSUNDIALS.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ParadisSUNDIALS.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ParadisStep.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ParadisStep.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ParadisStep.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ParadisStep.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ParadisStep.o: $(INCDIR)/DisplayC.h $(INCDIR)/Comm.h $(INCDIR)/Decomp.h $(INCDIR)/QueueOps.h $(INCDIR)/SMN.h $(INCDIR)/CrossSlip.h $(INCDIR)/Remesh.h $(INCDIR)/Timestep.h
+$(OBJDIR)/ParadisThread.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ParadisThread.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ParadisThread.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ParadisThread.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Param.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Param.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Param.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Param.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Parse.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Parse.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Parse.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Parse.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/PickScrewGlidePlane.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/PickScrewGlidePlane.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/PickScrewGlidePlane.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/PickScrewGlidePlane.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Plot.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Init.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/Plot.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/Plot.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/Plot.o: $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/InData.h $(INCDIR)/DisplayC.h $(INCDIR)/Decomp.h
+$(OBJDIR)/Plot.o: $(INCDIR)/V3.h $(INCDIR)/M33.h $(INCDIR)/M44.h $(INCDIR)/Vertex.h $(INCDIR)/Triangle.h $(INCDIR)/Ellipsoid.h
+$(OBJDIR)/PredictiveCollision.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/PredictiveCollision.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/PredictiveCollision.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/PredictiveCollision.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/PredictiveCollision.o: $(INCDIR)/Comm.h
+$(OBJDIR)/ProximityCollision.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ProximityCollision.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ProximityCollision.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ProximityCollision.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ProximityCollision.o: $(INCDIR)/Comm.h
+$(OBJDIR)/Quaternion_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Quaternion_t.h $(INCDIR)/V3.h
+$(OBJDIR)/QueueOps.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/QueueOps.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/QueueOps.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/QueueOps.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/QueueOps.h
+$(OBJDIR)/RBDecomp.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RBDecomp.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/RBDecomp.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/RBDecomp.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Decomp.h
+$(OBJDIR)/RBDecomp.o: $(INCDIR)/RBDecomp.h $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h $(INCDIR)/DisplayC.h
+$(OBJDIR)/RSDecomp.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RSDecomp.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/RSDecomp.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/RSDecomp.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Decomp.h
+$(OBJDIR)/RSDecomp.o: $(INCDIR)/RSDecomp.h $(INCDIR)/DisplayC.h $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h
+$(OBJDIR)/ReadBinaryRestart.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ReadBinaryRestart.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ReadBinaryRestart.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ReadBinaryRestart.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ReadBinaryRestart.o: $(INCDIR)/Decomp.h $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h
+$(OBJDIR)/ReadEshelbyInclusions.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ReadEshelbyInclusions.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/ReadEshelbyInclusions.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/ReadEshelbyInclusions.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/ReadEshelbyInclusions.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ReadRestart.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ReadRestart.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ReadRestart.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ReadRestart.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ReadRestart.o: $(INCDIR)/Decomp.h $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h
+$(OBJDIR)/RemapInitialTags.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RemapInitialTags.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/RemapInitialTags.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/RemapInitialTags.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/RemapInitialTags.o: $(INCDIR)/Comm.h
+$(OBJDIR)/Remesh.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Remesh.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Remesh.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Remesh.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Comm.h $(INCDIR)/Remesh.h
+$(OBJDIR)/RemeshRule_2.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RemeshRule_2.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/RemeshRule_2.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/RemeshRule_2.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/RemeshRule_2.o: $(INCDIR)/QueueOps.h $(INCDIR)/Remesh.h
+$(OBJDIR)/RemeshRule_3.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RemeshRule_3.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/RemeshRule_3.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/RemeshRule_3.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/RemeshRule_3.o: $(INCDIR)/QueueOps.h $(INCDIR)/Remesh.h
+$(OBJDIR)/RemoteOps.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RemoteOps.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/RemoteOps.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/RemoteOps.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/RemoteSegForces.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RemoteSegForces.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/RemoteSegForces.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/RemoteSegForces.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/RemoveNode.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RemoveNode.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/RemoveNode.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/RemoveNode.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ResetGlidePlanes.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ResetGlidePlanes.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ResetGlidePlanes.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ResetGlidePlanes.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/ResetGlidePlanes.o: $(INCDIR)/Comm.h
+$(OBJDIR)/ResetTaskGeometry.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/ResetTaskGeometry.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/ResetTaskGeometry.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/ResetTaskGeometry.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Restart.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/PBC.h $(INCDIR)/cuda_portability.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Home.h
+$(OBJDIR)/Restart.o: $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h
+$(OBJDIR)/Restart.o: $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h
+$(OBJDIR)/Restart.o: $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/SegmentPair.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h
+$(OBJDIR)/Restart.o: $(INCDIR)/Restart.h $(INCDIR)/V3.h
+$(OBJDIR)/RetroactiveCollision.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/RetroactiveCollision.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/RetroactiveCollision.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/RetroactiveCollision.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/RetroactiveCollision.o: $(INCDIR)/SegmentPair.h $(INCDIR)/Comm.h $(INCDIR)/V3.h $(INCDIR)/M33.h
+$(OBJDIR)/SMNComm.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SMNComm.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SMNComm.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/SMNComm.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/SMN.h
+$(OBJDIR)/SMNEvalMultiNodeSplits.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/SMNEvalMultiNodeSplits.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/SMNEvalMultiNodeSplits.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/SMNEvalMultiNodeSplits.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/SMNEvalMultiNodeSplits.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/SMN.h
+$(OBJDIR)/SMNEvalSplitForces.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SMNEvalSplitForces.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SMNEvalSplitForces.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SMNEvalSplitForces.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SMNEvalSplitForces.o: $(INCDIR)/SMN.h
+$(OBJDIR)/SMNPartialForce.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SMNPartialForce.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SMNPartialForce.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SMNPartialForce.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SMNPartialForce.o: $(INCDIR)/SMN.h
+$(OBJDIR)/SMNSupport.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SMNSupport.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SMNSupport.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SMNSupport.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/SMN.h
+$(OBJDIR)/SMNSupport.o: $(INCDIR)/QueueOps.h
+$(OBJDIR)/SSF_Aniso.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Home.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SSF_Aniso.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SSF_Aniso.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/SSF_Aniso.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Complex_t.h
+$(OBJDIR)/SSF_Aniso.o: $(INCDIR)/V3.h $(INCDIR)/Anisotropic.h $(INCDIR)/AnisotropicVars_t.h $(INCDIR)/SSF_Aniso.h $(INCDIR)/SSF_FV_t.h $(INCDIR)/SSF_PV_t.h
+$(OBJDIR)/SSF_Aniso_NonParallel.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Complex_t.h $(INCDIR)/V3.h $(INCDIR)/Anisotropic.h
+$(OBJDIR)/SSF_Aniso_NonParallel.o: $(INCDIR)/SSF_Aniso.h $(INCDIR)/SSF_FV_t.h $(INCDIR)/SSF_PV_t.h
+$(OBJDIR)/SSF_Aniso_Parallel.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Complex_t.h $(INCDIR)/V3.h $(INCDIR)/SSF_Aniso.h
+$(OBJDIR)/SSF_Aniso_Parallel.o: $(INCDIR)/SSF_FV_t.h $(INCDIR)/SSF_PV_t.h
+$(OBJDIR)/SSF_Driver.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/omp_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Complex_t.h $(INCDIR)/V3.h
+$(OBJDIR)/SSF_Driver.o: $(INCDIR)/PBC.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Home.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h
+$(OBJDIR)/SSF_Driver.o: $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h
+$(OBJDIR)/SSF_Driver.o: $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h
+$(OBJDIR)/SSF_Driver.o: $(INCDIR)/SegmentPair.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Anisotropic.h $(INCDIR)/SSF_PV_t.h $(INCDIR)/SSF_FV_t.h $(INCDIR)/SSF_Iso.h $(INCDIR)/SSF_Aniso.h
+$(OBJDIR)/SSF_Driver.o: $(INCDIR)/SSF_Driver.h $(INCDIR)/AnisotropicVars_t.h $(INCDIR)/SSF_Node_t.h
+$(OBJDIR)/SSF_Iso.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/PBC.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Home.h
+$(OBJDIR)/SSF_Iso.o: $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h
+$(OBJDIR)/SSF_Iso.o: $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h
+$(OBJDIR)/SSF_Iso.o: $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/SegmentPair.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/V3.h $(INCDIR)/SSF_Iso.h
+$(OBJDIR)/SSF_Iso.o: $(INCDIR)/SSF_FV_t.h $(INCDIR)/SSF_PV_t.h $(INCDIR)/SSF_Iso_Rational.h
+$(OBJDIR)/SSF_Iso_Rational.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/V3.h $(INCDIR)/SSF_Iso_Rational.h
+$(OBJDIR)/SSF_Node_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/SSF_Node_t.h $(INCDIR)/Node.h $(INCDIR)/ParadisThread.h
+$(OBJDIR)/SSF_Node_t.o: $(INCDIR)/Tag.h $(INCDIR)/Thread.h $(INCDIR)/Home.h $(INCDIR)/ParadisProto.h $(INCDIR)/FM.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/SSF_Node_t.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/SSF_Node_t.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SegSegForce.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Home.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SegSegForce.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SegSegForce.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SegSegForce.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/V3.h
+$(OBJDIR)/SegSegForce.o: $(INCDIR)/SSF_Iso.h $(INCDIR)/SSF_FV_t.h $(INCDIR)/SSF_PV_t.h $(INCDIR)/SSF_Aniso.h
+$(OBJDIR)/Segment.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/omp_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/CPU_Timer.h $(INCDIR)/Node.h
+$(OBJDIR)/Segment.o: $(INCDIR)/ParadisThread.h $(INCDIR)/Tag.h $(INCDIR)/Thread.h $(INCDIR)/Home.h $(INCDIR)/ParadisProto.h $(INCDIR)/FM.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/Segment.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h
+$(OBJDIR)/Segment.o: $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/Segment.o: $(INCDIR)/SegmentPair.h $(INCDIR)/V3.h
+$(OBJDIR)/SegmentPair.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/SegmentPair.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Node.h $(INCDIR)/ParadisThread.h
+$(OBJDIR)/SegmentPair.o: $(INCDIR)/Tag.h $(INCDIR)/Thread.h $(INCDIR)/Home.h $(INCDIR)/ParadisProto.h $(INCDIR)/FM.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/SegmentPair.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/SegmentPair.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/SegmentPairList.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SegmentPairList.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SegmentPairList.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SegmentPairList.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SegmentPairList.o: $(INCDIR)/SegmentPairList.h $(INCDIR)/V3.h
+$(OBJDIR)/SelfForceAnisotropic.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SelfForceAnisotropic.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/SelfForceAnisotropic.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/SelfForceAnisotropic.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/SelfForceAnisotropic.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SelfForceIsotropic.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SelfForceIsotropic.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SelfForceIsotropic.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SelfForceIsotropic.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SemiInfiniteSegSegForce.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/SemiInfiniteSegSegForce.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/SemiInfiniteSegSegForce.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/SemiInfiniteSegSegForce.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/SemiInfiniteSegSegForce.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicNonParallel.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicNonParallel.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicNonParallel.o: $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicNonParallel.o: $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicNonParallel.o: $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicParallel.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicParallel.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicParallel.o: $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicParallel.o: $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h
+$(OBJDIR)/SemiInfiniteSegSegForceAnisotropicParallel.o: $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SemiInfiniteSegSegForceNonRational.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/SemiInfiniteSegSegForceNonRational.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/SemiInfiniteSegSegForceNonRational.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/SemiInfiniteSegSegForceNonRational.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/SemiInfiniteSegSegForceNonRational.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SemiInfiniteSegSegForceRational.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/SemiInfiniteSegSegForceRational.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/SemiInfiniteSegSegForceRational.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/SemiInfiniteSegSegForceRational.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/SemiInfiniteSegSegForceRational.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SharedMem.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SharedMem.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SharedMem.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/SharedMem.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SortNativeNodes.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SortNativeNodes.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SortNativeNodes.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SortNativeNodes.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SortNodesForCollision.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SortNodesForCollision.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/SortNodesForCollision.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/SortNodesForCollision.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/SortNodesForCollision.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SplinterSegments.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SplinterSegments.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SplinterSegments.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SplinterSegments.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/SplitMultiNodesParallel.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/SplitMultiNodesParallel.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/SplitMultiNodesParallel.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/SplitMultiNodesParallel.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/SplitMultiNodesParallel.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/SMN.h
+$(OBJDIR)/SplitSurfaceNodes.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/SplitSurfaceNodes.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/SplitSurfaceNodes.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/SplitSurfaceNodes.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/StressDueToSeg.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/StressDueToSeg.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/StressDueToSeg.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/StressDueToSeg.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/StressDueToSegAnisotropic.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/StressDueToSegAnisotropic.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/StressDueToSegAnisotropic.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/StressDueToSegAnisotropic.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/StressDueToSegAnisotropic.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/StressDueToSemiInfSeg.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/StressDueToSemiInfSeg.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/StressDueToSemiInfSeg.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/StressDueToSemiInfSeg.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/StressDueToSemiInfSeg.o: $(INCDIR)/SegmentPair.h
+$(OBJDIR)/StressDueToSemiInfSegAnisotropic.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/StressDueToSemiInfSegAnisotropic.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/StressDueToSemiInfSegAnisotropic.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/StressDueToSemiInfSegAnisotropic.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/StressDueToSemiInfSegAnisotropic.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/StressDueToSemiInfSegIsotropic.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/StressDueToSemiInfSegIsotropic.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/StressDueToSemiInfSegIsotropic.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/StressDueToSemiInfSegIsotropic.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/StressDueToSemiInfSegIsotropic.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/String_t.o: $(INCDIR)/String_t.h
+$(OBJDIR)/TAYLOR_FMCorrectionTable.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/TAYLOR_FMCorrectionTable.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/TAYLOR_FMCorrectionTable.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/TAYLOR_FMCorrectionTable.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/TAYLOR_FMCorrectionTable.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/TAYLOR_FMFunctions.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/TAYLOR_FMFunctions.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/TAYLOR_FMFunctions.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/TAYLOR_FMFunctions.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Ta_Util.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Ta_Util.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Ta_Util.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Ta_Util.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Tag.o: $(INCDIR)/Tag.h $(INCDIR)/cuda_portability.h $(INCDIR)/TagMap.h
+$(OBJDIR)/TagMap.o: $(INCDIR)/TagMap.h $(INCDIR)/Tag.h $(INCDIR)/cuda_portability.h
+$(OBJDIR)/Tecplot.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Tecplot.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Tecplot.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Tecplot.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Thread.o: $(INCDIR)/Thread.h
+$(OBJDIR)/Timer.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Timer.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Timer.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Timer.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/Topology.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/Topology.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/Topology.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/Topology.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Comm.h $(INCDIR)/SMN.h
+$(OBJDIR)/TrapezoidIntegrator.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/TrapezoidIntegrator.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/TrapezoidIntegrator.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/TrapezoidIntegrator.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/TrapezoidIntegrator.o: $(INCDIR)/Comm.h $(INCDIR)/V3.h
+$(OBJDIR)/TrapezoidIntegratorKINSOL.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/TrapezoidIntegratorKINSOL.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/TrapezoidIntegratorKINSOL.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/TrapezoidIntegratorKINSOL.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/TrapezoidIntegratorKINSOL.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Timestep.h $(INCDIR)/DeltaTime.h
+$(OBJDIR)/Triangle.o: $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Triangle.h
+$(OBJDIR)/UNIFORM_FMCorrectionTable.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/UNIFORM_FMCorrectionTable.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/UNIFORM_FMCorrectionTable.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/UNIFORM_FMCorrectionTable.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/UNIFORM_FMCorrectionTable.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/UNIFORM_FMFunctions.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/UNIFORM_FMFunctions.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/UNIFORM_FMFunctions.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/UNIFORM_FMFunctions.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/UNIFORM_FMInit.o: $(INCDIR)/Home.h $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/UNIFORM_FMInit.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/UNIFORM_FMInit.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/UNIFORM_FMInit.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/UTC_Time.o: $(INCDIR)/UTC_Time.h
+$(OBJDIR)/Util.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h
+$(OBJDIR)/Util.o: $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h
+$(OBJDIR)/Util.o: $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h
+$(OBJDIR)/Util.o: $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/Abort.h $(INCDIR)/QueueOps.h
+$(OBJDIR)/V3.o: $(INCDIR)/V3.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/M33.h
+$(OBJDIR)/VacancyClimb.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/VacancyClimb.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/VacancyClimb.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/VacancyClimb.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/VacancyClimb.o: $(INCDIR)/dgesvd.h
+$(OBJDIR)/Vector_t.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Vector_t.h
+$(OBJDIR)/Vertex.o: $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/V3.h $(INCDIR)/M44.h $(INCDIR)/Vertex.h
+$(OBJDIR)/WriteArms.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteArms.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteArms.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/WriteArms.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteBinaryRestart.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteBinaryRestart.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteBinaryRestart.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteBinaryRestart.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteBinaryRestart.o: $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h
+$(OBJDIR)/WriteDensFlux.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteDensFlux.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteDensFlux.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteDensFlux.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteDensFluxDescription.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h
+$(OBJDIR)/WriteDensFluxDescription.o: $(INCDIR)/ParadisProto.h $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h
+$(OBJDIR)/WriteDensFluxDescription.o: $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h
+$(OBJDIR)/WriteDensFluxDescription.o: $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h
+$(OBJDIR)/WriteDensFluxDescription.o: $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteDensityField.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteDensityField.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteDensityField.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteDensityField.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteDomains.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteDomains.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteDomains.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteDomains.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteDomains.o: $(INCDIR)/Decomp.h $(INCDIR)/RSDecomp.h $(INCDIR)/RBDecomp.h $(INCDIR)/WriteDomains.h
+$(OBJDIR)/WriteForce.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteForce.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteForce.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteForce.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteNodes.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Typedefs.h $(INCDIR)/Constants.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/ParadisThread.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteNodes.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteNodes.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteNodes.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteNodes.o: $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h $(INCDIR)/WriteNodes.h
+$(OBJDIR)/WritePoleFig.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WritePoleFig.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WritePoleFig.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WritePoleFig.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WritePovray.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WritePovray.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WritePovray.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WritePovray.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WritePovray.o: $(INCDIR)/Decomp.h
+$(OBJDIR)/WriteProp.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteProp.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteProp.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h $(INCDIR)/Init.h
+$(OBJDIR)/WriteProp.o: $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h $(INCDIR)/WriteProp.h
+$(OBJDIR)/WritePropDescription.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WritePropDescription.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h
+$(OBJDIR)/WritePropDescription.o: $(INCDIR)/MatType_t.h $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h
+$(OBJDIR)/WritePropDescription.o: $(INCDIR)/Util.h $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h
+$(OBJDIR)/WritePropDescription.o: $(INCDIR)/SegmentPair.h $(INCDIR)/WriteProp.h
+$(OBJDIR)/WriteRestart.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteRestart.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteRestart.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteRestart.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteRestart.o: $(INCDIR)/Restart.h $(INCDIR)/Domain_t.h $(INCDIR)/Decomp.h
+$(OBJDIR)/WriteVelocity.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteVelocity.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteVelocity.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteVelocity.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteVisit.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteVisit.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteVisit.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteVisit.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/WriteVisit.o: $(INCDIR)/Decomp.h
+$(OBJDIR)/WriteVisitBurgID.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/WriteVisitBurgID.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/WriteVisitBurgID.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/WriteVisitBurgID.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/cuda_portability.o: $(INCDIR)/mpi_portability.h $(INCDIR)/cuda_portability.h $(INCDIR)/MPI_Utils.h
+$(OBJDIR)/deWitInteraction.o: $(INCDIR)/mpi_portability.h $(INCDIR)/Home.h $(INCDIR)/cuda_portability.h $(INCDIR)/Constants.h $(INCDIR)/ParadisThread.h $(INCDIR)/Typedefs.h $(INCDIR)/ParadisProto.h
+$(OBJDIR)/deWitInteraction.o: $(INCDIR)/Tag.h $(INCDIR)/FM.h $(INCDIR)/Node.h $(INCDIR)/Thread.h $(INCDIR)/NodeBlock.h $(INCDIR)/Param.h $(INCDIR)/Parse.h $(INCDIR)/Mobility.h $(INCDIR)/MatType_t.h
+$(OBJDIR)/deWitInteraction.o: $(INCDIR)/Cell.h $(INCDIR)/TagMap.h $(INCDIR)/RemoteDomain.h $(INCDIR)/MirrorDomain.h $(INCDIR)/Topology.h $(INCDIR)/OpList.h $(INCDIR)/Timer.h $(INCDIR)/Util.h
+$(OBJDIR)/deWitInteraction.o: $(INCDIR)/Init.h $(INCDIR)/InData.h $(INCDIR)/Matrix.h $(INCDIR)/DebugFunctions.h $(INCDIR)/Force.h $(INCDIR)/Segment.h $(INCDIR)/PBC.h $(INCDIR)/SegmentPair.h
+$(OBJDIR)/display.o: $(INCDIR)/display.h $(INCDIR)/mpi_portability.h

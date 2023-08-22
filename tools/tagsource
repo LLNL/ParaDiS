@@ -1,0 +1,218 @@
+#!/bin/ksh
+#
+#  Description:  This utility provides a simple mechanism
+#                for adding or removing tags from one or
+#                all source files in the ParaDiS repository.
+#
+#                WARNING! This utility MUST be executed from
+#                the top level ParaDiS source directory
+#
+#  Usage:   tagsource  [-d] [-l] [-r] [-f filename] tag
+#
+#  where:   -d     indicates the specified tag is to be
+#                  removed from one or more files
+#           -r     indicates the specified tag is to be
+#                  removed from one or more files and
+#                  added back to the newest version of
+#                  those files
+#           -l     lists tags currently in use.  If used,
+#                  all other options are ignored.
+#           -f <filename> allows user to specify the name of a
+#                  specific file to be associated/disassociated
+#                  with the specified tag.  The file name must"
+#                  be specified by it's path relative to the"
+#                  highest level ParaDiS source directory"
+#           <tag>  is of the form Vn-n-n"
+#  
+#
+#  Version nomenclature:
+#    
+#      Digit 1:  denotes major changes such as substantial
+#                structural changes
+#      Digit 2:  denotes modularized code changes such as
+#                new mobility functions, remesh routines, etc.
+#      Digit 3:  denotes minor code changes, bug fixes, etc.
+#
+#
+
+
+function Usage
+{
+    echo " "
+    echo "Usage:   $1   [-d] [-l] [-r] [-f filename] tag"
+    echo " "
+    echo "    where:   -d     indicates the specified tag is to be"
+    echo "                    removed from one or more files"
+    echo "             -r     indicates the specified tag is to be"
+    echo "                    removed from one or more files and"
+    echo "                    added back to the newest version of"
+    echo "                    those files"
+    echo "             -l     lists tags currently in use.  If used,"
+    echo "                    all other options are ignored."
+    echo "             -f <filename> allows user to specify the name of a"
+    echo "                    specific file to be associated/disassociated"
+    echo "                    with the specified tag.  The file name must"
+    echo "                    be specified by it's path relative to the"
+    echo "                    highest level ParaDiS source directory"
+    echo "             <tag>  is of the form Vn-n-n"
+    echo " "
+
+    exit
+}
+
+
+setTag=1
+deleteTag=0
+listTags=0
+tagSegs=0
+tag=""
+fileName=""
+typeset -u inTag=""    # force all letters in <inTag> to uppercase
+
+
+#
+#    Since the cvs commands used in the utility rely on
+#    relative path names for some stuff, force the user
+#    to execute this utility from a known location (i.e. the
+#    highest level directory in the source tree).  This
+#    makes life easier.
+#
+
+executable="$0"
+thisFile="`basename $0`"
+execDir=`dirname $0`
+
+#
+#    Check the command line options...
+#
+
+while [[ $# -ge 1 ]] ; do
+    case $1 in
+        -d)
+              deleteTag=1;
+              setTag=0
+              shift ;;
+        -l)
+              listTags=1
+              setTag=0
+              shift ;;
+        -r)
+              deleteTag=1
+              shift ;;
+        -f)
+              shift
+              if [[ $# -lt 1 ]] ; then
+                  Usage $thisFile
+              fi
+              fileName=$1
+              shift ;;
+        *)
+              inTag=$1
+              shift ;;
+    esac
+done
+
+
+#
+#    If the caller requested a list of tags, ignore the other
+#    options and list all CVS tags on this source file then exit
+#    Since we're tagging all files each time, the list of tags on this
+#    file is as good as that of any other file...
+#
+
+if [ $listTags -gt 0 ] ; then
+    cvs status -v $executable | egrep -v 'File:|Version|Sticky|Working|Repository|====='
+    exit
+fi
+
+
+#
+#    If no file name was provided, assume the current directory.
+#    If a relative path was provided, verify the file exists.
+#    If a full path was provided, print an error.
+#    
+
+if [ "$fileName" = "" ] ; then
+    fileName=.
+elif [[ "$fileName" != /* ]] ; then
+    if [ ! -f $fileName ] ; then
+        echo " "
+        echo "ERROR:  File $fileName does not exist"
+        echo " "
+        exit
+    fi
+else
+    echo " "
+    echo "ERROR:  When tagging a specific file, please specify"
+    echo "        file by it's path relative to the highest   "
+    echo "        level of directory of the ParaDiS source.   "
+    echo " "
+    exit
+fi
+
+
+#
+#    If no tag was specified, return an error
+#
+
+if [ "$inTag" = "" ] ; then
+    Usage $thisFile 
+fi
+
+
+#
+#    If the tag was not of the form Vn-n-n, return an error.
+#    Actually, allow any of '.' '_' or '-' as the separators
+#    and either upper or lower case 'v'.
+#
+
+if [[ $inTag != V* ]] ; then
+    echo "ERROR: Tag ($inTag) must be of form Vn-n-n"
+    exit
+fi
+
+tag=`echo $inTag | sed -e 's/\./-/g' | sed -e 's/_/-/g'`
+tagSegs=`echo $tag | awk -F- '{print NF}'`
+
+if [[ $tagSegs -ne 3 ]] ; then
+    echo "ERROR: Tag must be of form Vn-n-n"
+    exit
+fi
+
+
+
+#
+#    If the specified tag is to be removed, delete it from either
+#    the file specified by the caller, or all files in the current
+#    directory... which should be the upper level directory in
+#    the ParaDiS source.  Don't exit yet, though... this may be
+#    a retag request in which case we'll be putting the tag back
+#    on the newest version of the file(s)
+#
+
+if [ $deleteTag -gt 0 ] ; then
+    echo "Deleting tag $tag from file(s)"
+    cvs tag -d $tag $fileName
+fi
+
+
+#
+#    If the tag is being newly added (or replaced on a new version of
+#    the file(s)), go ahead and add the tag now.
+#
+
+if [ $setTag -gt 0 ] ; then
+    echo "Tagging file(s) with tag $tag"
+    cvs tag $tag $fileName
+
+    if [ $deleteTag -eq 0 ] ; then
+        echo "+++                                                     +++"
+        echo "+++  If you have not updated the <VersionHistory> file  +++"
+        echo "+++  with a brief description of the changes associated +++"
+        echo "+++  with this tag, please do so!                       +++"
+        echo "+++                                                     +++"
+        echo " "
+    fi
+fi
+
+exit

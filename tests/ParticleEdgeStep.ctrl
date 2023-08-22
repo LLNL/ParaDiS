@@ -1,0 +1,91 @@
+#
+dirname     = "tests/ParticleEdgeStep_results"
+inclusionFile = "tests/onepart.dat"
+#
+numXdoms   = 1
+numYdoms   = 1
+numZdoms   = 1
+#
+numXcells  = 3
+numYcells  = 3
+numZcells  = 3
+#
+eshelbyfmEnabled   =   0
+eshelbyfmMPOrder     = 3
+eshelbyfmTaylorOrder = 3
+#
+fmEnabled          = 0
+fmMPOrder          = 2
+fmTaylorOrder      = 5
+fmCorrectionTbl    = "tests/tungsten.fmm"
+#
+maxstep    = 1000
+maxDT = 1e-12
+#
+maxSeg     = 3
+minSeg     = 1
+rc         = 1.0
+rTol         = 0.1
+#
+remeshRule      = 2
+mobilityLaw      = "BCC_linear_Eshelby"
+MobEshelbyResist =   1.0
+IncStepEnergy = 1.0599e+10 # in units of Pa . b from 2.9 J/m^2
+#
+MobScrew = 1000
+MobEdge  = 2350
+MobClimb = 1e-3
+#
+shearModulus =   160e9
+pois =   0.28
+#shearModulus2 =   1
+#pois2 =   0.45
+burgMag =   2.73600e-10
+#
+loadType   = 0
+appliedStress = [ 
+   816496581.0
+          0.0
+  -816496581
+  -408248290
+          0.0
+  -408248290
+]
+
+enableCrossSlip = 0
+enforceGlidePlanes = 1
+#
+savecn       = 0  
+saveprop     = 0  
+#
+minBisection = 0
+maxBisection = 10
+
+#
+savecn =   1
+savecnfreq =   100
+savecncounter =   0
+saveprop =   1
+savepropfreq =   50
+#
+fluxfile =   1
+fluxfreq =   50
+
+#
+#  Visit output
+#
+writeVisit                =    0
+writeVisitFreq            =    1
+writeVisitCounter         =    1
+writeVisitSegments        =    1
+writeVisitNodes           =    1
+writeVisitSegmentsAsText  =    1
+writeVisitNodesAsText     =    1
+
+#timestepIntegrator =   "trapezoid-kinsol"
+KINSOL_UseNewton =   0
+KINSOL_MaxIterations =  5
+KINSOL_NumPriorResiduals =  4
+KINSOL_PrintLevel =   0
+KINSOL_LogFile =   ""
+KINSOL_EtaVal            = 0.2

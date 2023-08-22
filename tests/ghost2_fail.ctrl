@@ -1,0 +1,100 @@
+########################################
+###                                  ###
+###  ParaDiS control parameter file  ###
+###                                  ###
+########################################
+
+dirname =   "ghost2_fail.rslts"
+
+#
+#  Simulation cell and processor setup
+#
+numXdoms =   4
+numYdoms =   2
+numZdoms =   2
+numXcells =   8
+numYcells =   8
+numZcells =   8
+xBoundType =   0
+yBoundType =   0
+zBoundType =   0
+decompType =   2
+DLBfreq =   3
+#
+#  Simulation time and timestepping controls
+#
+maxstep =   10000
+timestepIntegrator =   "trapezoid"
+maxDT =   1.000000000000000e-07
+nextDT =   1.000000000000000e-10
+rTol =   1.250000000000000e+00
+#
+#  Discretization and topological change controls
+#
+maxSeg =   2.000000000000000e+02
+minSeg =   5.000000000000000e+01
+rann =   2.500000000000000e+00
+remeshRule =   2
+splitMultiNodeFreq =   1
+collisionMethod =   1
+#
+#  Fast Multipole Method controls
+#
+fmEnabled =   1
+fmMPOrder =   2
+fmTaylorOrder =   5
+fmCorrectionTbl =   "./ghost2_fail.fmm"
+fmEnableAnisotropy =   0
+eshelbyfmEnabled =   0
+#
+#  Tables for non-FMM far-field force calcs
+#
+#
+#  Loading conditions
+#
+loadType =   0
+appliedStress = [
+  0.000000000000000e+00
+  0.000000000000000e+00
+  0.000000000000000e+00
+  0.000000000000000e+00
+  0.000000000000000e+00
+  0.000000000000000e+00
+  ]
+eRate =   1.000000000000000e+00
+indxErate =   2
+edotdir = [0. 0. 1.]
+numLoadCycle =   0
+#
+#  Material and mobility parameters
+#
+mobilityLaw =   "BCC_0b"
+materialTypeName =   "BCC"
+shearModulus =   8.600000000000000e+10
+pois =   2.910000000000000e-01
+burgMag =   2.480000000000000e-10
+rc =   5.000000000000000e+00
+MobScrew =   1.000000000000000e+01
+MobEdge =   1.000000000000000e+01
+MobClimb =   1.000000000000000e+01
+#
+#  I/O controls and parameters
+#
+savecn =   1
+savecnfreq =  100
+saveprop =   1
+savepropfreq =   10
+savetimers =   1
+savetimersfreq =   1000
+
+#
+#  Miscellaneous parameters
+#
+enforceGlidePlanes =   0
+enableCrossSlip =   0
+crossSlipBCCIndex =   2
+TensionFactor =   1.000000000000000e+00
+elasticinteraction =   1
+
+useLabFrame = 1
+rotationMatrix = [1. 1. 0.  0.5 -0.5 0.70710678  0.5 -0.5 -0.70710678]

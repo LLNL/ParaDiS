@@ -1,0 +1,93 @@
+#!/bin/csh
+#
+#  Usage:  findnodes <restart_file_name> <number_arms>
+#
+#  Locate all nodes with the specified number of arms
+#  in the given restart file and print out the node
+#  ID, the location in the restart file, the burger's vectors
+#  for each of the node's arms, and the number of different
+#  burgers vectors for the node
+#
+#  Warning!  This script currently has no concept of multi-segment
+#            restart files.
+#
+
+if ($#argv != 2) then
+    echo Usage:
+    echo "  " $0 \<restart_file_name\> \<number_arms\>
+    echo " "
+    exit
+endif
+
+awk -v n=$2 '\
+#run as:\
+# awk -v n=4 -f findnode.awk rs0050\
+\
+BEGIN{\
+     print "\nAnalysing nodes...\n";\
+     char = n;\
+     numNbrs = n;\
+     succ = 0;\
+     for (i=0; i<=numNbrs*(numNbrs-1)/2; i++)\
+     {\
+             nt[i]=0;\
+     }\
+}        \
+\
+{\
+if ( NF == 6 && $5 == char )\
+{\
+        nodeID = $1;\
+        curline = NR;\
+        numNbrs = $5;\
+        succ = 1;\
+        #print $0;\
+}\
+\
+if ( NR > curline && NR <= curline+numNbrs*2 && succ )\
+{\
+   if ( NF == 4 )\
+   {\
+       i = (NR-curline+1)/2;\
+       nbridx[i]=$1 ; bx[i]=$2; by[i]=$3; bz[i]=$4;\
+   }\
+}\
+\
+if ( NR == curline+numNbrs*2 && succ )\
+{\
+   t = 0;\
+   for (p = 1; p<=numNbrs; p++)\
+   {\
+      for (q = p+1; q<=numNbrs; q++)\
+      {\
+         if( ((bx[p]+bx[q])==0)&&((by[p]+by[q])==0)&&((bz[p]+bz[q])==0) )\
+         {\
+                 t = t+1 ;\
+         }\
+      }\
+   }\
+\
+   nt[t] = nt[t] + 1;\
+   if (1) #print all nodes\
+   {\
+       print "node " nodeID "  numNbrs " numNbrs  "  line " NR ;\
+       for (i=1; i<=numNbrs; i++)\
+       {\
+             print "  nbr(" i ") = " nbridx[i] " " bx[i] " " by[i] " " bz[i];\
+       }\
+       print "  pairs of Burgers vectors = " t  ;\
+   }\
+}                \
+\
+}\
+\
+END{\
+     print "\nSummary:";\
+     for (i=0; i<=numNbrs*(numNbrs-1)/2; i++)\
+     {\
+             if (nt[i]!=0) print "  nt[" i "] = " nt[i] ;\
+     }\
+     print " ";\
+}\
+' $1
+

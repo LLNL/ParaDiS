@@ -1,0 +1,309 @@
+#------------------------------------------------------------------------------
+#    makefile.srcs:  Defines all the source modules [other than the source
+#                    containing main()] that are compiled and linked into
+#                    the ParaDiS executable.
+#
+#                    This is provided to simplify the process of substituting
+#                    a different main() function (as is done for the FEM
+#                    coupling for paradisfem) but still compile in all the
+#                    necessary support code.
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+#	Define the source/object modules for the application
+#------------------------------------------------------------------------------
+
+PARADIS_OBJS = \
+   $(OBJDIR)/ARKodeIntegrator.o                        \
+   $(OBJDIR)/ARKodeIntegrator_RhsFi.o                  \
+   $(OBJDIR)/Abort.o                                   \
+   $(OBJDIR)/AllSegmentStress.o                        \
+   $(OBJDIR)/AnisotropicInit.o                         \
+   $(OBJDIR)/AnisotropicVars_t.o                       \
+   $(OBJDIR)/Append_v.o                                \
+   $(OBJDIR)/Args.o                                    \
+   $(OBJDIR)/BB_FMCorrectionTable.o                    \
+   $(OBJDIR)/BB_FMFunctions.o                          \
+   $(OBJDIR)/BB_FMInit.o                               \
+   $(OBJDIR)/BCC_Util.o                                \
+   $(OBJDIR)/Bitmap_t.o                                \
+   $(OBJDIR)/BurgVec_Table.o                           \
+   $(OBJDIR)/CalcJunctionLen.o                         \
+   $(OBJDIR)/Cell.o                                    \
+   $(OBJDIR)/CellCharge.o                              \
+   $(OBJDIR)/CellTable.o                               \
+   $(OBJDIR)/Collision.o                               \
+   $(OBJDIR)/CommSendGhostPlanes.o                     \
+   $(OBJDIR)/CommSendGhosts.o                          \
+   $(OBJDIR)/CommSendMirrorNodes.o                     \
+   $(OBJDIR)/CommSendRemesh.o                          \
+   $(OBJDIR)/CommSendSecondaryGhosts.o                 \
+   $(OBJDIR)/CommSendSegments.o                        \
+   $(OBJDIR)/CommSendVelocity.o                        \
+   $(OBJDIR)/Complex_Vec_t.o                           \
+   $(OBJDIR)/ComputeForces.o                           \
+   $(OBJDIR)/CrossSlip.o                               \
+   $(OBJDIR)/CrossSlipBCC.o                            \
+   $(OBJDIR)/CrossSlipBCCRandom.o                      \
+   $(OBJDIR)/CrossSlipFCC.o                            \
+   $(OBJDIR)/CrossSlipHCP.o                            \
+   $(OBJDIR)/CrossSlipRhombohedralVa.o                 \
+   $(OBJDIR)/DLBfreeOld.o                              \
+   $(OBJDIR)/DebugFunctions.o                          \
+   $(OBJDIR)/Decomp.o                                  \
+   $(OBJDIR)/DeltaPlasticStrain.o                      \
+   $(OBJDIR)/DeltaPlasticStrain_BCC.o                  \
+   $(OBJDIR)/DeltaPlasticStrain_BCC2.o                 \
+   $(OBJDIR)/DeltaPlasticStrain_FCC.o                  \
+   $(OBJDIR)/DeltaPlasticStrain_HCP.o                  \
+   $(OBJDIR)/DeltaPlasticStrain_rhomboVa.o             \
+   $(OBJDIR)/DeltaTime.o                               \
+   $(OBJDIR)/Directory.o                               \
+   $(OBJDIR)/DisableUnneededParams.o                   \
+   $(OBJDIR)/DislocationNetwork.o                      \
+   $(OBJDIR)/DisplayC.o                                \
+   $(OBJDIR)/Domain_t.o                                \
+   $(OBJDIR)/ElasticConstants.o                        \
+   $(OBJDIR)/Ellipsoid.o                               \
+   $(OBJDIR)/EshelbyBuildMatrix.o                      \
+   $(OBJDIR)/EshelbyDerofR.o                           \
+   $(OBJDIR)/EshelbyEvalTaylor.o                       \
+   $(OBJDIR)/EshelbyForce.o                            \
+   $(OBJDIR)/EshelbyMakeEta.o                          \
+   $(OBJDIR)/EshelbyMakeTaylor.o                       \
+   $(OBJDIR)/EshelbyTranslateEta.o                     \
+   $(OBJDIR)/EshelbyTranslateTaylor.o                  \
+   $(OBJDIR)/FCC_Util.o                                \
+   $(OBJDIR)/FFT.o                                     \
+   $(OBJDIR)/FMAnisotropicInit.o                       \
+   $(OBJDIR)/FMComm.o                                  \
+   $(OBJDIR)/FMSigma2.o                                \
+   $(OBJDIR)/FMSigma2NonRational.o                     \
+   $(OBJDIR)/FMSigma2Rational.o                        \
+   $(OBJDIR)/FMStanfordSupport.o                       \
+   $(OBJDIR)/FMSupport.o                               \
+   $(OBJDIR)/FMWrapperFuncs.o                          \
+   $(OBJDIR)/File.o                                    \
+   $(OBJDIR)/FindPreciseGlidePlane.o                   \
+   $(OBJDIR)/FixRemesh.o                               \
+   $(OBJDIR)/FixedPt_Fcn.o                             \
+   $(OBJDIR)/ForwardEulerIntegrator.o                  \
+   $(OBJDIR)/FrankReadCritical.o                       \
+   $(OBJDIR)/FreeInitArrays.o                          \
+   $(OBJDIR)/G2sigma_tilde.o                           \
+   $(OBJDIR)/GPU.o                                     \
+   $(OBJDIR)/GPU_Misc.o                                \
+   $(OBJDIR)/GPU_Timer.o                               \
+   $(OBJDIR)/GenerateOutput.o                          \
+   $(OBJDIR)/GetBurgList.o                             \
+   $(OBJDIR)/GetDensityDelta.o                         \
+   $(OBJDIR)/GetNewGhostNode.o                         \
+   $(OBJDIR)/GetNewNativeNode.o                        \
+   $(OBJDIR)/Gnuplot.o                                 \
+   $(OBJDIR)/HCP_CA_Split.o                            \
+   $(OBJDIR)/HCP_Util.o                                \
+   $(OBJDIR)/Heap.o                                    \
+   $(OBJDIR)/InclusionStepForce.o                      \
+   $(OBJDIR)/InitCellDomains.o                         \
+   $(OBJDIR)/InitCellNatives.o                         \
+   $(OBJDIR)/InitCellNeighbors.o                       \
+   $(OBJDIR)/InitHome.o                                \
+   $(OBJDIR)/InitRemoteDomains.o                       \
+   $(OBJDIR)/InitSendDomains.o                         \
+   $(OBJDIR)/Initialize.o                              \
+   $(OBJDIR)/InputSanity.o                             \
+   $(OBJDIR)/LinearMobilityFunctions.o                 \
+   $(OBJDIR)/LoadCurve.o                               \
+   $(OBJDIR)/LocalSegEnergy.o                          \
+   $(OBJDIR)/LocalSegForces.o                          \
+   $(OBJDIR)/M22.o                                     \
+   $(OBJDIR)/M33.o                                     \
+   $(OBJDIR)/M44.o                                     \
+   $(OBJDIR)/MPI_Cell_t.o                              \
+   $(OBJDIR)/MPI_Comms_t.o                             \
+   $(OBJDIR)/MPI_Utils.o                               \
+   $(OBJDIR)/Malloc.o                                  \
+   $(OBJDIR)/Matrix.o                                  \
+   $(OBJDIR)/Matrix_t.o                                \
+   $(OBJDIR)/MemCheck.o                                \
+   $(OBJDIR)/Meminfo.o                                 \
+   $(OBJDIR)/Memory_Buffer_t.o                         \
+   $(OBJDIR)/Migrate.o                                 \
+   $(OBJDIR)/MirrorDomain.o                            \
+   $(OBJDIR)/MobilityLaw_BCC_0.o                       \
+   $(OBJDIR)/MobilityLaw_BCC_0_Eshelby.o               \
+   $(OBJDIR)/MobilityLaw_BCC_0b.o                      \
+   $(OBJDIR)/MobilityLaw_BCC_0b_Eshelby.o              \
+   $(OBJDIR)/MobilityLaw_BCC_Va_nl.o                   \
+   $(OBJDIR)/MobilityLaw_BCC_Va_nl_planar.o            \
+   $(OBJDIR)/MobilityLaw_BCC_glide.o                   \
+   $(OBJDIR)/MobilityLaw_BCC_linear.o                  \
+   $(OBJDIR)/MobilityLaw_BCC_linear_Eshelby.o          \
+   $(OBJDIR)/MobilityLaw_BCC_nl.o                      \
+   $(OBJDIR)/MobilityLaw_FCC_0.o                       \
+   $(OBJDIR)/MobilityLaw_FCC_0b.o                      \
+   $(OBJDIR)/MobilityLaw_FCC_0b_Eshelby.o              \
+   $(OBJDIR)/MobilityLaw_FCC_angle.o                   \
+   $(OBJDIR)/MobilityLaw_FCC_climb.o                   \
+   $(OBJDIR)/MobilityLaw_FCC_linear.o                  \
+   $(OBJDIR)/MobilityLaw_FCC_linear_Eshelby.o          \
+   $(OBJDIR)/MobilityLaw_HCP_linear.o                  \
+   $(OBJDIR)/MobilityLaw_HCP_linear_Eshelby.o          \
+   $(OBJDIR)/MobilityLaw_Relax.o                       \
+   $(OBJDIR)/MobilityLaw_Relax_glide.o                 \
+   $(OBJDIR)/MobilityLaw_Ta.o                          \
+   $(OBJDIR)/MobilityLaw_Ta_linear.o                   \
+   $(OBJDIR)/MobilityLaw_Ta_pencil.o                   \
+   $(OBJDIR)/Mobility_BCC_Fe_nl.o                      \
+   $(OBJDIR)/Mobility_BCC_Fe_nl_a.o                    \
+   $(OBJDIR)/Mobility_BCC_Ta_nl.o                      \
+   $(OBJDIR)/Mobility_BCC_Ta_nl_b.o                    \
+   $(OBJDIR)/Mobility_BCC_Ta_nl_b_planar.o             \
+   $(OBJDIR)/Mobility_BCC_faceted.o                    \
+   $(OBJDIR)/Mobility_Rhombohedral_Va_nl_planar.o      \
+   $(OBJDIR)/Moment.o                                  \
+   $(OBJDIR)/Narms_Diag.o                              \
+   $(OBJDIR)/Newton_Fcn.o                              \
+   $(OBJDIR)/Node.o                                    \
+   $(OBJDIR)/NodeBlock.o                               \
+   $(OBJDIR)/NodeForce.o                               \
+   $(OBJDIR)/NodeTaskGroup.o                           \
+   $(OBJDIR)/NodeVelocity.o                            \
+   $(OBJDIR)/OsmoticForce.o                            \
+   $(OBJDIR)/ParadisFinish.o                           \
+   $(OBJDIR)/ParadisInit.o                             \
+   $(OBJDIR)/ParadisSUNDIALS.o                         \
+   $(OBJDIR)/ParadisStep.o                             \
+   $(OBJDIR)/ParadisThread.o                           \
+   $(OBJDIR)/Param.o                                   \
+   $(OBJDIR)/Parse.o                                   \
+   $(OBJDIR)/PickScrewGlidePlane.o                     \
+   $(OBJDIR)/Plot.o                                    \
+   $(OBJDIR)/PredictiveCollision.o                     \
+   $(OBJDIR)/PrintStress.o                             \
+   $(OBJDIR)/ProximityCollision.o                      \
+   $(OBJDIR)/Quaternion_t.o                            \
+   $(OBJDIR)/QueueOps.o                                \
+   $(OBJDIR)/RBDecomp.o                                \
+   $(OBJDIR)/RSDecomp.o                                \
+   $(OBJDIR)/ReadBinaryRestart.o                       \
+   $(OBJDIR)/ReadEshelbyInclusions.o                   \
+   $(OBJDIR)/ReadRestart.o                             \
+   $(OBJDIR)/RemapInitialTags.o                        \
+   $(OBJDIR)/Remesh.o                                  \
+   $(OBJDIR)/RemeshRule_2.o                            \
+   $(OBJDIR)/RemeshRule_3.o                            \
+   $(OBJDIR)/RemoteOps.o                               \
+   $(OBJDIR)/RemoteSegForces.o                         \
+   $(OBJDIR)/RemoveNode.o                              \
+   $(OBJDIR)/ResetGlidePlanes.o                        \
+   $(OBJDIR)/ResetTaskGeometry.o                       \
+   $(OBJDIR)/Restart.o                                 \
+   $(OBJDIR)/RetroactiveCollision.o                    \
+   $(OBJDIR)/SMNComm.o                                 \
+   $(OBJDIR)/SMNEvalMultiNodeSplits.o                  \
+   $(OBJDIR)/SMNEvalSplitForces.o                      \
+   $(OBJDIR)/SMNPartialForce.o                         \
+   $(OBJDIR)/SMNSupport.o                              \
+   $(OBJDIR)/SegPartCoreForce.o                        \
+   $(OBJDIR)/SegPartIntersect.o                        \
+   $(OBJDIR)/SegSegForce.o                             \
+   $(OBJDIR)/Segment.o                                 \
+   $(OBJDIR)/SegmentPair.o                             \
+   $(OBJDIR)/SegmentPairList.o                         \
+   $(OBJDIR)/SelfForceAnisotropic.o                    \
+   $(OBJDIR)/SelfForceIsotropic.o                      \
+   $(OBJDIR)/SemiInfiniteSegSegForce.o                 \
+   $(OBJDIR)/SemiInfiniteSegSegForceAnisotropicNonParallel.o   \
+   $(OBJDIR)/SemiInfiniteSegSegForceAnisotropicParallel.o      \
+   $(OBJDIR)/SemiInfiniteSegSegForceNonRational.o              \
+   $(OBJDIR)/SemiInfiniteSegSegForceRational.o                 \
+   $(OBJDIR)/SharedMem.o                               \
+   $(OBJDIR)/SortNativeNodes.o                         \
+   $(OBJDIR)/SortNodesForCollision.o                   \
+   $(OBJDIR)/Spectral.o                                \
+   $(OBJDIR)/SplinterSegments.o                        \
+   $(OBJDIR)/SplitMultiNodesParallel.o                 \
+   $(OBJDIR)/SplitSurfaceNodes.o                       \
+   $(OBJDIR)/StressDueToSeg.o                          \
+   $(OBJDIR)/StressDueToSegAnisotropic.o               \
+   $(OBJDIR)/String_t.o                                \
+   $(OBJDIR)/TAYLOR_FMCorrectionTable.o                \
+   $(OBJDIR)/TAYLOR_FMFunctions.o                      \
+   $(OBJDIR)/Ta_Util.o                                 \
+   $(OBJDIR)/Tag.o                                     \
+   $(OBJDIR)/TagMap.o                                  \
+   $(OBJDIR)/Tecplot.o                                 \
+   $(OBJDIR)/Thread.o                                  \
+   $(OBJDIR)/Timer.o                                   \
+   $(OBJDIR)/Topology.o                                \
+   $(OBJDIR)/TrapezoidIntegrator.o                     \
+   $(OBJDIR)/TrapezoidIntegratorKINSOL.o               \
+   $(OBJDIR)/TrapezoidIntegratorMulti.o                \
+   $(OBJDIR)/Triangle.o                                \
+   $(OBJDIR)/UNIFORM_FMCorrectionTable.o               \
+   $(OBJDIR)/UNIFORM_FMFunctions.o                     \
+   $(OBJDIR)/UNIFORM_FMInit.o                          \
+   $(OBJDIR)/UTC_Time.o                                \
+   $(OBJDIR)/Util.o                                    \
+   $(OBJDIR)/V3.o                                      \
+   $(OBJDIR)/Vector_t.o                                \
+   $(OBJDIR)/Vertex.o                                  \
+   $(OBJDIR)/WriteArms.o                               \
+   $(OBJDIR)/WriteBinaryRestart.o                      \
+   $(OBJDIR)/WriteDensFlux.o                           \
+   $(OBJDIR)/WriteDensFluxDescription.o                \
+   $(OBJDIR)/WriteDensityField.o                       \
+   $(OBJDIR)/WriteDomains.o                            \
+   $(OBJDIR)/WriteForce.o                              \
+   $(OBJDIR)/WriteNodes.o                              \
+   $(OBJDIR)/WritePoleFig.o                            \
+   $(OBJDIR)/WritePovray.o                             \
+   $(OBJDIR)/WriteProp.o                               \
+   $(OBJDIR)/WritePropDescription.o                    \
+   $(OBJDIR)/WriteRestart.o                            \
+   $(OBJDIR)/WriteVelocity.o                           \
+   $(OBJDIR)/WriteVisit.o                              \
+   $(OBJDIR)/WriteVisitBurgID.o                        \
+   $(OBJDIR)/cuda_portability.o                        \
+   $(OBJDIR)/deWitInteraction.o                        \
+   $(OBJDIR)/display.o
+
+#------------------------------------------------------------------------------
+# ParaDiS sources containing GPU/CUDA content...
+#------------------------------------------------------------------------------
+
+PARADIS_OBJS += \
+   $(OBJDIR)/GPU_Error.o                               \
+   $(OBJDIR)/GPU_Node.o                                \
+   $(OBJDIR)/GPU_Segment.o                             \
+   $(OBJDIR)/PBC.o                                     \
+   $(OBJDIR)/SSF_Aniso.o                               \
+   $(OBJDIR)/SSF_Aniso_NonParallel.o                   \
+   $(OBJDIR)/SSF_Aniso_Parallel.o                      \
+   $(OBJDIR)/SSF_Driver.o                              \
+   $(OBJDIR)/SSF_Iso.o                                 \
+   $(OBJDIR)/SSF_Iso_Rational.o                        \
+   $(OBJDIR)/SSF_Node_t.o
+
+#------------------------------------------------------------------------------
+# When building for the GPU, all sources containing relocatable device code
+# will need a separate RDC link uing nvcc...
+#------------------------------------------------------------------------------
+
+PARADIS_RDC_OBJS =                                     \
+   $(OBJDIR)/GPU_Error.o                               \
+   $(OBJDIR)/GPU_Node.o                                \
+   $(OBJDIR)/GPU_Segment.o                             \
+   $(OBJDIR)/PBC.o                                     \
+   $(OBJDIR)/SSF_Aniso.o                               \
+   $(OBJDIR)/SSF_Aniso_NonParallel.o                   \
+   $(OBJDIR)/SSF_Aniso_Parallel.o                      \
+   $(OBJDIR)/SSF_Driver.o                              \
+   $(OBJDIR)/SSF_Iso.o                                 \
+   $(OBJDIR)/SSF_Iso_Rational.o                        \
+   $(OBJDIR)/SSF_Node_t.o
+
+ifeq ($(GPU_ENABLED),ON)
+PARADIS_OBJS += $(OBJDIR)/nvcc_rdc_dlink.o
+endif

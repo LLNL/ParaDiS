@@ -1,0 +1,65 @@
+#
+#  This example inserts eshelby inclusions into the simulation and
+#  enables use of a mobility function which retards the mobility of
+#  any dislcoation segments that intersects inclusions
+#
+#  Various types of outputs are generated and placed under the
+#  directory specified by the <dirname> value.
+#
+dirname = "tests/eshelby_inclusions_results"
+#
+#  Specifying a file which defines the inclusions to be inserted
+#  automatically enables the code that calculates forces from
+#  inclusions on dislocations
+#  
+inclusionFile = "inputs/eshelby_inclusions.dat"
+#
+#  Select the mobility function that retards mobility of inclusion-
+#  intersecting dislocations.
+#
+mobilityLaw = "BCC_0_eshelby"
+#
+#  Enable the inclusion-specific FMM code to calculate forces from
+#  remote inclusions.  If this is not enabled, dislocations will
+#  only experience effects from inclusions in the 27-cell cube
+#  surrounding the dislocation.
+#
+eshelbyfmEnable = 1
+eshelbyfmMPOrder = 3
+eshelbyfmTaylorOrder = 3
+#
+numXdoms = 2
+numYdoms = 2
+numZdoms = 2
+#
+numXcells = 4
+numYcells = 4
+numZcells = 4
+#
+DLBfreq = 1
+decompType = 2
+#
+remeshRule = 2
+maxSeg = 5.000000e+02
+#
+maxstep = 5000
+timestepIntegrator = "trapezoid"
+nextDT = 1.0e-08
+#
+fmEnabled       = 1
+fmMPOrder       = 2
+fmTaylorOrder   = 5
+fmCorrectionTbl = "inputs/fm-ctab.Ta.600K.0GPa.m2.t5.dat"
+#
+loadType = 1
+eRate = 5.0e+03
+rc = 6
+#
+savecn = 1
+savecnfreq = 500
+tecplot = 1
+tecplotfreq = 100
+povray = 1
+povrayfreq = 250
+saveprop = 1
+savepropfreq = 50

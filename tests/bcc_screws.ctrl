@@ -1,0 +1,94 @@
+########################################
+###  ParaDiS control parameter file  ###
+########################################
+
+# Simulation cell and processor setup
+
+numXdoms   = 2
+numYdoms   = 2
+numZdoms   = 2
+
+numXcells  = 4
+numYcells  = 4
+numZcells  = 4
+
+xBoundType = 0
+yBoundType = 0
+zBoundType = 0
+
+DLBfreq    = 3
+
+dirname                  = "bcc_screws.rslts"
+
+maxstep                  = 60000
+
+remeshRule               = 2
+splitMultiNodeFreq       = 5
+collisionMethod          = 1
+
+timestepIntegrator       = "trapezoid"
+
+loadType                 = 1
+appliedStress            = [ 0.0 0.0 0.0 0.0 0.0 0.0 ]
+eRate                    = 1.0e4
+indxErate                = 2
+edotdir                  = [ 0.0 0.0 1.0 ]
+
+materialTypeName         = "BCC"
+mobilityLaw              = "BCC_0b"
+burgMag                  = 2.85e-10
+
+enforceGlidePlanes       = 0
+enableCrossSlip          = 0
+
+fluxfile                 = 1 
+fluxfreq                 = 200
+
+shearModulus             = 65000000000.0
+pois                     = 0.45
+
+rc                       = 3.0
+
+MobScrew                 = 100.0
+MobEdge                  = 100.0
+MobClimb                 = 0.1
+
+rann                     = 7.0
+rTol                     = 1.5
+minSeg                   = 50.0
+maxSeg                   = 100.0
+
+# Fast Multipole Method controls
+
+fmEnabled                = 1
+fmMPOrder                = 2
+fmTaylorOrder            = 5
+fmCorrectionTbl          = "bcc_screws.fmm"
+
+# Tables for non-FMM far-field force calcs
+
+Rijmfile                 = "../inputs/Rijm.cube.out"
+RijmPBCfile              = "../inputs/RijmPBC.cube.out"
+
+# I/O controls and parameters
+
+saveprop                 = 1
+savepropfreq             = 500
+
+savecn                   = 1
+savecnfreq               = 2000
+
+savetimers               = 1
+savetimersfreq           = 2000
+
+velfile                  = 1
+velfilefreq              = 2000
+
+writeVisit               = 1
+writeVisitFreq           = 2000
+writeVisitCounter        = 1
+writeVisitSegments       = 1
+writeVisitNodes          = 1
+writeVisitSegmentsAsText = 1
+writeVisitNodesAsText    = 1
+

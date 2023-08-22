@@ -1,0 +1,54 @@
+#
+dirname =   "testplanes/screwAT_results"
+#
+numXdoms = 1
+numYdoms = 1
+numZdoms = 1
+#
+numXcells =   3  
+numYcells =   3  
+numZcells =   3  
+#
+fmEnabled       = 0
+fmMPOrder       = 2
+fmTaylorOrder   = 5
+#
+maxstep = 1 
+remeshRule =   2  
+maxSeg =  1000.
+minSeg =  300. 
+#
+timestepIntegrator =   "trapezoid"  
+#
+enforceGlidePlanes = 1
+enableCrossSlip = 1
+remeshRule = 2
+#
+rc =  2.0
+rann = 6.0
+Ecore = 0
+#
+mobilityLaw =   "BCC_Ta_collinear"  
+maxDT = 4.e-7
+#
+shearModulus =   70.7e9
+pois =   0.339
+burgMag =   2.853217687613880e-10
+#
+loadType =   0
+indxErate = 2
+#
+appliedStress = [
+0.0
+0.0
+-1e9
+0.0
+0.0
+0.0]
+
+savecn =   1  
+savecnfreq =   100  
+savecncounter =   0  
+saveprop =   1  
+savepropfreq =   50  
+

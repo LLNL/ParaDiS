@@ -1,0 +1,62 @@
+dirname    = "hcp_junct_no_diss.rslts"                
+
+numXdoms   = 2 
+numYdoms   = 2 
+numZdoms   = 2 
+
+numXcells  = 3 
+numYcells  = 3 
+numZcells  = 3 
+
+xBoundType = 0 
+yBoundType = 0 
+zBoundType = 0 
+
+timestepIntegrator = "trapezoid" 
+
+Rijmfile           = "../inputs/Rijm.cube.out"  
+RijmPBCfile        = "../inputs/RijmPBC.cube.out"  
+winDefaultsFile    = "../inputs/paradis.xdefaults"
+
+loadType = 0 
+
+rc              = 1.000000 
+collisionMethod = 1
+
+shearModulus = 287000000000.000000
+pois         = 0.032000
+YoungModulus = 130000000000.000000
+burgMag      = 2.29e-10
+cOVERa       = 1.568000
+
+maxstep = 5000
+minSeg  = 100 
+maxSeg  = 300
+
+materialTypeName = HCP 
+mobilityLaw      = HCP_linear
+
+remeshRule = 2 
+
+enableCrossSlip       = 1 
+enforceGlidePlanes    = 0 
+HCP_CA_SplitFrequency = 1
+splinterSegFrequency  = 0
+
+savecn        = 1 
+savecnfreq    = 200
+
+saveprop      = 1 
+savepropfreq  = 200
+
+gnuplot       = 1 
+gnuplotfreq   = 200
+
+writeVisit               = 1
+writeVisitFreq           = 200
+writeVisitCounter        = 1
+writeVisitSegments       = 1
+writeVisitNodes          = 1
+writeVisitSegmentsAsText = 1
+writeVisitNodesAsText    = 1
+

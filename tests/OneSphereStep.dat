@@ -1,0 +1,10 @@
+#
+# Data for an precipitate consists of the following items separated with white space
+#
+# Precipitate ID     : 1 integer identifying the precipitate regardless of its position in the simulation or the domain encompassing it. (Should be sequential values)
+# Position           : 3 values specifying the XYZ coordinates of the center of the precipitate
+# Semi-principal axes: 3 values defining the three semi-principal axis of the ellipsoidal precipitate in units of b
+# Rotation matrix    : 2 vectors defining the rotation of the ellipsoidal precipitates
+# Strain field       : 6 components of the strain field for the particleStrain field is a symmetric matrix so only six components are specified
+#
+1   70. 70. 70. 100 100 100 1 0 0 0 1 0  0.000000 0.000000 0.000000 0.000000 0.000000 0.000000

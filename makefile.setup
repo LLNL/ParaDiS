@@ -1,0 +1,655 @@
+#-------------------------------------------------------------------------------------------
+# makefile.setup
+#
+# ParaDiS is a highly optimized collection of codes.  As such - a number of system-specific
+# settigs are required to manage the various options necessary to run the code on specific
+# HPC systems.
+#
+# When you attempt to build ParaDiS on specific machines, you will need to set the parameters
+# within this file.
+#
+# There are a number of systems for which we have predefined setups.  For the systems
+# listed below - you should set the SYS parameter to the specified system type.
+#
+# System type         Description
+# -----------------   ----------------------------------------------------------------------
+# SYS=linux.intel     Linux systems using native Intel compilers.
+# SYS=linux           Generic linux system
+# SYS=linux.scorep    Generic linux system with Score-P instrumentation
+# SYS=linux.caliper   Generic linux system with Caliper instrumentation
+# SYS=gcc             Generic system build using gnu compilers
+# SYS=aix             IBM aix systems using native compilers (llnl's ice, berg, purple, um, up, uv...)
+# SYS=mac             MacBook Pro
+# SYS=bgp             LC BlueGene/P systems (dawn, dawndev)
+# SYS=bgq             LC BlueGene/Q systems (sequoia, rzuseq)
+# SYS=mc-cc           Stanford ME Linux system using intel compilers
+# SYS=wcr             Stanford ME Linux system using intel compilers
+# SYS=cygwin          Stanford Linux emulator for Windows PC
+# SYS=xt4             Cray XT4 systems (NERSC's franklin)
+# SYS=pershing        ARL's Pershing cluster using native Intel compilers
+#-------------------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------------------
+# Attempt to set the system parameter based on the operating system and node name (hostname).
+# You can override this logic by explicitely setting the system parameter after this section.
+#-------------------------------------------------------------------------------------------
+
+OPSYS=$(shell uname -s)
+NODE =$(shell uname -n)
+
+#-------------------------------------------------------------------------------------------
+# The Apple/Mac's generally have a consistent Xcode/development environment so
+# we don't need to differentiate based on node name...
+#-------------------------------------------------------------------------------------------
+
+ifeq ($(OPSYS),Darwin)
+   SYS=mac
+endif
+
+#-------------------------------------------------------------------------------------------
+# Lastly - you can bypass the above automation and explicitely set the SYS parameter here...
+#-------------------------------------------------------------------------------------------
+# SYS=linux.intel
+
+#-------------------------------------------------------------------------------------------
+# Toss an error if the system parameter has not been identified.
+#-------------------------------------------------------------------------------------------
+
+ifndef SYS
+$(error target system has not been identified in the makefile, you will need to explicitely set it)
+endif
+
+#
+#    Set the execution MODE to PARALLEL to enable compile-time support
+#    for MPI and multi-cpu support, or SERIAL for single-cpu compilation
+#
+#MODE=SERIAL
+MODE=PARALLEL
+
+#
+#    Set the XLIB mode to ON to enable compilation supporting the DD3d
+#    xwindow plotting capability, or OFF to disable it.
+#
+#XLIB_MODE=ON
+XLIB_MODE=OFF
+
+ifeq ($(OPSYS),Darwin)
+   XLIB_MODE=ON
+endif
+
+#-------------------------------------------------------------------------------------------
+#    Define the optimization level to be used during compilation
+#
+#      -g      to enable symbol table generation
+#      -g -pg  to enable profiling with gprof.  Note: for profiling on
+#              IBM systems may also need -qnoipa -Q! to turn off inlining.
+#
+#      -mp     On Intel icc compilers, will restrict some optimizations
+#              that may alter results of calculations.
+#
+# OPT = -g          (generate symbol table, needed for debug)
+# OPT = -g -pg      (generate symbol table and enable profiling capture via gprof)
+#
+# Optimization settings...
+# OPT = -O       (default optimization, typically equivalent to -O2)
+# OPT = -O0      (disable optimization, fastest compile, highest level of debug support)
+# OPT = -O1      (minimal  optimization)
+# OPT = -O2      (moderate optimization)
+# OPT = -O3      (full     optimization)
+
+# Set default optimizations...
+
+OPT = -O3 -g
+
+# enable link time optimizations in LLVM...
+# OPT  += -flto
+
+#-------------------------------------------------------------------------------------------
+# Specify whether the GPU components will be active.
+#
+# GPU configuration notes...
+#
+#  - GPU support will only be enabled if the CUDA libraries are present on the machine
+#    in the directory specified in CUDA_DIR
+#
+#  - Because CUDA interacts with the low-level video device drivers, it's not possible to
+#    build a local instance of the CUDA support.  You must use the CUDA support
+#    infrastructure on the local machine as a shared library wherever it's installed
+#    (typically /usr/local/cuda).
+#
+#    On the LLNL surface cluster (surface.llnl.gov), several versions of CUDA are present and available.
+#    To determine which versions are available, use the command "module avail cuda". To load a specific
+#    module within your build/execution environment, you must first load the module via the "module load"
+#    command...
+#
+#       module load cudatoolkit/5.0 (for CUDA 5.0)
+#       module load cudatoolkit/5.5 (for CUDA 5.5)
+#       module load cudatoolkit/6.0 (for CUDA 6.0)
+#       module load cudatoolkit/6.5 (for CUDA 6.5)
+#       module load cudatoolkit/7.0 (for CUDA 7.0)
+#       module load cudatoolkit/7.5 (for CUDA 7.5)
+#
+#    After loading a specific module, several new environment variables will be set.
+#    The makefile assumes that the NVCC compiler, includes, and library files will be located
+#    at $(CUDA_PATH), $(CUDA_INCLUDES), and $(CUDA_LIBS).
+#
+#  - First generation GPUs from Nvidia did not support double precision (either in hardware
+#    or software. As a result, CUDA support for double precision is disabled by default.
+#    To enable double precision support for HPC, the GPU architecture must be specified to
+#    SM 1.3 or above. Since we will likely use several new features (unified memory, etc) that
+#    are supported on more contemporary GPUs, I've restricted the CUDA compiles to SM 3.0 or later
+#    using the -arch=sm_30 flag.
+#
+#  - I have explicitely disabled the GPU fused multiply/add (-fmad) due to some weird rounding
+#    differences between the GPU and CPU force calculations. Note that it's not clear which is
+#    producing the correct answers.
+#
+#    ref: http://en.wikipedia.org/wiki/CUDA
+#-------------------------------------------------------------------------------------------
+#GPU_ENABLED=ON
+GPU_ENABLED=OFF
+
+#-------------------------------------------------------------------------------------------
+#  NVCC compiler flag info...
+#    -g                                  : generate debug information for host
+#    -G                                  : generate debug information for device code
+#    -O0                                 : disable optimization
+#    -rdc=true                           : create relocatable device code              (default=false, needed if device functions span multiple files)
+#    -fmad=true                          : enable/disable fused multiply+add           (default=true )
+#    -ftz=false                          : enable/disable flushed to zero denormalize  (default=false)
+#    -prec-div=true                      : enable/disable precise division    (slower) (default=true )
+#    -prec-sqrt=true                     : enable/disable precise square-root (slower) (default=true )
+#    -Xptxas -v                          : set PTX assembly output to verbose (helpful for determining register pressure)
+#    -Xptxas -dlcm=ca                    : cache memory accesses in both L1 and L2 (default)
+#    -Xptxas -dlcm=cg                    : cache memory accesses in L2 only
+#    -maxrregcount=96                    : set the maximum register count (no default, higher values reduce thread block allocation)
+#    -ccbin=$(CPP)                       : set the NVCC host compiler (default is g++)
+#    -gencode arch=compute_20,code=sm_21 : use for older GTX series boards
+#    -gencode arch=compute_30,code=sm_30 : use for macbook pro (GT 750M)
+#    -gencode arch=compute_35,code=sm_35 : use for surface     (Tesla K40)
+#    -gencode arch=compute_37,code=sm_37 : use for rzhasgpu    (Tesla K80)
+#    -Wno-deprecated-gpu-targets         : suppresses deprecated gpu warnings on Cuda 8+
+#    -std {c++03|c++11|c++14}            : sets C++ dialect (note - not all dialect options are supported)
+#-------------------------------------------------------------------------------------------
+
+NVCC_FLAGS = -O3 -g -rdc=true -Wno-deprecated-gpu-targets
+
+#-------------------------------------------------------------------------------------------
+#    DEFS is used to accumulate all the active #defines to be passed to the compiler.
+#    Start with an empty string...
+#-------------------------------------------------------------------------------------------
+DEFS=
+
+#-------------------------------------------------------------------------------------------
+#    Use Caliper annotations for performance analysis
+#
+#    Caliper is a verstile program instrumentation and performance
+#    measurement framework. It can collect profiles or traces, access
+#    CPU hardware counters, connect to third-party tools (e.g. NVprof or
+#    VTune), and collect MPI performance data.
+#
+# CALIPER_MODE=ON
+
+#-------------------------------------------------------------------------------------------
+#    Set the HDF_MODE to ON to enable compilation with HDF5 support
+#    for writing binary restart files.
+#
+# HDF_MODE=ON
+
+#-------------------------------------------------------------------------------------------
+#    Set OPENMP_MODE to ON to enable compilation with thread
+#    support via OpenMP.
+#
+# OPENMP_MODE=ON
+
+#-------------------------------------------------------------------------------------------
+#    Set PTHREADS_ENABLED to ON to enable compilation with thread support via pthreads.
+#
+# PTHREADS_ENABLED=ON
+
+#-------------------------------------------------------------------------------------------
+#    Set the SCR_MODE to ON to enable compilation with the Scalable
+#    Checkpoint/Restart library.
+#
+# SCR_MODE=ON
+
+#-------------------------------------------------------------------------------------------
+#    KINSOL is a general-purpose nonlinear system solver based on
+#    Newton-Krylov solver technology and is one of the components
+#    of the SUNDIALS suite of equation solvers.  Set the KINSOL_MODE
+#    to ON to enable compilation with the SUNDIALS library in order
+#    to use the version of the trapezoid timestep integrator integrated
+#    with the KINSOL component of SUNDIALS.
+#
+#    Note: If this flag is enabled, the SUNDIALS/KINSOL library must be
+#    available and located in the location specified by the appropriate
+#    KINSOL_DIR.<SYS> value in makefile.sys.
+#
+# KINSOL_MODE=ON
+
+#-------------------------------------------------------------------------------------------
+#    ARKODE is a general-purpose solver for multi-rate ODE systems
+#    based on Addative Runge Kutta methods and is one of the components
+#    of the SUNDIALS suite of equation solvers.  Set the ARKODE_MODE
+#    to ON to enable compilation with the SUNDIALS library in order
+#    to use the version of the Runge Kutta integrator integrated
+#    with the ARKODE component of SUNDIALS.
+#
+#    Note: If this flag is enabled, the SUNDIALS/ARKODE library must be
+#    available and located in the location specified by the appropriate
+#    ARKODE_DIR.<SYS> value in makefile.sys.
+#
+# ARKODE_MODE=ON
+
+#-------------------------------------------------------------------------------------------
+#    SHUTDOWN_SIGNAL provides a means of instructing a ParaDiS simulation
+#    to shutdown.  On receipt of the defined signal, the code attempts to
+#    complete its current cycle, and then enters the standard
+#    ParaDiS termination procedure which writes final output files
+#    and then exits.
+#
+#    When SHUTDOWN_SIGNAL is defined, the default signal is SIGTERM, but
+#    this can be replaced with any catchable signal supported by the
+#    operating system.
+#
+# DEFS += -DSHUTDOWN_SIGNAL=SIGTERM
+
+#-------------------------------------------------------------------------------------------
+#    SHARED_MEM enables functions that allow ParaDiS to share specifically
+#    identified memory buffers among MPI tasks that are co-located on
+#    a compute-node.  This is accomplished by having a single task on
+#    each node create a shared memory object to which all other tasks
+#    on the node connect.  If ParaDiS is compiled for serial execution,
+#    this flag has no effect.
+#
+#    NOTE: Only the task creating the shared memory object can write to
+#    the shared memory; all other tasks have read-only access.
+#
+# DEFS += -DSHARED_MEM
+
+#-------------------------------------------------------------------------------------------
+#    FULL_N2_FORCES enables code to explicitly calculate direct
+#    segment-to-segment forces for every pair of dislocation
+#    segments in the simulation.  This will automatically disable
+#    any remote force calculations.
+#
+#    NOTE:  This is primarily for debugging/verification purposes
+#           and is only supported for serial execution.  If the
+#           compilation MODE (see above) is "PARALLEL" attempts
+#           to use FULL_N2_FORCES will not be permitted.
+#
+# DEFS += -DFULL_N2_FORCES
+
+#-------------------------------------------------------------------------------------------
+#    To enable use of the "rational" seg force functions
+#    enable the USE_RATIONAL_SEG_FORCES flag below.
+#
+#    NOTE: The "rational" segment forces are not supported in conjunction
+#    with anisotropic elasticity, therefore the USE_RATIONAL_SEG_FORCES
+#    flag is mutually exclusive with the ANISOTROPIC flag described
+#    elsewhere in this file.
+#
+# DEFS += -DUSE_RATIONAL_SEG_FORCES
+
+#-------------------------------------------------------------------------------------------
+#    By default ParaDiS uses isotropic elasticity.  This default, however
+#    can be overidden at compile time by defining ANISOTROPIC to force
+#    the use of anisotropic elasticity.
+#
+#    WARNING: When ansiotropy is enabled, all local segment/segment
+#    interaction forces are anisotropic, however, the user may specify
+#    at run-time whether force contributions from remote segments
+#    will use anisotropic or isotropic FMM.  This selection is
+#    done via the <fmEnableAnisotropy> control file parameter.
+#
+#    Anisotropy is not supported in conjunction with "rational" segment
+#    forces, therefore the ANISOTROPIC flag is mutually exclusive with
+#    the USE_RATIONAL_SEG_FORCES flag described elsewhere in this file.
+#
+#    Additionally, Anisotropy is not supported when the ARL FEM code has
+#    been hooked in.
+#
+# DEFS += -DANISOTROPIC
+# DEFS += -DANISO_QMAX=10
+
+#-------------------------------------------------------------------------------------------
+#    Fast multipole method is by default using the Taylor series. However
+#    this approach does not currently work for anisotropic elasticity.
+#    Uniform and Black-box (BB or Chebyshev) polynomial interpolation for
+#    the fast multipole method have been developed to work for anisotropic
+#    elasticity. They use more memory but can also by used in isotropic
+#    elasticity.
+#
+# TAYLOR_FMM_MODE=OFF
+
+ifeq ($(TAYLOR_FMM_MODE),OFF)
+   #DEFS += -DBBFMM
+   DEFS += -DUNIFORMFMM
+else
+   DEFS += -DTAYLORFMM
+endif
+
+#-------------------------------------------------------------------------------------------
+#    ESHELBY enables the Eshelby inclusion support within the ParaDiS
+#    code base.
+#
+# DEFS += -DESHELBY
+
+#-------------------------------------------------------------------------------------------
+#
+#    ESHELBYFORCE enables the Eshelby stress both local and remote
+#
+# DEFS += -DESHELBYFORCE
+
+#-------------------------------------------------------------------------------------------
+#    ESHELBYFORCE enables the core force due to presence of particles
+#
+# DEFS += -DESHELBYCORE
+
+#-------------------------------------------------------------------------------------------
+#    ESHELBYSTEP enables the step force due to presence of particles
+#
+# DEFS += -DESHELBYSTEP
+
+#-------------------------------------------------------------------------------------------
+#   SPECTRAL enables the use of the DDD-FFT approach to compute
+#   long-range stresses
+#
+# DEFS += -DSPECTRAL
+
+#-------------------------------------------------------------------------------------------
+#   FIX_PLASTIC_STRAIN enables the correction of plastic strain
+#   that results from topological operations
+#
+DEFS += -DFIX_PLASTIC_STRAIN
+
+#-------------------------------------------------------------------------------------------
+#   LIMIT_NODE_VELOCITY limits the computed node velocity to the shear sound velocity
+#   computed during the trapezoid integration.
+#
+DEFS += -DLIMIT_NODE_VELOCITY
+
+#-------------------------------------------------------------------------------------------
+#   Determine the critical stress of a Frank-Read source
+#   automatically.
+#   Works only in serial and when FMM if off for now.
+#
+# DEFS += -DFRCRIT
+
+#-------------------------------------------------------------------------------------------
+#   Energy calculations in ParaDiS due to dislocations
+#
+# DEFS += -DCALCENERGY
+
+#-------------------------------------------------------------------------------------------
+#    As a postprocessing tool, the stress can be printed out when the option
+#    PRINTSTRESS is turned on.
+#
+# DEFS += -DPRINTSTRESS
+
+#-------------------------------------------------------------------------------------------
+#    NAN_CHECK enables code to check the position and velocity components
+#    of all nodes for values that are NaNs or Inf, and abort if any such
+#    values are found.  This definition is for debugging purposes.
+#
+# DEFS += -DNAN_CHECK
+
+#-------------------------------------------------------------------------------------------
+#    CHECK_MEM_USAGE enables code to calculate estimated memory usage
+#    on each task and then have the largest memory task print its
+#    memory usage.  Note: using this requires global communications.
+#
+# DEFS += -DCHECK_MEM_USAGE
+
+#-------------------------------------------------------------------------------------------
+#    DCHECK_LARGE_SEGS enables code to check for unusually large segments
+#    within the simulation. Created to diagnose secondary ghost errors.
+#
+# DEFS += -DCHECK_LARGE_SEGS
+
+#-------------------------------------------------------------------------------------------
+#    Apparently, when multiple processes on different hosts
+#    write to the same NFS-mounted file (even if access is
+#    sequentialized), consistency problems can arise due to
+#    NFS caching issues resulting in corrupted data files.
+#    Explicitly doing a 'stat' of the file on each process
+#    immediately before opening it forces the NFS daemon
+#    on a local host to update its cached file info and
+#    clears up the problem... so, when runnning in parallel
+#    and writing to NFS, define the following to compile in
+#    the additional 'stat' call before opening output files.
+#    By default this capability is disabled.
+#
+# DEFS += -DDO_IO_TO_NFS
+
+#-------------------------------------------------------------------------------------------
+#    Defining SYNC_TIMERS activates some additional syncronization points
+#    in the code that allow the coarse-grain timers in the code to
+#    more accurately differentiate between time spent in certain portions
+#    of the code.  By default, these extra syncronizaation points are
+#    not enabled.
+#
+# DEFS += -DSYNC_TIMERS
+
+#-------------------------------------------------------------------------------------------
+#    Define WRITE_TASK_TIMES to enable creation of task-specific
+#    timing files in addition to the aggregate timing file.
+#
+# DEFS += -DWRITE_TASK_TIMES
+
+#-------------------------------------------------------------------------------------------
+#    Affects the real-time x-window plotting
+#
+# DEFS += -DNO_THREAD
+
+#-------------------------------------------------------------------------------------------
+#    Debug...
+#
+# DEFS += -DDEBUG_TIMESTEP
+# DEFS += -DDEBUG_NODAL_TIMESTEP
+# DEFS += -DDEBUG_TIMESTEP_ERROR
+# DEFS += -DDEBUG_MEM
+# DEFS += -DDEBUG_ARKCODE
+# DEFS += -DDEBUG_PARADIS_VECTOR
+
+#-------------------------------------------------------------------------------------------
+#    Memory diagnostics....
+#
+#    If the memory diagnostics are enabled, additional information is included with
+#    each call to malloc(), free(), etc. to enable tracking and frame checksums to
+#    each dynamic memory allocation.
+#
+#    Note that commenting out the diagnostics below or defining them at zero basically
+#    has the same impact on the builds.
+#
+#    Several levels are supported (with increasing impact on performance)...
+#       0 : memory diagnostic support disabled (default)
+#       1 : adds allocation sizes to each allocation (low impact)
+#       2 : adds allocation sizes and frame markers, also adds frame checks on delete
+#       3 : full diagnostic support, including block diagnostics
+#             - adds block tracking (allocations, deallocations)
+#             - significant performance impact
+#
+# DEFS += -DMALLOC_DIAGS=0
+
+#-------------------------------------------------------------------------------------------
+#    Defining DEBUG_TOPOLOGY_CHANGES prints debug info of topological
+#    changes. The DEBUG_TOPOLOGY_DOMAIN value defines the
+#    domain for which this information is printed.  A negative value
+#    applies to all domains, a value >= 0 applies to the single
+#    corresponding domain.
+#
+# DEFS += -DDEBUG_TOPOLOGY_CHANGES -DDEBUG_TOPOLOGY_DOMAIN=-1
+
+#-------------------------------------------------------------------------------------------
+#    Defining DEBUG_CROSSSLIP_EVENTS prints debug info about
+#    cross-slip events. The DEBUG_CROSSSLIP_DOMAIN value defines the
+#    domain for which this information is printed.  A negative value
+#    applies to all domains, a value >= 0 applies to the single
+#    corresponding domain.
+#
+# DEFS += -DDEBUG_CROSSSLIP_EVENTS -DDEBUG_CROSSSLIP_DOMAIN=-1
+
+#-------------------------------------------------------------------------------------------
+#    If any of the following 4 definitions are uncommented
+#    the code will sum and print the number of corresponding
+#    topological events from all domains each cycle
+#
+# DEFS += -DDEBUG_LOG_COLLISIONS
+# DEFS += -DDEBUG_LOG_MULTI_NODE_SPLITS
+# DEFS += -DDEBUG_LOG_MESH_COARSEN
+# DEFS += -DDEBUG_LOG_MESH_REFINE
+
+#-------------------------------------------------------------------------------------------
+#    Periodically compile with the following options just to see what needs
+#    to be cleaned up in the code.
+#-------------------------------------------------------------------------------------------
+
+# DEFS += -Wformat
+# DEFS += -Wmissing-prototypes
+# DEFS += -Wunused
+# DEFS += -Wunused-variable
+# DEFS += -Wunused-function
+# DEFS += -Wuninitialized
+# DEFS += -Wall
+
+#-------------------------------------------------------------------------------------------
+# Header diagnostic - sometimes it's useful to identify where a particular include
+# file is coming from. Enabling the -H parameter will dump those paths.
+# Beware - this will generate a HUGE amount of output!
+#
+# DEFS += -H
+
+#-------------------------------------------------------------------------------------------
+# Pull in the system-specific settings
+#
+# Note - there is only one makefile.sys that will match below.  We will either match
+#   in the current directory or one level above (. or ..) . The dash preceding the
+#   include (e.g. -include) prevents make from throwing an error on the failed match.
+#-------------------------------------------------------------------------------------------
+
+-include  ./makefile.sys
+-include ../makefile.sys
+
+#-------------------------------------------------------------------------------------------
+#    Define some macros to point to the correct machine specific
+#    library paths and libraries for XLIB, and MPI if they
+#    have been enabled.
+#-------------------------------------------------------------------------------------------
+
+XLIB_ON_LIB        = $(XLIB_LIB.$(SYS))
+XLIB_ON_INCS       = $(XLIB_INCS.$(SYS))
+XLIB_LIB           = $(XLIB_$(XLIB_MODE)_LIB)
+XLIB_INCS          = $(XLIB_$(XLIB_MODE)_INCS)
+XLIB_DEFS_OFF      = -DNO_XWINDOW
+
+HDF_ON_LIB         = $(HDF_LIB.$(SYS))
+HDF_ON_INCS        = $(HDF_INCS.$(SYS))
+HDF_LIB            = $(HDF_$(HDF_MODE)_LIB)
+HDF_INCS           = $(HDF_$(HDF_MODE)_INCS)
+HDF_DEFS_ON        = -DUSE_HDF
+HDF_DEFS           = $(HDF_$(HDF_MODE)_DEFS)
+
+SCR_ON_LIB         = $(SCR_LIB.$(SYS))
+SCR_ON_INCS        = $(SCR_INCS.$(SYS))
+SCR_LIB            = $(SCR_$(SCR_MODE)_LIB)
+SCR_INCS           = $(SCR_$(SCR_MODE)_INCS)
+SCR_DEFS_ON        = -DUSE_SCR
+
+MPI_LIB_PARALLEL   = $(MPI_LIB.$(SYS)) $(SCR_LIB)
+MPI_INCS_PARALLEL  = $(MPI_INCS.$(SYS)) $(SCR_INCS)
+
+MPI_LIB            = $(MPI_LIB_$(MODE))
+MPI_INCS           = $(MPI_INCS_$(MODE))
+
+LIB_PARALLEL       = $(LIB_$(MODE).$(SYS)) $(XLIB_LIB) $(MPI_LIB) $(HDF_LIB)
+LIB_SERIAL         = $(LIB_$(MODE).$(SYS)) $(XLIB_LIB) $(HDF_LIB)
+
+DEFS              += $(XLIB_DEFS_$(XLIB_MODE)) $(HDF_DEFS_$(HDF_MODE))
+DEFS              += -DNO_XPM -DNO_GENERAL -DSEM_SEMUN_UNDEFINED
+
+INCS               = -I. -I../include $(INCS_$(MODE).$(SYS)) $(XLIB_INCS) $(HDF_INCS)
+
+ifeq ($(MODE),PARALLEL)
+   INCS           += $(MPI_INCS)
+endif
+
+# Note - caliper MPI wrapper must be linked before MPI
+
+ifeq ($(CALIPER_MODE),ON)
+   # Use the specified caliper installation if CALIPER_DIR is defined.
+   # Assume dynamic libraries in that case.
+   # Otherwise use our copy in ../ext
+   ifdef CALIPER_DIR
+     INCS         += -I$(CALIPER_DIR)/include
+     LIB_PARALLEL += -Wl,-rpath $(CALIPER_DIR)/lib64 -L$(CALIPER_DIR)/lib64 -lcaliper-mpi -lcaliper
+     LIB_SERIAL   += -Wl,-rpath $(CALIPER_DIR)/lib64 -L$(CALIPER_DIR)/lib64 -lcaliper
+   else
+     EXTERNAL_TARGETS += caliper
+     INCS         += -I../ext/include
+     LIB_PARALLEL += ../ext/lib/libcaliper-mpi.a ../ext/lib/libcaliper.a ../ext/lib/libcaliper-reader.a ../ext/lib/libcaliper-common.a -lpthread
+     LIB_SERIAL   += ../ext/lib/libcaliper.a ../ext/lib/libcaliper-reader.a ../ext/lib/libcaliper-common.a -lpthread
+   endif
+
+   DEFS           += -DUSE_CALIPER
+endif
+
+ifeq ($(KINSOL_MODE),ON)
+   INCS           += -I../ext/include/sundials
+   LIB_PARALLEL   += ../ext/lib/libsundials_kinsol.a
+   LIB_SERIAL     += ../ext/lib/libsundials_kinsol.a
+   DEFS           += -DUSE_KINSOL
+endif
+
+ifeq ($(ARKODE_MODE),ON)
+   INCS           += -I../ext/include/sundials
+   LIB_PARALLEL   += ../ext/lib/libsundials_arkode.a
+   LIB_SERIAL     += ../ext/lib/libsundials_arkode.a
+   DEFS           += -DUSE_ARKODE
+endif
+
+ifeq ($(GPU_ENABLED),ON)
+ifneq ($(wildcard $(NVCC)),)
+   INCS           += -I$(CUDA_PATH)/include
+   LIB_PARALLEL   += -L$(CUDA_LIBS) -lcudart
+   LIB_SERIAL     += -L$(CUDA_LIBS) -lcudart
+   DEFS           += -DGPU_ENABLED
+else
+   $(info NVCC compiler not found - disabling GPU features)
+   GPU_ENABLED=OFF
+endif
+endif
+
+ifeq ($(TAYLOR_FMM_MODE),OFF)
+   USE_FFTW       = ON
+endif
+
+ifneq ($(findstring -DSPECTRAL,$(DEFS)),)
+   USE_FFTW       = ON
+endif
+
+ifeq ($(USE_FFTW),ON)
+   INCS           += -I../ext/include
+   INCS           += -I../ext/include/fftw
+   LIB_PARALLEL   += -L../ext/lib -lfftw3_mpi -lfftw3
+   LIB_SERIAL     += -L../ext/lib -lfftw3_mpi -lfftw3
+ifeq ($(OPSYS),Darwin)
+   LIB_PARALLEL   += -L/opt/local/lib/gcc8
+   LIB_SERIAL     += -L/opt/local/lib/gcc8
+endif
+endif
+
+ifeq ($(PTHREADS_ENABLED),ON)
+   DEFS           += -DPTHREADS
+endif
+
+OPENMP_ON          = $(OPENMP_FLAG.$(SYS))
+OPENMP_FLAG        = $(OPENMP_$(OPENMP_MODE))
+
+CPP                = $(CPP_$(MODE).$(SYS))
+CPPFLAG            = $(CPPFLAG.$(SYS)) $(OPENMP_FLAG) $(DEFS)
+LIB                = $(LIB_PARALLEL)
+
+CPP_SERIAL         = $(CPP_SERIAL.$(SYS))
+CPPFLAG_SERIAL     = $(CPPFLAG_SERIAL.$(SYS)) $(DEFS)
+INCS_SERIAL        = $(INCS)

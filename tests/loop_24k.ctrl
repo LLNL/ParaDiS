@@ -1,0 +1,99 @@
+#
+#  Example control file using Tantalum non-linear mobility
+#
+dirname    = "loop_24k.rslts"
+#
+#  Simulation cell and processor setup
+#  
+numXdoms   =  4
+numYdoms   =  4  
+numZdoms   =  2  
+
+numXcells  =  4  
+numYcells  =  4  
+numZcells  =  4  
+#
+#  Load balance every cycle using a recursive-bisection decomposition
+#
+decompType  = 2 
+DLBfreq     = 3  
+#
+#  Simulation time and timestepping controls
+#  
+maxstep             = 1000000  
+maxstep             = 1
+timestepIntegrator  = "trapezoid"  
+rTol                = 0.3 
+nextDT              = 1.0e-20
+#maxDT              = 1.0e-12
+#
+#  Discretization controls
+#  
+maxSeg              = 15.0  
+minSeg              = 3.0
+remeshRule          = 2  
+#
+#  Fast Multipole Method controls
+#  
+fmEnabled           = 1
+fmMPOrder           = 2  
+fmTaylorOrder       = 5  
+fmCorrectionTbl     = "./loop_24k.fmm"
+#
+Rijmfile            = "../inputs/Rijm.rect.out"
+RijmPBCfile         = "../inputs/RijmPBC.rect.out" 
+#
+#  Loading conditions
+#  
+TempK               =  3.000000e+02  
+pressure            =  0.000000e+00  
+loadType            =  1  
+eRate               = -2.000000e+08  
+indxErate           =  2  
+edotdir             = [ 0.  0.  1 ] 
+appliedStress       = [ -319.74009e5    -297.17907e5     -41162.42e5   97.041524e5    -316.64006e5    -14.337491e5 ]
+#
+#  Material and mobility parameters
+#  
+materialTypeName      = "BCC"
+mobilityLaw           = "BCC_Ta"
+TaDragLine            = 2.254e-06
+TaDragClimbScrew      = 57.393
+TaDragClimbEdge       = 573.93
+TaDragEdge110         = 0.00030
+TaDragEdge112         = 0.00030
+TaDragScrew112T       = 0.017341
+TaDragScrew112AT      = 0.15005
+TaDragScrew110        = 0.057393
+
+TaDragParam110K       = 4000
+TaDragParam110B       = 0.9
+TaDragParam110alpha   = 1.2
+
+TaDragParam112TK      = 2200
+TaDragParam112TB      = 0.12
+TaDragParam112Talpha  = 1.7
+
+TaDragParam112ATK     = 10600
+TaDragParam112ATB     = 0.5
+TaDragParam112ATalpha = 3
+#
+#materialTypeName     = "BCC"
+#mobilityLaw          = "BCC_Ta_pencil"
+#
+shearModulus          = 70.7e9
+pois                  = 0.339
+burgMag               = 2.8500e-10  
+rc                    = 1.000000e+00   
+#
+#  I/O controls and parameters
+#  
+savecn                = 1  
+savecnfreq            = 100 
+saveprop              = 1  
+savepropfreq          = 1 
+writeFlux             = 1  
+writeFluxFreq         = 100
+savetimers            = 1
+savetimersfreq        = 100
+
