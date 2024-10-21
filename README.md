@@ -1,9 +1,9 @@
 
 # ParaDiS
 
-ParaDiS Public Release Version 4.0
+**IMPORTANT: ParaDiS development is no longer supported as the code is being replaced by our new open-source project [OpenDiS](https://github.com/OpenDiS/OpenDiS), which includes the high-performance [ExaDiS](https://github.com/LLNL/exadis) core library that runs on GPU. More information about OpenDiS is available at the [OpenDiS documentation](https://opendis.github.io/OpenDiS).**
 
-**IMPORTANT:** ParaDiS development is no longer supported as the code is being replaced by our new open-source project [OpenDiS](https://github.com/OpenDiS/OpenDiS), which includes the high-performance [ExaDiS](https://github.com/LLNL/exadis) core library. More information about OpenDiS is available at the [OpenDiS documentation](https://opendis.github.io/OpenDiS).
+ParaDiS Public Release Version 4.0
 
 ParaDiS (Parallel Dislocation Simulator) is a simulation tool that performs direct numerical simulation of dislocation ensembles, the carriers of plasticity, to predict the strength in crystalline materials from the fundamental physics of defect motion, evolution, and interaction.
 
